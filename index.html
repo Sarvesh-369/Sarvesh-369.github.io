@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarvesh Baskar - Research Portfolio</title>
+    <meta name="description" content="Research portfolio of Sarvesh Baskar, focusing on Large Language Models, AI, and Machine Learning research.">
+    <meta name="keywords" content="Sarvesh Baskar, LLM research, AI, machine learning, computer science, BITS Pilani">
+    
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-text: #2c3e50;
+            --secondary-text: #7f8c8d;
+            --accent-color: #3498db;
+            --background: #ffffff;
+            --light-gray: #f8f9fa;
+            --border-color: #e9ecef;
+            --hover-background: #f1f3f4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: var(--primary-text);
+            background-color: var(--background);
+            font-size: 16px;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--primary-text);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary-text);
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Mobile menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 2px;
+            background-color: var(--primary-text);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Main content */
+        main {
+            padding-top: 80px;
+        }
+
+        .section {
+            padding: 5rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--primary-text);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            min-height: 70vh;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-content .tagline {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--secondary-text);
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .hero-image img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--light-gray);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+            background: transparent;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: var(--light-gray);
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .experience-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-text);
+        }
+
+        .experience-company {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-date {
+            color: var(--secondary-text);
+            font-weight: 500;
+        }
+
+        .experience-description {
+            color: var(--secondary-text);
+            line-height: 1.6;
+        }
+
+        .experience-description ul {
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .experience-description li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--light-gray);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--accent-color), #2980b9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-text);
+        }
+
+        .project-description {
+            color: var(--secondary-text);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            background: rgba(52, 152, 219, 0.1);
+            color: var(--accent-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Publications Section */
+        .publication-item {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .publication-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .publication-image {
+            width: 120px;
+            height: 80px;
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .publication-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .publication-content {
+            flex: 1;
+        }
+
+        .publication-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary-text);
+        }
+
+        .publication-authors {
+            color: var(--secondary-text);
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-venue {
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-content p {
+            font-size: 1.1rem;
+            color: var(--secondary-text);
+            margin-bottom: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--light-gray);
+            color: var(--primary-text);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .social-link:hover {
+            background: var(--accent-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--light-gray);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--secondary-text);
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 1rem 2rem;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content .tagline {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 3rem 0;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .publication-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animation classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Sarvesh Baskar</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="section">
+            <div class="hero fade-in">
+                <div class="hero-content">
+                    <h1>Sarvesh Baskar</h1>
+                    <p class="tagline">AI Researcher & Computer Science Scholar</p>
+                    <p>I'm a dual degree student at BITS Pilani specializing in Large Language Models, reinforcement learning, and AI systems. Currently conducting research at the University of Maryland, Baltimore County, with a focus on improving conversational AI through novel persona knowledge frameworks.</p>
+                    <p>My work spans from theoretical foundations in machine learning to practical applications in natural language processing, with publications in top-tier conferences like NAACL.</p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="src/profile.jpg" alt="Sarvesh Baskar" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <h2 class="section-title fade-in">Research Experience</h2>
+            
+            <div class="experience-item fade-in">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Research Assistant</div>
+                        <div class="experience-company">University of Maryland, Baltimore County</div>
+                    </div>
+                    <div class="experience-date">August 2024 - Present</div>
+                </div>
+                <div class="experience-description">
+                    <p>Under the supervision of Dr. Manas Gaur, conducting cutting-edge research in Large Language Models and conversational AI systems.</p>
+                    <ul>
+                        <li>Published and presented a first-author paper at NAACL 2025, a prestigious CORE-A ranked conference</li>
+                        <li>Developed CPER framework addressing persona knowledge gaps in LLMs, improving performance by up to 42% in human evaluations</li>
+                        <li>Acquired practical experience in grant proposal writing for Samsung START award 2025</li>
+                        <li>Collaborating with IBM researchers on extending "Automatic Thought of Search" framework to complex planning domains</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item fade-in">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Student Researcher</div>
+                        <div class="experience-company">TCS Research - BITS Pilani Collaboration</div>
+                    </div>
+                    <div class="experience-date">January 2024 - May 2024</div>
+                </div>
+                <div class="experience-description">
+                    <p>Collaborative research project between TCS Research and BITS Pilani, focusing on enhancing LLM reasoning capabilities.</p>
+                    <ul>
+                        <li>Enhanced LLM reasoning through novel prompt strategies, achieving 30% increase in executable code generation efficiency</li>
+                        <li>Automated code generation and execution processes using LLMs, reducing human intervention</li>
+                        <li>Worked under guidance of industry experts Dr. Gautam Shroff and Dr. Lovekesh Vig from TCS Research</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item fade-in">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Summer Intern</div>
+                        <div class="experience-company">Techisy</div>
+                    </div>
+                    <div class="experience-date">May 2024 - July 2024</div>
+                </div>
+                <div class="experience-description">
+                    <p>Developed AI-powered solutions for document processing and recruitment optimization.</p>
+                    <ul>
+                        <li>Built duplicate bill identification system with 95% accuracy using OCR, OpenAI embeddings, and CLIP</li>
+                        <li>Created RAG-based resume matching solution using LangChain, Ollama (Llama 3), and FAISS</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2 class="section-title fade-in">Notable Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card fade-in" onclick="openProject('simclr')">
+                    <div class="project-image">
+                        <img src="src/simclr-project.jpg" alt="SimCLR Project" />
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">SimCLR Reimplementation & Analysis</h3>
+                        <p class="project-description">Comprehensive reimplementation of the SimCLR framework with extensive ablation studies on architectural choices and data augmentation techniques. Achieved 92.5% Top-1 accuracy on CIFAR-10.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Self-Supervised Learning</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Computer Vision</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in" onclick="openProject('rl')">
+                    <div class="project-image">
+                        <img src="src/rl-project.jpg" alt="Reinforcement Learning Project" />
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Reinforcement Learning Algorithms</h3>
+                        <p class="project-description">Implementation and evaluation of fundamental RL algorithms for the 10-armed bandit problem and Markov Reward Process, demonstrating exploration-exploitation trade-offs.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Reinforcement Learning</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Multi-Armed Bandits</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in" onclick="openProject('connectfour')">
+                    <div class="project-image">
+                        <img src="src/connectfour-project.jpg" alt="Connect Four AI Project" />
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Connect Four AI with Minimax</h3>
+                        <p class="project-description">Sophisticated AI agent using game tree search with Minimax algorithm and alpha-beta pruning. Achieved 88% win rate through optimized evaluation functions and move ordering heuristics.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Game AI</span>
+                            <span class="tech-tag">Minimax</span>
+                            <span class="tech-tag">Alpha-Beta Pruning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in" onclick="openProject('plagiarism')">
+                    <div class="project-image">
+                        <img src="src/plagiarism-project.jpg" alt="Plagiarism Detection Project" />
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Plagiarism Detection Tool</h3>
+                        <p class="project-description">NLP-based plagiarism detection system employing language model creation, text similarity analysis, and content identification with 70% confidence threshold.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Natural Language Processing</span>
+                            <span class="tech-tag">Text Analysis</span>
+                            <span class="tech-tag">Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="section">
+            <h2 class="section-title fade-in">Publications</h2>
+            
+            <div class="publication-item fade-in" onclick="openPublication('naacl2025')">
+                <div class="publication-image">
+                    <img src="src/naacl-paper.jpg" alt="NAACL 2025 Paper" />
+                </div>
+                <div class="publication-content">
+                    <h3 class="publication-title">From Guessing to Asking: An Approach to Resolving the Persona Knowledge Gap in LLMs during Multi-Turn Conversations</h3>
+                    <p class="publication-authors">Sarvesh Baskar, Tanmay Tulsidas Verlekar, Srinivasan Parthasarathy, Manas Gaur</p>
+                    <p class="publication-venue">NAACL 2025 - North American Chapter of the Association for Computational Linguistics</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2 class="section-title fade-in">Get In Touch</h2>
+            <div class="contact-content fade-in">
+                <p>I'm always interested in discussing research opportunities, collaborations, and innovative projects in AI and machine learning. Feel free to reach out!</p>
+                
+                <div class="social-links">
+                    <a href="mailto:baskarsarvesh@gmail.com" class="social-link">
+                        📧 Email
+                    </a>
+                    <a href="https://linkedin.com/in/sarvesh-b-0bb062223/" target="_blank" class="social-link">
+                        💼 LinkedIn
+                    </a>
+                    <a href="https://sarvesh-369.github.io" target="_blank" class="social-link">
+                        🌐 Portfolio
+                    </a>
+                    <a href="https://github.com/sarvesh-369" target="_blank" class="social-link">
+                        💻 GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Sarvesh Baskar. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu if open
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Project click handlers
+        function openProject(projectId) {
+            const projectLinks = {
+                'simclr': '#', // Replace with actual project link
+                'rl': '#', // Replace with actual project link
+                'connectfour': '#', // Replace with actual project link
+                'plagiarism': '#' // Replace with actual project link
+            };
+            
+            if (projectLinks[projectId] && projectLinks[projectId] !== '#') {
+                window.open(projectLinks[projectId], '_blank');
+            }
+        }
+
+        // Publication click handler
+        function openPublication(pubId) {
+            const publicationLinks = {
+                'naacl2025': '#' // Replace with actual paper link when available
+            };
+            
+            if (publicationLinks[pubId] && publicationLinks[pubId] !== '#') {
+                window.open(publicationLinks[pubId], '_blank');
+            }
+        }
+
+        // Add active class to current navigation item
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
