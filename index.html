@@ -347,7 +347,17 @@
             font-weight: 600;
             flex-shrink: 0;
         }
+        .email-reveal-btn {
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: inherit;
+        }
 
+        .email-revealed {
+            background: #27ae60 !important;
+            color: white !important;
+        }
         .publication-image img {
             width: 100%;
             height: 100%;
@@ -551,7 +561,7 @@
                 </div>
             </div>
         </section>
-        
+
          <!-- Publications Section -->
         <section id="publications" class="section">
             <h2 class="section-title fade-in">Publications</h2>
@@ -700,17 +710,20 @@
                 <p>I'm always interested in discussing research opportunities, collaborations, and innovative projects in AI and machine learning. Feel free to reach out!</p>
                 
                 <div class="social-links">
-                    <a href="mailto:baskarsarvesh@gmail.com" class="social-link">
-                        📧 Email
-                    </a>
+                    <button class="social-link email-reveal-btn" onclick="revealEmail()">
+                        📧 <span id="email-text">Email</span>
+                    </button>
                     <a href="https://linkedin.com/in/sarvesh-b-0bb062223/" target="_blank" class="social-link">
                         💼 LinkedIn
                     </a>
-                    <a href="https://sarvesh-369.github.io" target="_blank" class="social-link">
-                        🌐 Portfolio
+                    <a href="https://x.com/Sarvesh__369" target="_blank" class="social-link">
+                        🐦 Twitter
                     </a>
                     <a href="https://github.com/sarvesh-369" target="_blank" class="social-link">
                         💻 GitHub
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=95VFgm8AAAAJ&hl=en&authuser=3" target="_blank" class="social-link">
+                        📚 Google Scholar
                     </a>
                 </div>
             </div>
@@ -783,7 +796,7 @@
         // Publication click handler
         function openPublication(pubId) {
             const publicationLinks = {
-                'naacl2025': '#' // Replace with actual paper link when available
+                'naacl2025': 'https://aclanthology.org/2025.naacl-srw.42.pdf' // Replace with actual paper link when available
             };
             
             if (publicationLinks[pubId] && publicationLinks[pubId] !== '#') {
@@ -811,6 +824,29 @@
                 }
             });
         });
+        // Email reveal functionality
+        function revealEmail() {
+            const emailButton = document.querySelector('.email-reveal-btn');
+            const emailText = document.getElementById('email-text');
+            
+            if (emailText.textContent === 'Email') {
+                emailText.textContent = 'baskarsarvesh@gmail.com';
+                emailButton.classList.add('email-revealed');
+                
+                // Optional: Copy to clipboard
+                navigator.clipboard.writeText('baskarsarvesh@gmail.com').then(() => {
+                    // Temporarily show "Copied!" message
+                    const originalText = emailText.textContent;
+                    emailText.textContent = 'Copied!';
+                    setTimeout(() => {
+                        emailText.textContent = originalText;
+                    }, 1000);
+                }).catch(() => {
+                    // Fallback if clipboard API fails
+                    console.log('Email revealed: baskarsarvesh@gmail.com');
+                });
+            }
+        }
     </script>
 </body>
 </html>
