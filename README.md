@@ -75,6 +75,7 @@ A dedicated, organized document structure is located inside `assets/documents/`.
 | **Research Papers / Preprints** | `assets/documents/publications/paper_name.pdf` | Link from **Publications** (`../assets/documents/publications/paper_name.pdf`) |
 | **Project Reports / Slides** | `assets/documents/projects/project_name.pdf` | Link from **Projects** (`../assets/documents/projects/project_name.pdf`) |
 
+
 ---
 
 ### How to Link Your Documents in HTML:

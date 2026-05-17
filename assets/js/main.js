@@ -48,6 +48,23 @@ async function navigateToPage(url, pushState = true) {
     pageContainer.innerHTML = newContainer.innerHTML;
     document.title = newDoc.title;
 
+    // 5. Dynamic Stylesheet Injection: Load any page-specific stylesheet links
+    const newLinks = newDoc.querySelectorAll('link[rel="stylesheet"]');
+    newLinks.forEach(oldLink => {
+      const href = oldLink.getAttribute('href');
+      if (href) {
+        const alreadyLoaded = Array.from(document.head.querySelectorAll('link[rel="stylesheet"]'))
+          .some(el => el.getAttribute('href') === href || el.href === oldLink.href);
+        
+        if (!alreadyLoaded) {
+          const newLink = document.createElement('link');
+          newLink.setAttribute('rel', 'stylesheet');
+          newLink.setAttribute('href', href);
+          document.head.appendChild(newLink);
+        }
+      }
+    });
+
     // 4. Extract and execute page-specific script files (excluding globally persistent ones)
     const newScripts = newDoc.querySelectorAll('script');
     newScripts.forEach(oldScript => {
