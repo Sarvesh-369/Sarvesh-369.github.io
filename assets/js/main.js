@@ -140,10 +140,11 @@ window.portfolioData = null;
 
 async function loadPortfolioData() {
   if (window.portfolioData) return window.portfolioData;
-  const isPageSubdir = window.location.pathname.includes('/pages/');
-  const prefix = isPageSubdir ? '../' : './';
+  // Always fetch from the site root — works on both localhost and GitHub Pages.
+  const jsonUrl = new URL('assets/data/portfolio_extra.json', window.location.origin + '/').href;
+
   try {
-    const response = await fetch(prefix + 'assets/data/portfolio_extra.json');
+    const response = await fetch(jsonUrl);
     if (!response.ok) throw new Error('Failed to load portfolio_extra.json');
     window.portfolioData = await response.json();
     
@@ -180,8 +181,11 @@ function interpolatePortfolioData() {
   document.querySelectorAll('.exp-link-avyott').forEach(el => el.href = p.experience?.avyott?.link || '#');
   document.querySelectorAll('.exp-link-techisy').forEach(el => el.href = p.experience?.techisy?.link || '#');
 
-  // If we are on the education page, render dynamic coursework lists
-  if (window.location.pathname.includes('education.html')) {
+  // Render education dynamics whenever the containers are present in the DOM
+  // (works for both direct load and SPA navigation)
+  if (document.getElementById('cs-courses-container') ||
+      document.getElementById('physics-courses-container') ||
+      document.getElementById('activities-container')) {
     renderEducationPageDynamics();
   }
 }
