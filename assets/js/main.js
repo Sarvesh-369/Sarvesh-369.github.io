@@ -47,6 +47,7 @@ async function navigateToPage(url, pushState = true) {
     // 4. Swap page content
     pageContainer.innerHTML = newContainer.innerHTML;
     document.title = newDoc.title;
+    interpolatePortfolioData();
 
     // 5. Dynamic Stylesheet Injection: Load any page-specific stylesheet links
     const newLinks = newDoc.querySelectorAll('link[rel="stylesheet"]');
@@ -131,3 +132,108 @@ document.addEventListener('click', (e) => {
 window.addEventListener('popstate', (e) => {
   navigateToPage(window.location.href, false);
 });
+
+// ==========================================
+// Portfolio Dynamic Loader & Interpolation Engine
+// ==========================================
+window.portfolioData = null;
+
+async function loadPortfolioData() {
+  if (window.portfolioData) return window.portfolioData;
+  const isPageSubdir = window.location.pathname.includes('/pages/');
+  const prefix = isPageSubdir ? '../' : './';
+  try {
+    const response = await fetch(prefix + 'assets/data/portfolio_extra.json');
+    if (!response.ok) throw new Error('Failed to load portfolio_extra.json');
+    window.portfolioData = await response.json();
+    
+    // Dispatch custom event to notify components (like footer)
+    window.dispatchEvent(new CustomEvent('portfolioDataLoaded'));
+    return window.portfolioData;
+  } catch (err) {
+    console.error('Error fetching portfolio extra data:', err);
+    return null;
+  }
+}
+
+function interpolatePortfolioData() {
+  if (!window.portfolioData) return;
+  const p = window.portfolioData;
+
+  // Update email links
+  document.querySelectorAll('.email-link').forEach(el => {
+    el.href = `mailto:${p.personal.email}`;
+    if (el.dataset.fillText) {
+      el.innerText = p.personal.email;
+    }
+  });
+
+  // Update social links
+  document.querySelectorAll('.social-link-linkedin').forEach(el => el.href = p.personal.socials.linkedin || '#');
+  document.querySelectorAll('.social-link-github').forEach(el => el.href = p.personal.socials.github || '#');
+  document.querySelectorAll('.social-link-scholar').forEach(el => el.href = p.personal.socials.google_scholar || '#');
+  document.querySelectorAll('.social-link-twitter').forEach(el => el.href = p.personal.socials.twitter || '#');
+
+  // Update company links
+  document.querySelectorAll('.exp-link-umd').forEach(el => el.href = p.experience?.umd?.link || '#');
+  document.querySelectorAll('.exp-link-umbc').forEach(el => el.href = p.experience?.umbc?.link || '#');
+  document.querySelectorAll('.exp-link-avyott').forEach(el => el.href = p.experience?.avyott?.link || '#');
+  document.querySelectorAll('.exp-link-techisy').forEach(el => el.href = p.experience?.techisy?.link || '#');
+
+  // If we are on the education page, render dynamic coursework lists
+  if (window.location.pathname.includes('education.html')) {
+    renderEducationPageDynamics();
+  }
+}
+
+function renderEducationPageDynamics() {
+  const p = window.portfolioData;
+  if (!p || !p.education) return;
+
+  // CS Courses
+  const csContainer = document.getElementById('cs-courses-container');
+  if (csContainer && p.education.courses && p.education.courses.cs) {
+    csContainer.innerHTML = p.education.courses.cs.map(course => `
+      <div class="col-12 col-md-6 mb-2">
+        <li class="pl-2" style="list-style: square;">${course}</li>
+      </div>
+    `).join('');
+  }
+
+  // Physics Courses
+  const physicsContainer = document.getElementById('physics-courses-container');
+  if (physicsContainer && p.education.courses && p.education.courses.physics) {
+    physicsContainer.innerHTML = p.education.courses.physics.map(course => `
+      <div class="col-12 col-md-6 mb-2">
+        <li class="pl-2" style="list-style: square;">${course}</li>
+      </div>
+    `).join('');
+  }
+
+  // Activities
+  const activitiesContainer = document.getElementById('activities-container');
+  if (activitiesContainer && p.education.activities) {
+    activitiesContainer.innerHTML = p.education.activities.map(act => `
+      <div class="row mb-2">
+        <div class="col-12">
+          <ul class="pb-0 mb-1">
+            <li class="activity-lemos">
+              <span class="activity-names" style="font-weight: bold; color: var(--blue-medium);">${act.name}:</span> 
+              <span>${act.description}</span>
+              ${act.link ? `<a class="ml-2" href="${act.link}" target="_blank">Reference Link <i class="fa-solid fa-up-right-from-square small"></i></a>` : ''}
+            </li>
+          </ul>
+        </div>
+      </div>
+    `).join('');
+  }
+}
+
+// Auto-run on first load
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    loadPortfolioData().then(() => interpolatePortfolioData());
+  });
+} else {
+  loadPortfolioData().then(() => interpolatePortfolioData());
+}
