@@ -15,8 +15,8 @@ async function navigateToPage(url, pushState = true) {
   pageContainer.classList.add('fade-out');
 
   try {
-    // 2. Fetch target page concurrently
-    const response = await fetch(url);
+    // 2. Fetch target page concurrently (bypass local browser cache to get fresh markup)
+    const response = await fetch(url, { cache: 'no-cache' });
     if (!response.ok) throw new Error('Failed to fetch page');
     const htmlText = await response.text();
 
