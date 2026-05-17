@@ -170,3 +170,65 @@ h1, h2, h3, h4, h5, h6 {
 .social-icons {
   list-style-type: none !important;
 }
+
+/* --- Global Premium Button Styles --- */
+.btn-blue {
+  font-family: 'Ubuntu Sans', sans-serif !important;
+  color: var(--white-ish) !important;
+  background-color: var(--blue-light) !important;
+  border: 2px solid var(--blue-medium) !important;
+  border-radius: 4px !important;
+  padding: 0.35rem 0.95rem !important; /* Premium generous padding */
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  vertical-align: middle !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06) !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+}
+
+/* Prevent nested link tag background color leak */
+.btn-blue a,
+.btn-blue a:hover,
+.btn-blue a:focus,
+.btn-blue a:active {
+  color: var(--white-ish) !important;
+  background-color: transparent !important;
+  border: none !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Icon style inside button */
+.btn-blue i {
+  color: var(--white-ish) !important;
+  font-size: 0.95rem !important;
+  margin-left: 0.45rem !important;
+  transition: transform 0.2s ease !important;
+}
+
+/* Hover effects */
+.btn-blue:hover {
+  background-color: var(--blue-medium) !important;
+  border-color: var(--blue-medium) !important;
+  color: var(--white-ish) !important;
+  transform: translateY(-1.5px) !important;
+  box-shadow: 0 4px 8px rgba(0, 119, 182, 0.22) !important;
+  text-decoration: none !important;
+}
+
+.btn-blue:hover i {
+  transform: scale(1.15) !important;
+}
+
+/* Ensure no conflicts with bootstrap or standard buttons */
+button.btn-blue {
+  line-height: inherit !important;
+}
