@@ -178,8 +178,8 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--blue-light) !important;
   border: 2px solid var(--blue-medium) !important;
   border-radius: 4px !important;
-  padding: 0.35rem 0.95rem !important; /* Premium generous padding */
-  font-size: 0.9rem !important;
+  padding: 0.2rem 0.65rem !important; /* Premium compact padding */
+  font-size: 0.82rem !important;
   font-weight: 500 !important;
   transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
   display: inline-flex !important;
@@ -209,8 +209,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Icon style inside button */
 .btn-blue i {
   color: var(--white-ish) !important;
-  font-size: 0.95rem !important;
-  margin-left: 0.45rem !important;
+  font-size: 0.85rem !important;
+  margin-left: 0.35rem !important;
   transition: transform 0.2s ease !important;
 }
 
