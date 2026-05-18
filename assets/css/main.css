@@ -121,7 +121,9 @@ h1, h2, h3, h4, h5, h6 {
 
 #page-container {
   position: relative;
-  min-height: 93vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   /* Smooth page transition animation */
   animation: pageFadeIn 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -154,18 +156,13 @@ h1, h2, h3, h4, h5, h6 {
 }
   
 #content-wrap {
-    /* padding-bottom: 100px;    Footer height */
-    padding-bottom: 2.5rem;    /*Footer height*/
-    /* padding-top: 5rem; */
+    padding-bottom: 2.5rem;
 }
 
 #footer {
-    position: absolute;
-    bottom: 0;
+    margin-top: auto;
     width: 100%;
-    /* height: 100px;            Footer height */
-    height: 2.5rem;            /*Footer height*/
-    
+    position: relative;
 }
 
 /* Card override for design consistency with Publications page */
