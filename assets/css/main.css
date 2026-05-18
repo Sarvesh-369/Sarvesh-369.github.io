@@ -54,8 +54,17 @@ nav {
     font-weight: 700;
 }
 
-.nav-link{
-	color:var(--light-gray) !important;
+.navbar-nav .nav-link{
+	color: var(--light-gray) !important;
+	border-bottom: 2px solid transparent;
+	transition: all 0.2s ease;
+}
+
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-link.active {
+	color: #ffffff !important;
+	font-weight: 700 !important;
+	border-bottom: 2px solid var(--blue-light) !important;
 }
 
 .navbar-expand-lg{

@@ -9,6 +9,13 @@ class Header extends HTMLElement {
     const isPageSubdir = window.location.pathname.includes('/pages/');
     const prefix = isPageSubdir ? '../' : './';
     
+    const path = window.location.pathname;
+    const isEducation = path.includes('education.html');
+    const isExperience = path.includes('experience.html');
+    const isProjects = path.includes('projects.html');
+    const isPublications = path.includes('publications.html');
+    const isHome = !isEducation && !isExperience && !isProjects && !isPublications;
+    
     this.innerHTML = `
       <header>
         <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
@@ -18,19 +25,19 @@ class Header extends HTMLElement {
         </button>
         <div class="navbar-collapse collapse" id="navbarCollapse" style="">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item mr-2">
+            <li class="nav-item mr-2 ${isHome ? 'active' : ''}">
               <a class="nav-link" href="${prefix}index.html">Home</a>
             </li>
-            <li class="nav-item mr-2">
+            <li class="nav-item mr-2 ${isEducation ? 'active' : ''}">
               <a class="nav-link" href="${prefix}pages/education.html">Education</a>
             </li>
-            <li class="nav-item mr-2">
+            <li class="nav-item mr-2 ${isExperience ? 'active' : ''}">
               <a class="nav-link" href="${prefix}pages/experience.html">Experience</a>
             </li>
-            <li class="nav-item mr-2">
+            <li class="nav-item mr-2 ${isProjects ? 'active' : ''}">
               <a class="nav-link" href="${prefix}pages/projects.html">Projects</a>
             </li> 
-            <li class="nav-item mr-2">
+            <li class="nav-item mr-2 ${isPublications ? 'active' : ''}">
               <a class="nav-link" href="${prefix}pages/publications.html">Publications</a>
             </li>
           </ul>
