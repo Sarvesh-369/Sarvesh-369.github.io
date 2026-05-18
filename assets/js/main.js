@@ -33,8 +33,8 @@ async function navigateToPage(url, pushState = true) {
       return;
     }
 
-    // Wait for the exit animation to finish (220ms)
-    await new Promise(resolve => setTimeout(resolve, 220));
+    // Wait for the exit animation to finish (80ms)
+    await new Promise(resolve => setTimeout(resolve, 80));
 
     // Abort if a newer page transition has been triggered in the meantime
     if (currentTransitionId !== activeTransitionId) return;
