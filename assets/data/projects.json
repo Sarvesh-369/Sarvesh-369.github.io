@@ -41,7 +41,7 @@
     "duration": "(Sep 2025 - Present)",
     "description": "Created a parametric evaluation framework to systematically map video model performance across variations in frequency, count, temporal span, clutter, and scale.",
     "tools": ["Python", "VLM Evaluation", "Synthetic Data Generation", "Temporal Reasoning", "Model Scaling Analysis"],
-    "github_link": "https://github.com/Sarvesh-369",
+    "github_link": "https://github.com/Sarvesh-369/The_Low_Frequency_Trap",
     "icon": "fa-sliders",
     "gradient": "linear-gradient(135deg, #00b4d8, #0077b6)",
     "details": {
@@ -75,7 +75,7 @@
     "duration": "(Jul 2025 - Aug 2025)",
     "description": "Evaluated process supervision in mathematical reasoning by training step-level Process Reward Models (PRMs) versus outcome-only verifiers.",
     "tools": ["PRMs", "GSM8K", "Step-Level Verifiers", "Python"],
-    "github_link": "https://github.com/Sarvesh-369",
+    "github_link": "https://github.com/Sarvesh-369/Reward_Guided_Mathematical_Reasoning",
     "icon": "fa-calculator",
     "gradient": "linear-gradient(135deg, #4361ee, #4cc9f0)",
     "details": {
@@ -92,7 +92,7 @@
     "duration": "(Feb 2025 - May 2025)",
     "description": "Automated LLVM-IR low-level deobfuscation under Bogus Control Flow (BCF) and Control Flow Flattening (CFF) using reasoner LLMs.",
     "tools": ["LLVM-IR", "Chain of Thought", "Deobfuscation", "Python"],
-    "github_link": "https://github.com/Sarvesh-369",
+    "github_link": "https://github.com/Sarvesh-369/On-the-Emergent-Capabilities-of-Code-Deobfuscation-by-Large-Language-Models",
     "icon": "fa-code",
     "gradient": "linear-gradient(135deg, #3f37c9, #7209b7)",
     "details": {
@@ -109,7 +109,7 @@
     "duration": "(Aug 2024 - Dec 2024)",
     "description": "Developed CPER, a three-module dialogue system that identifies knowledge gaps and asks targeted questions to align with a user's dynamic persona.",
     "tools": ["Conversational AI", "Information Theory", "HuggingFace"],
-    "github_link": "https://github.com/Sarvesh-369",
+    "github_link": "https://github.com/Sarvesh-369/An-Approach-to-Resolving-Persona-Knowledge-Gap-in-Multi-Turn-Conversations-Using-LLMs",
     "icon": "fa-comments",
     "gradient": "linear-gradient(135deg, #03045e, #669bbc)",
     "details": {
@@ -126,6 +126,7 @@
     "duration": "(Jan 2024 - May 2024)",
     "description": "Developed an LLM-driven planning and code-generation system to automate the mining and execution of ML research ideas from papers.",
     "tools": ["RAG", "Code Synthesis", "Iterative Repair", "Python"],
+    "github_link": "https://github.com/Sarvesh-369/Automated-Plan-and-Code-Synthesis-for-Continual-Machine-Learning-Ideation",
     "icon": "fa-gears",
     "gradient": "linear-gradient(135deg, #588157, #a3b18a)",
     "details": {
