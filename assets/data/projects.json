@@ -2,120 +2,188 @@
   {
     "category": "Research Projects",
     "id": "1",
-    "title": "Towards Mitigating Hallucinations in Large Vision-Language Models by Refining Textual Embeddings",
+    "title": "VisAlign: Mitigating Hallucinations via Refining Textual Embeddings",
     "affiliation": "University of Maryland, College Park (UMD)",
-    "duration": "(Jul 2025 - Jan 2026)",
+    "duration": "(Oct 2025 - Present)",
     "description": "Investigated text-embedding space refinement in the Qwen2-VL architecture to enhance visual grounding and reduce hallucinations.",
     "tools": ["Qwen2-VL", "PyTorch", "HuggingFace", "Python"],
     "github_link": "https://github.com/Sarvesh-369",
     "icon": "fa-brain",
     "gradient": "linear-gradient(135deg, #0077b6, #0096c7)",
     "details": {
-      "Problem": "Large vision language models tend to over-rely on language tokens because visual embeddings are simply appended to the text stream, which leads to weak visual grounding and hallucination.",
-      "What I did": "Implemented VisAlign refinement experiments in the OpenQwen2VL stack and ran the full pretraining and evaluations. Integrated average pooled visual features into textual embeddings at inference, executed experiments, and prepared the result tables and plots for the paper.",
-      "Impact and Results": "Successfully integrated VisAlign into OpenQwen2VL and ran full pretraining plus eval scripts. Preliminary benchmarks suggest lower hallucination rates with significantly improved visual grounding."
+      "Problem": "Large vision language models tend to over rely on language tokens because visual embeddings are simply appended to the text stream, which leads to weak visual grounding and hallucination.",
+      "What I did": "Implemented the VisAlign refinement in the OpenQwen2VL stack and ran the full pretraining and evaluations. Integrated average pooled visual features into textual embeddings at inference, executed experiments, and prepared the result tables and plots for the paper.",
+      "Impact and Results": "Integrated VisAlign into OpenQwen2VL and ran full pretraining plus eval scripts. Preliminary benchmarks suggest lower hallucination rates with improved grounding; full OpenQwen2VL numbers pending. (Published in ACL Findings, 2026)"
     }
   },
   {
     "category": "Research Projects",
     "id": "2",
-    "title": "Temporal Counting Bottleneck in Multimodal Video Models",
+    "title": "Executable Reasoning Traces for Diagnosing Multimodal Video Reasoning",
     "affiliation": "University of Maryland, College Park (UMD)",
-    "duration": "(Sep 2025 - Jan 2026)",
-    "description": "Evaluated scaling limits of video LLMs on high-frequency counting tasks and developed new temporal visual routing baselines.",
-    "tools": ["Video LLMs", "Temporal Routing", "Evaluation", "Python"],
+    "duration": "(Sep 2025 - Present)",
+    "description": "Developed MORSE Trace, a diagnostic evaluation framework generating videos with executable ground-truth reasoning traces to pinpoint visual, temporal, and logical model failures.",
+    "tools": ["Python", "Manim", "Vision-Language Models", "Benchmarking", "Error Analysis"],
     "github_link": "https://github.com/Sarvesh-369",
     "icon": "fa-video",
     "gradient": "linear-gradient(135deg, #0096c7, #03045e)",
     "details": {
-      "Problem": "Self-improvement and evaluation of smaller video models on unsolved visual reasoning tasks require scalable, stress-tested environments, particularly around frequency and temporal event metrics.",
-      "What I did": "Built an end-to-end stress-testing and pipeline agent that programmatically synthesizes task variants with tunable counting and frequency difficulties, routing curated datasets directly to fine-tuning and evaluation harnesses.",
-      "Impact and Results": "Created a highly robust 2D synthetic image/video pipeline that maps reasoning failure thresholds. Demonstrated that scaling context lengths does not improve counting accuracy unless paired with precise temporal visual-feature routing."
+      "Problem": "Traditional multimodal video reasoning evaluation relies solely on final-answer accuracy, making it impossible to diagnose why or where models fail (e.g., missed visual events, temporal ordering, state loss, or faulty inference).",
+      "What I did": "Developed MORSE Trace, a diagnostic evaluation framework for multimodal video reasoning that generates videos with executable ground-truth reasoning traces instead of relying only on final-answer accuracy. Built a programmatic video-generation pipeline that captures state transitions, visual events, and reasoning operations required to solve each task.",
+      "Impact and Results": "Designed trace-level evaluation to localize model failures into missed visual events, incorrect temporal ordering, object-state loss, hallucinations, and faulty inference. Evaluated multimodal models on spatial and temporal reasoning tasks, showing persistent failures in temporal tracking, logical reasoning, and hallucination under increasing task complexity. (Under Review at ECCV, 2026)"
     }
   },
   {
     "category": "Research Projects",
     "id": "3",
-    "title": "Structured Prompting & Verification for LLM-based Planning",
-    "affiliation": "University of Maryland, Baltimore County (UMBC)",
-    "duration": "(Nov 2024 - May 2025)",
-    "description": "Built a modular planning loop integrating LLM state generation with classical PDDL-based syntax verification.",
-    "tools": ["LLM Planning", "PDDL", "DSPy", "Python"],
+    "title": "Parametric Capability Profiling for Multimodal Video Reasoning",
+    "affiliation": "University of Maryland, College Park (UMD)",
+    "duration": "(Sep 2025 - Present)",
+    "description": "Created a parametric evaluation framework to systematically map video model performance across variations in frequency, count, temporal span, clutter, and scale.",
+    "tools": ["Python", "VLM Evaluation", "Synthetic Data Generation", "Temporal Reasoning", "Model Scaling Analysis"],
     "github_link": "https://github.com/Sarvesh-369",
-    "icon": "fa-route",
-    "gradient": "linear-gradient(135deg, #0077b6, #003566)",
+    "icon": "fa-sliders",
+    "gradient": "linear-gradient(135deg, #00b4d8, #0077b6)",
     "details": {
-      "Problem": "Natural-language described search problems are underspecified and hard to ground into executable search procedures. Pure LLM prompting is brittle and lacks verification, which leads to incorrect plans and poor generalization across domains.",
-      "What I built": "ATLAS, a modular thought-of-search pipeline designed to parse tasks described in natural language into structured representations. It combines components using a unit-test feedback loop and carries out a validator-guided breadth-first search over candidate programs and plans. Developed an ablation suite and evaluation tool to identify the roles of tests, feedback, and search.",
-      "Impact and Results": "ATLAS solved 120/130 tasks (92.3%) across 13 classical planning domains described in ACPbench, versus the strongest baseline 112/130 (86.2%)."
+      "Problem": "Assessing video-language model robustness requires systematic, stress-tested benchmarks, but standard datasets lack parameterized control over event frequency, clutter, or object scale.",
+      "What I did": "Developed a parametric capability profiling framework to evaluate video-language models by systematically varying event frequency, event count, temporal span, clutter, and object scale. Created controlled temporal and spatial reasoning tasks, including State Transition, Blinking, Bouncing Ball, and Domino Counting, with deterministic executable traces for ground-truth validation. Benchmarked Qwen3-VL, Molmo2, and InternVL3.5 models across parameterized difficulty grids using exact-match accuracy across randomized seeds.",
+      "Impact and Results": "Identified a low-frequency temporal reasoning trap, where models failed to count simple events beyond small thresholds even when events were slow and visually distinct. Showed that scaling model size from 8B to 235B parameters improved average accuracy but did not meaningfully expand the temporal success region, suggesting scale alone is insufficient for robust temporal reasoning. (Under Review at ECCV, 2026)"
     }
   },
   {
     "category": "Research Projects",
     "id": "4",
-    "title": "CPER: Persona Knowledge Gap Resolution in Multi-Turn Conversations",
+    "title": "PlanForge: Automated Thought of Search for Language Described Search Problems",
+    "affiliation": "University of Maryland, Baltimore County (UMBC)",
+    "duration": "(May 2025 - Present)",
+    "description": "Built a modular planning thought-of-search loop integrating LLM state generation with a unit-test feedback loop and breadth-first search.",
+    "tools": ["LLM Planning", "Thought-of-Search", "DSPy", "Python"],
+    "github_link": "https://github.com/Sarvesh-369",
+    "icon": "fa-route",
+    "gradient": "linear-gradient(135deg, #0077b6, #003566)",
+    "details": {
+      "Problem": "Natural-language described search problems are underspecified and hard to ground into executable search procedures. Pure LLM prompting is brittle and lacks verification, which leads to incorrect plans and poor generalization across domains.",
+      "What I built": "ATLAS, a modular thought-of-search pipeline, was designed to parse tasks described in natural language into structured representations. It combines components using a unit-test feedback loop and carries out a validator-guided breadth-first search over candidate programs and plans. An ablation suite and evaluation tool were developed to identify the roles of tests, feedback, and search.",
+      "Impact and Results": "ATLAS solved 120/130 tasks (92.3%) across 13 classical planning domains described in ACPbench, versus strongest baseline 112/130 (86.2%)."
+    }
+  },
+  {
+    "category": "Research Projects",
+    "id": "5",
+    "title": "Multi-Step Reasoning Using Process Reward Models",
+    "affiliation": "University of Maryland, College Park (UMD)",
+    "duration": "(Jul 2025 - Aug 2025)",
+    "description": "Evaluated process supervision in mathematical reasoning by training step-level Process Reward Models (PRMs) versus outcome-only verifiers.",
+    "tools": ["PRMs", "GSM8K", "Step-Level Verifiers", "Python"],
+    "github_link": "https://github.com/Sarvesh-369",
+    "icon": "fa-calculator",
+    "gradient": "linear-gradient(135deg, #4361ee, #4cc9f0)",
+    "details": {
+      "Problem": "Outcome-only supervision in math reasoning rewards the final answer but ignores the quality of intermediate steps. This leads to brittle chains of thought, unnecessarily long solutions, and failures that are hard to diagnose or correct. Our hypothesis is that using PRM would produce more correct steps.",
+      "What I built": "An end-to-end PRM pipeline that generates multi-step trajectories, assigns weak step-level labels using verifier/self-consistency signals, and uses that score at inference for PRM-guided answers.",
+      "Impact and Results": "Experimenting on GSM8K PRM guidance underperformed both baselines across held out sets. Our initial results demonstrates that Majority voting was consistently strongest with a 92% accuracy compared to PRM with a 68% accuracy."
+    }
+  },
+  {
+    "category": "Research Projects",
+    "id": "6",
+    "title": "Large Language Models for Code Deobfuscation",
+    "affiliation": "University of Maryland, Baltimore County (UMBC)",
+    "duration": "(Feb 2025 - May 2025)",
+    "description": "Automated LLVM-IR low-level deobfuscation under Bogus Control Flow (BCF) and Control Flow Flattening (CFF) using reasoner LLMs.",
+    "tools": ["LLVM-IR", "Chain of Thought", "Deobfuscation", "Python"],
+    "github_link": "https://github.com/Sarvesh-369",
+    "icon": "fa-code",
+    "gradient": "linear-gradient(135deg, #3f37c9, #7209b7)",
+    "details": {
+      "Problem": "Automating deobfuscation of low level LLVM-IR is difficult with existing tools that struggle under Bogus Control Flow and Control Flow Flattening, and there is no standardized AI evaluation for this setting.",
+      "What I did": "Led the AI modeling and evaluation track. Designed Chain of Thought procedural prompts with global variable tracing. Built an LLVM-IR analysis module to extract basic blocks and control flow graphs and to compute Cyclomatic Complexity and instruction counts. Implemented an adjustment step to normalize identifiers for fair Levenshtein similarity. Created an evaluation harness using Code Reduction, Levenshtein Similarity, and Cyclomatic Complexity and benchmarked four reasoner models on O-LLVM obfuscations.",
+      "Impact and Results": "Established a 36 sample LLVM-IR benchmark across BCF, CFF, and BCF-CFF. Best model achieved 76.9% code reduction and 85% similarity on BCF-CFF with Cyclomatic Complexity reduced from 91 to 13.5 (85%). (Published at WoRMA, 2026)"
+    }
+  },
+  {
+    "category": "Research Projects",
+    "id": "7",
+    "title": "CPER: From Guessing to Asking (Persona Knowledge Gap Resolution)",
     "affiliation": "University of Maryland, Baltimore County (UMBC)",
     "duration": "(Aug 2024 - Dec 2024)",
-    "description": "Developed a multi-turn clarification model resolving gaps between an LLM's static persona and real-time user inputs.",
+    "description": "Developed CPER, a three-module dialogue system that identifies knowledge gaps and asks targeted questions to align with a user's dynamic persona.",
     "tools": ["Conversational AI", "Information Theory", "HuggingFace"],
     "github_link": "https://github.com/Sarvesh-369",
     "icon": "fa-comments",
     "gradient": "linear-gradient(135deg, #03045e, #669bbc)",
     "details": {
       "Problem": "Large language models in multi-turn chats miss user-specific context, creating a persona knowledge gap that leads to generic, incoherent, or misaligned replies.",
-      "What I did": "Designed CPER, a three-module framework that quantifies uncertainty, asks targeted clarifying questions, and generates persona-aligned responses. Implemented and evaluated on CCPE-M and ESConv datasets.",
-      "Impact and Results": "Human A/B judges preferred CPER over strong baselines by +42% on CCPE-M and +27% on ESConv, with strongest gains in long (12+ turn) conversations. GPT-4o preference reached 60.78%. Published at NAACL 2025 SRW."
+      "What I did": "Designed CPER, a three-module framework that quantifies uncertainty, asks targeted clarifying questions, and generates persona-aligned responses. Implemented and evaluated on CCPE-M and ESConv.",
+      "Impact and Results": "Human A/B judges preferred CPER over strong baselines by +42% on CCPE-M and +27% on ESConv, with strongest gains in long (12+ turn) conversations; GPT-4o preference on CCPE-M reached 60.78%. (Published at NAACL 2025 SRW)"
+    }
+  },
+  {
+    "category": "Research Projects",
+    "id": "8",
+    "title": "Automated Planning and Code Synthesis for Continual ML Ideation",
+    "affiliation": "TCS Research - Datalab, APPCAIR",
+    "duration": "(Jan 2024 - May 2024)",
+    "description": "Developed an LLM-driven planning and code-generation system to automate the mining and execution of ML research ideas from papers.",
+    "tools": ["RAG", "Code Synthesis", "Iterative Repair", "Python"],
+    "github_link": "https://github.com/Sarvesh-369",
+    "icon": "fa-gears",
+    "gradient": "linear-gradient(135deg, #588157, #a3b18a)",
+    "details": {
+      "Problem": "Turning new research ideas into runnable changes in an existing ML pipeline is slow and inconsistent. Teams need automatic extraction of ideas from papers and automatic plan to code execution with minimal manual effort.",
+      "What was built": "An LLM driven system that mines techniques and goals from a set of papers with a RAG workflow, then produces a modification plan, and generates, debugs, and finalizes code.",
+      "Impact and Results": "Internal runs showed about a 30% increase in executable code yield from optimized prompting and iterative repair, and successful end to end execution of planned modifications with minimal manual intervention."
     }
   },
   {
     "category": "Industry Projects",
-    "id": "5",
-    "title": "Multimodal RAG & Chatbot Systems for Enterprise Documents",
+    "id": "9",
+    "title": "Multimodal RAG Chatbot with Model Context Protocol (MCP) Integration",
     "affiliation": "Avyott (AI Consulting)",
     "duration": "(Aug 2025 - Present)",
-    "description": "Built enterprise chatbots indexing structured PDFs, images, and tables with precise user intent verification.",
-    "tools": ["RAG", "LlamaIndex", "VectorDB", "Python"],
+    "description": "Shipped an enterprise-grade multimodal RAG chatbot integrating custom MCP server endpoints for ticket lifecycle management and conversational clarification.",
+    "tools": ["RAG", "MCP", "LlamaIndex", "Node.js", "Python"],
     "github_link": "https://github.com/Sarvesh-369",
     "icon": "fa-magnifying-glass",
     "gradient": "linear-gradient(135deg, #005f73, #0a9396)",
     "details": {
-      "Problem": "Standard search frameworks struggle to ground answers accurately across structured/unstructured PDFs, diagrams, tables, and raw texts, leading to generic or hallucinated enterprise responses.",
-      "What I built": "Shipped a multimodal RAG chatbot embedded inside client products, able to process text, images, and tables for grounded and cited answers. Integrated an intent verification layer to double-check user questions.",
-      "Impact and Results": "Deployed the system for active enterprise use at IPCA and Taj, securely integrating it with internal knowledge bases and existing client workflows."
+      "Problem": "Enterprise customers need to retrieve grounded information across mixed PDFs, diagrams, and tables, as well as seamlessly execute ticketing actions (Jira, Service Desk) without high UI friction.",
+      "What I built": "Designed and shipped a multimodal RAG chatbot processing text, images, and tables with precise intent verification. Integrated custom Model Context Protocol (MCP) servers enabling chat-driven ticket creation, semantic search, and status synchronization. Added a clarification step based on my multi-turn LLM research to improve intent capture.",
+      "Impact and Results": "Deployed the chatbot securely for active enterprise clients at IPCA and Taj, reducing manual ticketing overhead by over 30% and significantly enhancing search accuracy."
     }
   },
   {
     "category": "Industry Projects",
-    "id": "6",
-    "title": "Model Context Protocol (MCP) Ticketing Server",
-    "affiliation": "Avyott (AI Consulting)",
-    "duration": "(Oct 2025 - Present)",
-    "description": "Developed custom MCP server endpoints bridging natural language chat interfaces with enterprise ticketing systems.",
-    "tools": ["MCP", "Node.js", "REST APIs", "Security"],
-    "github_link": "https://github.com/Sarvesh-369",
-    "icon": "fa-server",
-    "gradient": "linear-gradient(135deg, #0a9396, #94d2bd)",
-    "details": {
-      "Problem": "Interacting with ticketing workflows (Jira, Service Desk) historically required navigating complex UIs, leading to high administrative friction for operational staff.",
-      "What I built": "Wrote and deployed Model Context Protocol (MCP) servers to connect with multiple ticketing systems, enabling chat-driven ticket creation, semantic searching, and status synchronization directly through LLM workflows.",
-      "Impact and Results": "Bridged natural language interfaces with enterprise backends securely, reducing manual ticketing overhead for customer support teams by over 30%."
-    }
-  },
-  {
-    "category": "Industry Projects",
-    "id": "7",
-    "title": "Computer Vision Duplicate Bill & Resume Matcher Pipelines",
+    "id": "10",
+    "title": "Computer Vision Duplicate Bill Identification System",
     "affiliation": "Techisy (AI / Software Intern)",
     "duration": "(May 2024 - Jul 2024)",
-    "description": "Developed OCR duplicate bill image matching (CLIP) and FAISS resume classification pipelines.",
-    "tools": ["CLIP", "OCR", "LangChain", "FAISS"],
+    "description": "Built an AI duplicate invoice identification pipeline using OCR text parsing and CLIP multimodal embeddings.",
+    "tools": ["CLIP", "OCR", "OpenAI Embeddings", "Streamlit"],
     "github_link": "https://github.com/Sarvesh-369",
-    "icon": "fa-passport",
-    "gradient": "linear-gradient(135deg, #003049, #d62828)",
+    "icon": "fa-receipt",
+    "gradient": "linear-gradient(135deg, #d62828, #f77f00)",
     "details": {
-      "Problem": "Financial audits lose significant capital to duplicate bill invoicing, while HR recruiting departments waste valuable hours manually sorting unstructured resumes against job specs.",
-      "What I built": "Built an AI-powered duplicate bill identification system combining OCR text models and CLIP embeddings to match invoice duplicates with 95% accuracy. Designed a resume matching pipeline using LangChain, Ollama, and FAISS vector databases.",
-      "Impact and Results": "Successfully deployed working web prototypes using Streamlit, facilitating simplified recruiter screening and reducing manual resume audit times by 40%."
+      "Problem": "Corporate financial audits lose significant capital to duplicate bill invoicing and fraud due to subtle visual and textual duplicate matches.",
+      "What I built": "Developed an AI-powered duplicate bill identification system combining OCR text extraction and CLIP visual embeddings to compare and match invoice duplicates.",
+      "Impact and Results": "Deployed a working prototype in Streamlit, achieving 95% identification accuracy and substantially reducing auditing friction for finance teams."
+    }
+  },
+  {
+    "category": "Industry Projects",
+    "id": "11",
+    "title": "RAG-based Resume Matching & Classification Pipeline",
+    "affiliation": "Techisy (AI / Software Intern)",
+    "duration": "(May 2024 - Jul 2024)",
+    "description": "Developed an automated candidate-to-job matching solution using LangChain, Ollama, and FAISS vector indices.",
+    "tools": ["LangChain", "Ollama", "FAISS", "RAG", "Streamlit"],
+    "github_link": "https://github.com/Sarvesh-369",
+    "icon": "fa-address-card",
+    "gradient": "linear-gradient(135deg, #003049, #669bbc)",
+    "details": {
+      "Problem": "Recruitment teams waste significant hours manually parsing and classifying unstructured resumes against complex job descriptions.",
+      "What I built": "Designed a RAG-based resume matching and scoring pipeline using LangChain, Ollama (Llama 3), and FAISS vector databases to align and index applicant skills.",
+      "Impact and Results": "Streamlined HR screening workflows, reducing manual review efforts by 40% with functional Streamlit prototypes."
     }
   }
 ]

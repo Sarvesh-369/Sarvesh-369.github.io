@@ -27,7 +27,7 @@
         <div class="container mt-4">
             <h5><b>__ Research Projects _____________________</b></h5>
 
-            <!-- Project 1 -->
+            <!-- Project 1: VisAlign -->
             <div class="mt-3 card shadow-sm">
                 <div class="card-body">
                     <div class="row mt-2 mt-md-0">
@@ -37,8 +37,8 @@
                             </div>
                         </div>
                         <div class="col-md-10">
-                            <h4 class="card-title mb-0" style="color: var(--blue-dark);">Towards Mitigating Hallucinations in Large Vision-Language Models by Refining Textual Embeddings</h4>
-                            <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> University of Maryland, College Park (UMD)</span> (Jul 2025 - Jan 2026)</h6>
+                            <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">VisAlign: Mitigating Hallucinations via Refining Textual Embeddings</h4>
+                            <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> University of Maryland, College Park (UMD)</span> (Oct 2025 - Present)</h6>
                             <p class="card-text mt-2 mb-2 text-justify small">
                                 Investigated text-embedding space refinement in the Qwen2-VL architecture to enhance visual grounding and reduce hallucinations.
                             </p>
@@ -62,9 +62,9 @@
                             <!-- Collapse details -->
                             <div id="projectCollapse-1" class="collapse mt-3">
                                 <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.5;">
-                                    <p class="mb-2"><strong>Problem:</strong> Large vision language models tend to over-rely on language tokens because visual embeddings are simply appended to the text stream, which leads to weak visual grounding and hallucination.</p>
-                                    <p class="mb-2"><strong>What I did:</strong> Implemented VisAlign refinement experiments in the OpenQwen2VL stack and ran the full pretraining and evaluations. Integrated average pooled visual features into textual embeddings at inference, executed experiments, and prepared the result tables and plots for the paper.</p>
-                                    <p class="mb-0"><strong>Impact and Results:</strong> Successfully integrated VisAlign into OpenQwen2VL and ran full pretraining plus eval scripts. Preliminary benchmarks suggest lower hallucination rates with significantly improved visual grounding.</p>
+                                    <p class="mb-2"><strong>Problem:</strong> Large vision language models tend to over rely on language tokens because visual embeddings are simply appended to the text stream, which leads to weak visual grounding and hallucination.</p>
+                                    <p class="mb-2"><strong>What I did:</strong> Implemented the VisAlign refinement in the OpenQwen2VL stack and ran the full pretraining and evaluations. Integrated average pooled visual features into textual embeddings at inference, executed experiments, and prepared the result tables and plots for the paper.</p>
+                                    <p class="mb-0"><strong>Impact and Results:</strong> Integrated VisAlign into OpenQwen2VL and ran full pretraining plus eval scripts. Preliminary benchmarks suggest lower hallucination rates with improved grounding; full OpenQwen2VL numbers pending. <strong>(Published in ACL Findings, 2026)</strong></p>
                                 </div>
                             </div>
                         </div>
@@ -72,7 +72,7 @@
                 </div>
             </div>
 
-            <!-- Project 2 -->
+            <!-- Project 2: Executable Reasoning Traces -->
             <div class="mt-3 card shadow-sm">
                 <div class="card-body">
                     <div class="row mt-2 mt-md-0">
@@ -82,17 +82,18 @@
                             </div>
                         </div>
                         <div class="col-md-10">
-                            <h4 class="card-title mb-0" style="color: var(--blue-dark);">Temporal Counting Bottleneck in Multimodal Video Models</h4>
-                            <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> University of Maryland, College Park (UMD)</span> (Sep 2025 - Jan 2026)</h6>
+                            <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">Executable Reasoning Traces for Diagnosing Multimodal Video Reasoning</h4>
+                            <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> University of Maryland, College Park (UMD)</span> (Sep 2025 - Present)</h6>
                             <p class="card-text mt-2 mb-2 text-justify small">
-                                Evaluated scaling limits of video LLMs on high-frequency counting tasks and developed new temporal visual routing baselines.
+                                Developed MORSE Trace, a diagnostic evaluation framework generating videos with executable ground-truth reasoning traces to pinpoint visual, temporal, and logical model failures.
                             </p>
 
                             <div class="mb-2">
-                                <span class="badge p-1 sw-tools">Video LLMs</span>
-                                <span class="badge p-1 sw-tools">Temporal Routing</span>
-                                <span class="badge p-1 sw-tools">Evaluation</span>
                                 <span class="badge p-1 sw-tools">Python</span>
+                                <span class="badge p-1 sw-tools">Manim</span>
+                                <span class="badge p-1 sw-tools">Vision-Language Models</span>
+                                <span class="badge p-1 sw-tools">Benchmarking</span>
+                                <span class="badge p-1 sw-tools">Error Analysis</span>
                             </div>
 
                             <div class="mt-2">
@@ -107,9 +108,9 @@
                             <!-- Collapse details -->
                             <div id="projectCollapse-2" class="collapse mt-3">
                                 <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.5;">
-                                    <p class="mb-2"><strong>Problem:</strong> Self-improvement and evaluation of smaller video models on unsolved visual reasoning tasks require scalable, stress-tested environments, particularly around frequency and temporal event metrics.</p>
-                                    <p class="mb-2"><strong>What I did:</strong> Built an end-to-end stress-testing and pipeline agent that programmatically synthesizes task variants with tunable counting and frequency difficulties, routing curated datasets directly to fine-tuning and evaluation harnesses.</p>
-                                    <p class="mb-0"><strong>Impact and Results:</strong> Created a highly robust 2D synthetic image/video pipeline that maps reasoning failure thresholds. Demonstrated that scaling context lengths does not improve counting accuracy unless paired with precise temporal visual-feature routing.</p>
+                                    <p class="mb-2"><strong>Problem:</strong> Traditional multimodal video reasoning evaluation relies solely on final-answer accuracy, making it impossible to diagnose why or where models fail (e.g., missed visual events, temporal ordering, object-state loss, or faulty inference).</p>
+                                    <p class="mb-2"><strong>What I did:</strong> Developed **MORSE Trace**, a diagnostic evaluation framework for multimodal video reasoning that generates videos with executable ground-truth reasoning traces instead of relying only on final-answer accuracy. Built a programmatic video-generation pipeline that captures state transitions, visual events, and reasoning operations required to solve each task.</p>
+                                    <p class="mb-0"><strong>Impact and Results:</strong> Designed trace-level evaluation to localize model failures into missed visual events, incorrect temporal ordering, object-state loss, hallucinations, and faulty inference. Evaluated multimodal models on spatial and temporal reasoning tasks, showing persistent failures in temporal tracking, logical reasoning, and hallucination under increasing task complexity. <strong>(Under Review at ECCV, 2026)</strong></p>
                                 </div>
                             </div>
                         </div>
@@ -117,27 +118,28 @@
                 </div>
             </div>
 
-            <!-- Project 3 -->
+            <!-- Project 3: Parametric Capability Profiling -->
             <div class="mt-3 card shadow-sm">
                 <div class="card-body">
                     <div class="row mt-2 mt-md-0">
                         <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
-                            <div class="rounded d-flex align-items-center justify-content-center" style="width: 100%; height: 110px; background: linear-gradient(135deg, #0077b6, #003566); color: white; border: 1px solid var(--blue-light);">
-                                <i class="fa-solid fa-route fa-3x"></i>
+                            <div class="rounded d-flex align-items-center justify-content-center" style="width: 100%; height: 110px; background: linear-gradient(135deg, #00b4d8, #0077b6); color: white; border: 1px solid var(--blue-light);">
+                                <i class="fa-solid fa-sliders fa-3x"></i>
                             </div>
                         </div>
                         <div class="col-md-10">
-                            <h4 class="card-title mb-0" style="color: var(--blue-dark);">Structured Prompting & Verification for LLM-based Planning</h4>
-                            <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> University of Maryland, Baltimore County (UMBC)</span> (Nov 2024 - May 2025)</h6>
+                            <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">Parametric Capability Profiling for Multimodal Video Reasoning</h4>
+                            <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> University of Maryland, College Park (UMD)</span> (Sep 2025 - Present)</h6>
                             <p class="card-text mt-2 mb-2 text-justify small">
-                                Built a modular planning loop integrating LLM state generation with classical PDDL-based syntax verification.
+                                Created a parametric evaluation framework to systematically map video model performance across variations in frequency, count, temporal span, clutter, and scale.
                             </p>
 
                             <div class="mb-2">
-                                <span class="badge p-1 sw-tools">LLM Planning</span>
-                                <span class="badge p-1 sw-tools">PDDL</span>
-                                <span class="badge p-1 sw-tools">DSPy</span>
                                 <span class="badge p-1 sw-tools">Python</span>
+                                <span class="badge p-1 sw-tools">VLM Evaluation</span>
+                                <span class="badge p-1 sw-tools">Synthetic Data Generation</span>
+                                <span class="badge p-1 sw-tools">Temporal Reasoning</span>
+                                <span class="badge p-1 sw-tools">Model Scaling Analysis</span>
                             </div>
 
                             <div class="mt-2">
@@ -152,9 +154,9 @@
                             <!-- Collapse details -->
                             <div id="projectCollapse-3" class="collapse mt-3">
                                 <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.5;">
-                                    <p class="mb-2"><strong>Problem:</strong> Natural-language described search problems are underspecified and hard to ground into executable search procedures. Pure LLM prompting is brittle and lacks verification, which leads to incorrect plans and poor generalization across domains.</p>
-                                    <p class="mb-2"><strong>What I built:</strong> ATLAS, a modular thought-of-search pipeline designed to parse tasks described in natural language into structured representations. It combines components using a unit-test feedback loop and carries out a validator-guided breadth-first search over candidate programs and plans. Developed an ablation suite and evaluation tool to identify the roles of tests, feedback, and search.</p>
-                                    <p class="mb-0"><strong>Impact and Results:</strong> ATLAS solved 120/130 tasks (92.3%) across 13 classical planning domains described in ACPbench, versus the strongest baseline 112/130 (86.2%).</p>
+                                    <p class="mb-2"><strong>Problem:</strong> Assessing video-language model robustness requires systematic, stress-tested benchmarks, but standard datasets lack parameterized control over event frequency, clutter, or object scale.</p>
+                                    <p class="mb-2"><strong>What I did:</strong> Developed a **parametric capability profiling** framework to evaluate video-language models by systematically varying event frequency, event count, temporal span, clutter, and object scale. Created controlled temporal and spatial reasoning tasks, including **State Transition**, **Blinking**, **Bouncing Ball**, and **Domino Counting**, with deterministic executable traces for ground-truth validation. Benchmarked Qwen3-VL, Molmo2, and InternVL3.5 models across parameterized difficulty grids using exact-match accuracy across randomized seeds.</p>
+                                    <p class="mb-0"><strong>Impact and Results:</strong> Identified a **low-frequency temporal reasoning trap**, where models failed to count simple events beyond small thresholds even when events were slow and visually distinct. Showed that scaling model size from **8B to 235B parameters** improved average accuracy but did not meaningfully expand the temporal success region, suggesting scale alone is insufficient for robust temporal reasoning. <strong>(Under Review at ECCV, 2026)</strong></p>
                                 </div>
                             </div>
                         </div>
@@ -162,26 +164,27 @@
                 </div>
             </div>
 
-            <!-- Project 4 -->
+            <!-- Project 4: PlanForge -->
             <div class="mt-3 card shadow-sm">
                 <div class="card-body">
                     <div class="row mt-2 mt-md-0">
                         <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
-                            <div class="rounded d-flex align-items-center justify-content-center" style="width: 100%; height: 110px; background: linear-gradient(135deg, #03045e, #669bbc); color: white; border: 1px solid var(--blue-light);">
-                                <i class="fa-solid fa-comments fa-3x"></i>
+                            <div class="rounded d-flex align-items-center justify-content-center" style="width: 100%; height: 110px; background: linear-gradient(135deg, #0077b6, #003566); color: white; border: 1px solid var(--blue-light);">
+                                <i class="fa-solid fa-route fa-3x"></i>
                             </div>
                         </div>
                         <div class="col-md-10">
-                            <h4 class="card-title mb-0" style="color: var(--blue-dark);">CPER: Persona Knowledge Gap Resolution in Multi-Turn Conversations</h4>
-                            <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> University of Maryland, Baltimore County (UMBC)</span> (Aug 2024 - Dec 2024)</h6>
+                            <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">PlanForge: Automated Thought of Search for Language Described Search Problems</h4>
+                            <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> University of Maryland, Baltimore County (UMBC)</span> (May 2025 - Present)</h6>
                             <p class="card-text mt-2 mb-2 text-justify small">
-                                Developed a multi-turn clarification model resolving gaps between an LLM's static persona and real-time user inputs.
+                                Built a modular planning thought-of-search loop integrating LLM state generation with a unit-test feedback loop and breadth-first search.
                             </p>
 
                             <div class="mb-2">
-                                <span class="badge p-1 sw-tools">Conversational AI</span>
-                                <span class="badge p-1 sw-tools">Information Theory</span>
-                                <span class="badge p-1 sw-tools">HuggingFace</span>
+                                <span class="badge p-1 sw-tools">LLM Planning</span>
+                                <span class="badge p-1 sw-tools">Thought-of-Search</span>
+                                <span class="badge p-1 sw-tools">DSPy</span>
+                                <span class="badge p-1 sw-tools">Python</span>
                             </div>
 
                             <div class="mt-2">
@@ -196,9 +199,9 @@
                             <!-- Collapse details -->
                             <div id="projectCollapse-4" class="collapse mt-3">
                                 <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.5;">
-                                    <p class="mb-2"><strong>Problem:</strong> Large language models in multi-turn chats miss user-specific context, creating a persona knowledge gap that leads to generic, incoherent, or misaligned replies.</p>
-                                    <p class="mb-2"><strong>What I did:</strong> Designed CPER, a three-module framework that quantifies uncertainty, asks targeted clarifying questions, and generates persona-aligned responses. Implemented and evaluated on CCPE-M and ESConv datasets.</p>
-                                    <p class="mb-0"><strong>Impact and Results:</strong> Human A/B judges preferred CPER over strong baselines by +42% on CCPE-M and +27% on ESConv, with strongest gains in long (12+ turn) conversations. GPT-4o preference reached 60.78%. Published at NAACL 2025 SRW.</p>
+                                    <p class="mb-2"><strong>Problem:</strong> Natural-language described search problems are underspecified and hard to ground into executable search procedures. Pure LLM prompting is brittle and lacks verification, which leads to incorrect plans and poor generalization across domains.</p>
+                                    <p class="mb-2"><strong>What I built:</strong> ATLAS, a modular thought-of-search pipeline, was designed to parse tasks described in natural language into structured representations. It combines components using a unit-test feedback loop and carries out a validator-guided breadth-first search over candidate programs and plans. An ablation suite and evaluation tool were developed to identify the roles of tests, feedback, and search.</p>
+                                    <p class="mb-0"><strong>Impact and Results:</strong> ATLAS solved 120/130 tasks (92.3%) across 13 classical planning domains described in ACPbench, versus strongest baseline 112/130 (86.2%).</p>
                                 </div>
                             </div>
                         </div>
@@ -206,29 +209,26 @@
                 </div>
             </div>
 
-            <!-- Industry Projects Section -->
-            <h5 class="mt-5"><b>__ Industry Projects _____________________</b></h5>
-
-            <!-- Project 5 -->
+            <!-- Project 5: Multi-Step Reasoning PRM -->
             <div class="mt-3 card shadow-sm">
                 <div class="card-body">
                     <div class="row mt-2 mt-md-0">
                         <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
-                            <div class="rounded d-flex align-items-center justify-content-center" style="width: 100%; height: 110px; background: linear-gradient(135deg, #005f73, #0a9396); color: white; border: 1px solid var(--blue-light);">
-                                <i class="fa-solid fa-magnifying-glass fa-3x"></i>
+                            <div class="rounded d-flex align-items-center justify-content-center" style="width: 100%; height: 110px; background: linear-gradient(135deg, #4361ee, #4cc9f0); color: white; border: 1px solid var(--blue-light);">
+                                <i class="fa-solid fa-calculator fa-3x"></i>
                             </div>
                         </div>
                         <div class="col-md-10">
-                            <h4 class="card-title mb-0" style="color: var(--blue-dark);">Multimodal RAG & Chatbot Systems for Enterprise Documents</h4>
-                            <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> Avyott (AI Consulting)</span> (Aug 2025 - Present)</h6>
+                            <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">Multi-Step Reasoning Using Process Reward Models</h4>
+                            <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> University of Maryland, College Park (UMD)</span> (Jul 2025 - Aug 2025)</h6>
                             <p class="card-text mt-2 mb-2 text-justify small">
-                                Built enterprise chatbots indexing structured PDFs, images, and tables with precise user intent verification.
+                                Evaluated process supervision in mathematical reasoning by training step-level Process Reward Models (PRMs) versus outcome-only verifiers.
                             </p>
 
                             <div class="mb-2">
-                                <span class="badge p-1 sw-tools">RAG</span>
-                                <span class="badge p-1 sw-tools">LlamaIndex</span>
-                                <span class="badge p-1 sw-tools">VectorDB</span>
+                                <span class="badge p-1 sw-tools">PRMs</span>
+                                <span class="badge p-1 sw-tools">GSM8K</span>
+                                <span class="badge p-1 sw-tools">Step-Level Verifiers</span>
                                 <span class="badge p-1 sw-tools">Python</span>
                             </div>
 
@@ -244,9 +244,9 @@
                             <!-- Collapse details -->
                             <div id="projectCollapse-5" class="collapse mt-3">
                                 <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.5;">
-                                    <p class="mb-2"><strong>Problem:</strong> Standard search frameworks struggle to ground answers accurately across structured/unstructured PDFs, diagrams, tables, and raw texts, leading to generic or hallucinated enterprise responses.</p>
-                                    <p class="mb-2"><strong>What I built:</strong> Shipped a multimodal RAG chatbot embedded inside client products, able to process text, images, and tables for grounded and cited answers. Integrated an intent verification layer to double-check user questions.</p>
-                                    <p class="mb-0"><strong>Impact and Results:</strong> Deployed the system for active enterprise use at IPCA and Taj, securely integrating it with internal knowledge bases and existing client workflows.</p>
+                                    <p class="mb-2"><strong>Problem:</strong> Outcome-only supervision in math reasoning rewards the final answer but ignores the quality of intermediate steps. This leads to brittle chains of thought, unnecessarily long solutions, and failures that are hard to diagnose or correct. Our hypothesis is that using PRM would produce more correct steps.</p>
+                                    <p class="mb-2"><strong>What I built:</strong> An end-to-end PRM pipeline that generates multi-step trajectories, assigns weak step-level labels using verifier/self-consistency signals, and uses that score at inference for PRM-guided answers.</p>
+                                    <p class="mb-0"><strong>Impact and Results:</strong> Experimenting on GSM8K PRM guidance underperformed both baselines across held out sets. Our initial results demonstrates that Majority voting was consistently strongest with a 92% accuracy compared to PRM with a 68% accuracy.</p>
                                 </div>
                             </div>
                         </div>
@@ -254,27 +254,27 @@
                 </div>
             </div>
 
-            <!-- Project 6 -->
+            <!-- Project 6: Code Deobfuscation -->
             <div class="mt-3 card shadow-sm">
                 <div class="card-body">
                     <div class="row mt-2 mt-md-0">
                         <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
-                            <div class="rounded d-flex align-items-center justify-content-center" style="width: 100%; height: 110px; background: linear-gradient(135deg, #0a9396, #94d2bd); color: white; border: 1px solid var(--blue-light);">
-                                <i class="fa-solid fa-server fa-3x"></i>
+                            <div class="rounded d-flex align-items-center justify-content-center" style="width: 100%; height: 110px; background: linear-gradient(135deg, #3f37c9, #7209b7); color: white; border: 1px solid var(--blue-light);">
+                                <i class="fa-solid fa-code fa-3x"></i>
                             </div>
                         </div>
                         <div class="col-md-10">
-                            <h4 class="card-title mb-0" style="color: var(--blue-dark);">Model Context Protocol (MCP) Ticketing Server</h4>
-                            <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> Avyott (AI Consulting)</span> (Oct 2025 - Present)</h6>
+                            <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">Large Language Models for Code Deobfuscation</h4>
+                            <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> University of Maryland, Baltimore County (UMBC)</span> (Feb 2025 - May 2025)</h6>
                             <p class="card-text mt-2 mb-2 text-justify small">
-                                Developed custom MCP server endpoints bridging natural language chat interfaces with enterprise ticketing systems.
+                                Automated LLVM-IR low-level deobfuscation under Bogus Control Flow (BCF) and Control Flow Flattening (CFF) using reasoner LLMs.
                             </p>
 
                             <div class="mb-2">
-                                <span class="badge p-1 sw-tools">MCP</span>
-                                <span class="badge p-1 sw-tools">Node.js</span>
-                                <span class="badge p-1 sw-tools">REST APIs</span>
-                                <span class="badge p-1 sw-tools">Security</span>
+                                <span class="badge p-1 sw-tools">LLVM-IR</span>
+                                <span class="badge p-1 sw-tools">Chain of Thought</span>
+                                <span class="badge p-1 sw-tools">Deobfuscation</span>
+                                <span class="badge p-1 sw-tools">Python</span>
                             </div>
 
                             <div class="mt-2">
@@ -289,9 +289,9 @@
                             <!-- Collapse details -->
                             <div id="projectCollapse-6" class="collapse mt-3">
                                 <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.5;">
-                                    <p class="mb-2"><strong>Problem:</strong> Interacting with ticketing workflows (Jira, Service Desk) historically required navigating complex UIs, leading to high administrative friction for operational staff.</p>
-                                    <p class="mb-2"><strong>What I built:</strong> Wrote and deployed Model Context Protocol (MCP) servers to connect with multiple ticketing systems, enabling chat-driven ticket creation, semantic searching, and status synchronization directly through LLM workflows.</p>
-                                    <p class="mb-0"><strong>Impact and Results:</strong> Bridged natural language interfaces with enterprise backends securely, reducing manual ticketing overhead for customer support teams by over 30%.</p>
+                                    <p class="mb-2"><strong>Problem:</strong> Automating deobfuscation of low level LLVM-IR is difficult with existing tools that struggle under Bogus Control Flow and Control Flow Flattening, and there is no standardized AI evaluation for this setting.</p>
+                                    <p class="mb-2"><strong>What I did:</strong> Led the AI modeling and evaluation track. Designed Chain of Thought procedural prompts with global variable tracing. Built an LLVM-IR analysis module to extract basic blocks and control flow graphs and to compute Cyclomatic Complexity and instruction counts. Implemented an adjustment step to normalize identifiers for fair Levenshtein similarity. Created an evaluation harness using Code Reduction, Levenshtein Similarity, and Cyclomatic Complexity and benchmarked four reasoner models on O-LLVM obfuscations.</p>
+                                    <p class="mb-0"><strong>Impact and Results:</strong> Established a 36 sample LLVM-IR benchmark across BCF, CFF, and BCF-CFF. Best model achieved 76.9% code reduction and 85% similarity on BCF-CFF with Cyclomatic Complexity reduced from 91 to 13.5 (85%). <strong>(Published at WoRMA, 2026)</strong></p>
                                 </div>
                             </div>
                         </div>
@@ -299,27 +299,26 @@
                 </div>
             </div>
 
-            <!-- Project 7 -->
+            <!-- Project 7: CPER -->
             <div class="mt-3 card shadow-sm">
                 <div class="card-body">
                     <div class="row mt-2 mt-md-0">
                         <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
-                            <div class="rounded d-flex align-items-center justify-content-center" style="width: 100%; height: 110px; background: linear-gradient(135deg, #003049, #d62828); color: white; border: 1px solid var(--blue-light);">
-                                <i class="fa-solid fa-passport fa-3x"></i>
+                            <div class="rounded d-flex align-items-center justify-content-center" style="width: 100%; height: 110px; background: linear-gradient(135deg, #03045e, #669bbc); color: white; border: 1px solid var(--blue-light);">
+                                <i class="fa-solid fa-comments fa-3x"></i>
                             </div>
                         </div>
                         <div class="col-md-10">
-                            <h4 class="card-title mb-0" style="color: var(--blue-dark);">Computer Vision Duplicate Bill & Resume Matcher Pipelines</h4>
-                            <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> Techisy (AI / Software Intern)</span> (May 2024 - Jul 2024)</h6>
+                            <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">CPER: From Guessing to Asking (Persona Knowledge Gap Resolution)</h4>
+                            <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> University of Maryland, Baltimore County (UMBC)</span> (Aug 2024 - Dec 2024)</h6>
                             <p class="card-text mt-2 mb-2 text-justify small">
-                                Developed OCR duplicate bill image matching (CLIP) and FAISS resume classification pipelines.
+                                Developed CPER, a three-module dialogue system that identifies knowledge gaps and asks targeted questions to align with a user's dynamic persona.
                             </p>
 
                             <div class="mb-2">
-                                <span class="badge p-1 sw-tools">CLIP</span>
-                                <span class="badge p-1 sw-tools">OCR</span>
-                                <span class="badge p-1 sw-tools">LangChain</span>
-                                <span class="badge p-1 sw-tools">FAISS</span>
+                                <span class="badge p-1 sw-tools">Conversational AI</span>
+                                <span class="badge p-1 sw-tools">Information Theory</span>
+                                <span class="badge p-1 sw-tools">HuggingFace</span>
                             </div>
 
                             <div class="mt-2">
@@ -334,9 +333,195 @@
                             <!-- Collapse details -->
                             <div id="projectCollapse-7" class="collapse mt-3">
                                 <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.5;">
-                                    <p class="mb-2"><strong>Problem:</strong> Financial audits lose significant capital to duplicate bill invoicing, while HR recruiting departments waste valuable hours manually sorting unstructured resumes against job specs.</p>
-                                    <p class="mb-2"><strong>What I built:</strong> Built an AI-powered duplicate bill identification system combining OCR text models and CLIP embeddings to match invoice duplicates with 95% accuracy. Designed a resume matching pipeline using LangChain, Ollama, and FAISS vector databases.</p>
-                                    <p class="mb-0"><strong>Impact and Results:</strong> Successfully deployed working web prototypes using Streamlit, facilitating simplified recruiter screening and reducing manual resume audit times by 40%.</p>
+                                    <p class="mb-2"><strong>Problem:</strong> Large language models in multi-turn chats miss user-specific context, creating a persona knowledge gap that leads to generic, incoherent, or misaligned replies.</p>
+                                    <p class="mb-2"><strong>What I did:</strong> Designed CPER, a three-module framework that quantifies uncertainty, asks targeted clarifying questions, and generates persona-aligned responses. Implemented and evaluated on CCPE-M and ESConv.</p>
+                                    <p class="mb-0"><strong>Impact and Results:</strong> Human A/B judges preferred CPER over strong baselines by +42% on CCPE-M and +27% on ESConv, with strongest gains in long (12+ turn) conversations; GPT-4o preference on CCPE-M reached 60.78%. <strong>(Published at NAACL 2025 SRW)</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 8: ML Ideation (TCS APPCAIR) -->
+            <div class="mt-3 card shadow-sm">
+                <div class="card-body">
+                    <div class="row mt-2 mt-md-0">
+                        <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
+                            <div class="rounded d-flex align-items-center justify-content-center" style="width: 100%; height: 110px; background: linear-gradient(135deg, #588157, #a3b18a); color: white; border: 1px solid var(--blue-light);">
+                                <i class="fa-solid fa-gears fa-3x"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">Automated Planning and Code Synthesis for Continual ML Ideation</h4>
+                            <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> TCS Research - Datalab, APPCAIR</span> (Jan 2024 - May 2024)</h6>
+                            <p class="card-text mt-2 mb-2 text-justify small">
+                                Developed an LLM-driven planning and code-generation system to automate the mining and execution of ML research ideas from papers.
+                            </p>
+
+                            <div class="mb-2">
+                                <span class="badge p-1 sw-tools">RAG</span>
+                                <span class="badge p-1 sw-tools">Code Synthesis</span>
+                                <span class="badge p-1 sw-tools">Iterative Repair</span>
+                                <span class="badge p-1 sw-tools">Python</span>
+                            </div>
+
+                            <div class="mt-2">
+                                <p class="pt-2 my-auto"><b>References:</b> 
+                                    <button type="button" class="ml-2 btn btn-blue btn-sm py-0"><a href="https://github.com/Sarvesh-369" target="_blank">GitHub <i class="ml-1 fa-brands fa-github"></i></a></button>
+                                    <button class="ml-2 btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#projectCollapse-8" aria-expanded="false" aria-controls="projectCollapse-8">
+                                        Read more...
+                                    </button>
+                                </p>
+                            </div>
+
+                            <!-- Collapse details -->
+                            <div id="projectCollapse-8" class="collapse mt-3">
+                                <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.5;">
+                                    <p class="mb-2"><strong>Problem:</strong> Turning new research ideas into runnable changes in an existing ML pipeline is slow and inconsistent. Teams need automatic extraction of ideas from papers and automatic plan to code execution with minimal manual effort.</p>
+                                    <p class="mb-2"><strong>What was built:</strong> An LLM driven system that mines techniques and goals from a set of papers with a RAG workflow, then produces a modification plan, and generates, debugs, and finalizes code.</p>
+                                    <p class="mb-0"><strong>Impact and Results:</strong> Internal runs showed about a 30% increase in executable code yield from optimized prompting and iterative repair, and successful end to end execution of planned modifications with minimal manual intervention.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Industry Projects Section -->
+            <h5 class="mt-5"><b>__ Industry Projects _____________________</b></h5>
+
+            <!-- Project 9: Avyott RAG & MCP (Combined) -->
+            <div class="mt-3 card shadow-sm">
+                <div class="card-body">
+                    <div class="row mt-2 mt-md-0">
+                        <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
+                            <div class="rounded d-flex align-items-center justify-content-center" style="width: 100%; height: 110px; background: linear-gradient(135deg, #005f73, #0a9396); color: white; border: 1px solid var(--blue-light);">
+                                <i class="fa-solid fa-magnifying-glass fa-3x"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">Multimodal RAG Chatbot with Model Context Protocol (MCP) Integration</h4>
+                            <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> Avyott (AI Consulting)</span> (Aug 2025 - Present)</h6>
+                            <p class="card-text mt-2 mb-2 text-justify small">
+                                Shipped an enterprise-grade multimodal RAG chatbot integrating custom MCP server endpoints for ticket lifecycle management and conversational clarification.
+                            </p>
+
+                            <div class="mb-2">
+                                <span class="badge p-1 sw-tools">RAG</span>
+                                <span class="badge p-1 sw-tools">MCP</span>
+                                <span class="badge p-1 sw-tools">LlamaIndex</span>
+                                <span class="badge p-1 sw-tools">Node.js</span>
+                                <span class="badge p-1 sw-tools">Python</span>
+                            </div>
+
+                            <div class="mt-2">
+                                <p class="pt-2 my-auto"><b>References:</b> 
+                                    <button type="button" class="ml-2 btn btn-blue btn-sm py-0"><a href="https://github.com/Sarvesh-369" target="_blank">GitHub <i class="ml-1 fa-brands fa-github"></i></a></button>
+                                    <button class="ml-2 btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#projectCollapse-9" aria-expanded="false" aria-controls="projectCollapse-9">
+                                        Read more...
+                                    </button>
+                                </p>
+                            </div>
+
+                            <!-- Collapse details -->
+                            <div id="projectCollapse-9" class="collapse mt-3">
+                                <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.5;">
+                                    <p class="mb-2"><strong>Problem:</strong> Enterprise customers need to retrieve grounded information across mixed PDFs, diagrams, and tables, as well as seamlessly execute ticketing actions (Jira, Service Desk) without high UI friction.</p>
+                                    <p class="mb-2"><strong>What I built:</strong> Designed and shipped a multimodal RAG chatbot processing text, images, and tables with precise intent verification. Integrated custom Model Context Protocol (MCP) servers enabling chat-driven ticket creation, semantic search, and status synchronization. Added a clarification step based on my multi-turn LLM research to improve intent capture.</p>
+                                    <p class="mb-0"><strong>Impact and Results:</strong> Deployed the chatbot securely for active enterprise clients at IPCA and Taj, reducing manual ticketing overhead by over 30% and significantly enhancing search accuracy.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 10: Techisy Duplicate Bill -->
+            <div class="mt-3 card shadow-sm">
+                <div class="card-body">
+                    <div class="row mt-2 mt-md-0">
+                        <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
+                            <div class="rounded d-flex align-items-center justify-content-center" style="width: 100%; height: 110px; background: linear-gradient(135deg, #d62828, #f77f00); color: white; border: 1px solid var(--blue-light);">
+                                <i class="fa-solid fa-receipt fa-3x"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">Computer Vision Duplicate Bill Identification System</h4>
+                            <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> Techisy (AI / Software Intern)</span> (May 2024 - Jul 2024)</h6>
+                            <p class="card-text mt-2 mb-2 text-justify small">
+                                Built an AI duplicate invoice identification pipeline using OCR text parsing and CLIP multimodal embeddings.
+                            </p>
+
+                            <div class="mb-2">
+                                <span class="badge p-1 sw-tools">CLIP</span>
+                                <span class="badge p-1 sw-tools">OCR</span>
+                                <span class="badge p-1 sw-tools">OpenAI Embeddings</span>
+                                <span class="badge p-1 sw-tools">Streamlit</span>
+                            </div>
+
+                            <div class="mt-2">
+                                <p class="pt-2 my-auto"><b>References:</b> 
+                                    <button type="button" class="ml-2 btn btn-blue btn-sm py-0"><a href="https://github.com/Sarvesh-369" target="_blank">GitHub <i class="ml-1 fa-brands fa-github"></i></a></button>
+                                    <button class="ml-2 btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#projectCollapse-10" aria-expanded="false" aria-controls="projectCollapse-10">
+                                        Read more...
+                                    </button>
+                                </p>
+                            </div>
+
+                            <!-- Collapse details -->
+                            <div id="projectCollapse-10" class="collapse mt-3">
+                                <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.5;">
+                                    <p class="mb-2"><strong>Problem:</strong> Corporate financial audits lose significant capital to duplicate bill invoicing and fraud due to subtle visual and textual duplicate matches.</p>
+                                    <p class="mb-2"><strong>What I built:</strong> Developed an AI-powered duplicate bill identification system combining OCR text extraction and CLIP visual embeddings to compare and match invoice duplicates.</p>
+                                    <p class="mb-0"><strong>Impact and Results:</strong> Deployed a working prototype in Streamlit, achieving 95% identification accuracy and substantially reducing auditing friction for finance teams.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 11: Techisy Resume Matcher -->
+            <div class="mt-3 card shadow-sm">
+                <div class="card-body">
+                    <div class="row mt-2 mt-md-0">
+                        <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
+                            <div class="rounded d-flex align-items-center justify-content-center" style="width: 100%; height: 110px; background: linear-gradient(135deg, #003049, #669bbc); color: white; border: 1px solid var(--blue-light);">
+                                <i class="fa-solid fa-address-card fa-3x"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">RAG-based Resume Matching & Classification Pipeline</h4>
+                            <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> Techisy (AI / Software Intern)</span> (May 2024 - Jul 2024)</h6>
+                            <p class="card-text mt-2 mb-2 text-justify small">
+                                Developed an automated candidate-to-job matching solution using LangChain, Ollama, and FAISS vector indices.
+                            </p>
+
+                            <div class="mb-2">
+                                <span class="badge p-1 sw-tools">LangChain</span>
+                                <span class="badge p-1 sw-tools">Ollama</span>
+                                <span class="badge p-1 sw-tools">FAISS</span>
+                                <span class="badge p-1 sw-tools">RAG</span>
+                                <span class="badge p-1 sw-tools">Streamlit</span>
+                            </div>
+
+                            <div class="mt-2">
+                                <p class="pt-2 my-auto"><b>References:</b> 
+                                    <button type="button" class="ml-2 btn btn-blue btn-sm py-0"><a href="https://github.com/Sarvesh-369" target="_blank">GitHub <i class="ml-1 fa-brands fa-github"></i></a></button>
+                                    <button class="ml-2 btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#projectCollapse-11" aria-expanded="false" aria-controls="projectCollapse-11">
+                                        Read more...
+                                    </button>
+                                </p>
+                            </div>
+
+                            <!-- Collapse details -->
+                            <div id="projectCollapse-11" class="collapse mt-3">
+                                <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.5;">
+                                    <p class="mb-2"><strong>Problem:</strong> Recruitment teams waste significant hours manually parsing and classifying unstructured resumes against complex job descriptions.</p>
+                                    <p class="mb-2"><strong>What I built:</strong> Designed a RAG-based resume matching and scoring pipeline using LangChain, Ollama (Llama 3), and FAISS vector databases to align and index applicant skills.</p>
+                                    <p class="mb-0"><strong>Impact and Results:</strong> Streamlined HR screening workflows, reducing manual review efforts by 40% with functional Streamlit prototypes.</p>
                                 </div>
                             </div>
                         </div>
