@@ -1,16 +1,17 @@
 {
   "profile": {
     "name": "Sarvesh Baskar",
-    "title": "AI Research Assistant | UMD",
+    "title": "AI Research Engineer",
     "image": "./assets/img/profile.png"
   },
   "about": [
-    "I am an AI Research Assistant working on multimodal AI, vision-language models (VLMs), planning, and reliable agentic systems. I have research experience working with the University of Maryland, College Park (UMD) and the University of Maryland, Baltimore County (UMBC), with publications in LLM personalization, VLM hallucination mitigation, video reasoning, code reasoning, and multimodal evaluation.",
-    "My research addresses key safety and robustness issues in state-of-the-art vision and language models. I build embedding-refinement experiments in VLMs to improve visual grounding and reduce hallucinations, construct modular validators and program search loops for classical planning using LLMs, and standardise control flow analysis for control flow deobfuscation in LLMs."
+    "I am an AI research engineer working at the intersection of language models, vision-language models, planning, and multimodal agents. My work focuses on making AI systems more grounded and reliable as they move beyond text generation toward perception, reasoning, and action.",
+    "I have research experience with the University of Maryland, College Park and UMBC, where I have worked on VLM hallucination mitigation, multimodal video reasoning, LLM planning, code reasoning, and persona-aware conversational agents. I also have applied engineering experience building production AI systems, including multimodal RAG pipelines, MCP-based workflow integrations, and clarification-driven chat systems.",
+    "My long-term goal is to build AI agents that can understand visual environments, reason over uncertainty, and execute reliable long-horizon actions — both in digital interfaces and eventually in embodied/robotic settings."
   ],
   "interests": {
-    "description": "My technical focus centers on how we can combine natural language reasoning, reinforcement learning, and visual perception to build more robust, safe, and reliable AI systems. I am particularly interested in LLM reasoning traces, vision-language-action (VLA) models, structural program synthesis, and building evaluation benchmarks that test the actual capabilities and limitations of vision models.",
-    "keywords": "Large Language Models (LLMs), Reinforcement Learning, Reasoning & Planning, Robotics, Machine Perception, Computer Vision, Vision-Language-Action Models"
+    "description": "My technical interests center on multimodal intelligence: how models can combine language, vision, memory, and planning to make decisions that are grounded in the world rather than only fluent in text. I am especially interested in vision-language models, multimodal reasoning, planning for agents, visual grounding, hallucination mitigation, and embodied AI. A recurring theme in my work is that intelligent systems should not simply generate answers; they should know when to ask, when to look, when to verify, and when to plan. Going forward, I want to work on systems that connect VLMs, world models, and planning/control for agents that can operate across visual environments, GUIs, simulations, and robotics-inspired settings.",
+    "keywords": "Multimodal AI, Vision-Language Models, LLM Agents, Reasoning & Planning, Visual Grounding, Embodied AI, Robotics, Computer Vision, Vision-Language-Action Models"
   },
   "news": [
     {"type": "Academic", "date": "March 2026", "content": "Research paper \"Towards Mitigating Hallucinations in Large Vision-Language Models by Refining Textual Embeddings\" accepted at <b>ACL Findings 2026</b>!"},
