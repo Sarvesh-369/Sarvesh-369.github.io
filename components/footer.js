@@ -12,11 +12,11 @@ class Footer extends HTMLElement {
   render() {
     const isPageSubdir = window.location.pathname.includes('/pages/');
     const prefix = isPageSubdir ? '../' : './';
-    const email = window.portfolioData?.personal?.email || "baskarsarvesh@gmail.com";
-    const linkedin = window.portfolioData?.personal?.socials?.linkedin || "#";
-    const scholar = window.portfolioData?.personal?.socials?.google_scholar || "#";
-    const github = window.portfolioData?.personal?.socials?.github || "#";
-    const twitter = window.portfolioData?.personal?.socials?.twitter || "#";
+    const email = "baskarsarvesh@gmail.com";
+    const linkedin = "https://linkedin.com/in/sarvesh-b-0bb062223/";
+    const scholar = "https://scholar.google.com/citations?user=95VFgm8AAAAJ&hl=en&authuser=3";
+    const github = "https://github.com/sarvesh-369";
+    const twitter = "https://x.com/Sarvesh__369";
 
     this.innerHTML = `
     <div class="footer-lemos mt-5">
