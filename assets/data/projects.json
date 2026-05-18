@@ -140,14 +140,14 @@
     "title": "Multimodal RAG Chatbot with Model Context Protocol (MCP) Integration",
     "affiliation": "Avyott (AI Consulting)",
     "duration": "(Aug 2025 - Present)",
-    "description": "Shipped an enterprise-grade multimodal RAG chatbot integrating custom MCP server endpoints for ticket lifecycle management and conversational clarification.",
+    "description": "Shipped an enterprise-grade multimodal RAG chatbot integrating custom MCP server endpoints for secure internal system queries and conversational clarification.",
     "tools": ["RAG", "MCP", "LlamaIndex", "Node.js", "Python"],
     "icon": "fa-magnifying-glass",
     "gradient": "linear-gradient(135deg, #005f73, #0a9396)",
     "details": {
-      "Problem": "Enterprise customers need to retrieve grounded information across mixed PDFs, diagrams, and tables, as well as seamlessly execute ticketing actions (Jira, Service Desk) without high UI friction.",
-      "What I built": "Designed and shipped a multimodal RAG chatbot processing text, images, and tables with precise intent verification. Integrated custom Model Context Protocol (MCP) servers enabling chat-driven ticket creation, semantic search, and status synchronization. Added a clarification step based on my multi-turn LLM research to improve intent capture.",
-      "Impact and Results": "Deployed the chatbot securely for active enterprise clients at IPCA and Taj, reducing manual ticketing overhead by over 30% and significantly enhancing search accuracy."
+      "Problem": "Enterprise customers need to retrieve grounded information across mixed PDFs, diagrams, and tables, as well as seamlessly execute dynamic actions on external APIs and databases without high UI friction.",
+      "What I built": "Designed and shipped a multimodal RAG chatbot processing text, images, and tables with precise intent verification. Integrated custom Model Context Protocol (MCP) servers enabling chat-driven database query execution, semantic search, and system status synchronization. Added a clarification step based on my multi-turn LLM research to improve intent capture.",
+      "Impact and Results": "Deployed the chatbot securely for active enterprise clients at IPCA and Taj, reducing manual task overhead by over 30% and significantly enhancing search accuracy."
     }
   },
   {
