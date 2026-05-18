@@ -1,0 +1,28 @@
+{
+  "profile": {
+    "name": "Sarvesh Baskar",
+    "title": "AI Research Assistant | UMD",
+    "image": "./assets/img/profile.png"
+  },
+  "about": [
+    "I am an AI Research Assistant working on multimodal AI, vision-language models (VLMs), planning, and reliable agentic systems. I have research experience working with the University of Maryland, College Park (UMD) and the University of Maryland, Baltimore County (UMBC), with publications in LLM personalization, VLM hallucination mitigation, video reasoning, code reasoning, and multimodal evaluation.",
+    "My research addresses key safety and robustness issues in state-of-the-art vision and language models. I build embedding-refinement experiments in VLMs to improve visual grounding and reduce hallucinations, construct modular validators and program search loops for classical planning using LLMs, and standardise control flow analysis for control flow deobfuscation in LLMs."
+  ],
+  "interests": {
+    "description": "My technical focus centers on how we can combine natural language reasoning, reinforcement learning, and visual perception to build more robust, safe, and reliable AI systems. I am particularly interested in LLM reasoning traces, vision-language-action (VLA) models, structural program synthesis, and building evaluation benchmarks that test the actual capabilities and limitations of vision models.",
+    "keywords": "Large Language Models (LLMs), Reinforcement Learning, Reasoning & Planning, Robotics, Machine Perception, Computer Vision, Vision-Language-Action Models"
+  },
+  "news": [
+    {"type": "Academic", "date": "Jan 2026", "content": "Research paper \"Towards Mitigating Hallucinations in Large Vision-Language Models by Refining Textual Embeddings\" accepted at <b>ACL Findings 2026</b>!"},
+    {"type": "Academic", "date": "Jan 2026", "content": "Co-authored two papers on multimodal video reasoning under review for <b>ECCV 2026</b>!"},
+    {"type": "Academic", "date": "Jan 2026", "content": "Paper \"The Low-Frequency Trap: Why Scaling Doesn't Solve Simple Temporal Counting\" accepted at the <b>ICLR 2026 Workshop</b>!"},
+    {"type": "Academic", "date": "Jul 2025", "content": "Started as an AI Research Assistant at the <b>University of Maryland, College Park</b> under Dr. Furong Huang's Lab!"},
+    {"type": "Industry", "date": "Aug 2025", "content": "Appointed as an AI Consultant at <b>Avyott</b>!"},
+    {"type": "Academic", "date": "Aug 2024", "content": "Joined the <b>University of Maryland, Baltimore County (UMBC)</b> as an AI Research Assistant under Dr. Manas Gaur, working on IBM planning!"},
+    {"type": "Academic", "date": "Aug 2024", "content": "First-author paper \"(CPER) From Guessing to Asking\" accepted at <b>NAACL SRW 2025</b>!"}
+  ],
+  "documents": [
+    {"title": "Resume", "url": "./assets/documents/resume.pdf", "icon": "fa-circle-info"},
+    {"title": "Curriculum Vitae", "url": "./assets/documents/cv.pdf", "icon": "fa-file"}
+  ]
+}

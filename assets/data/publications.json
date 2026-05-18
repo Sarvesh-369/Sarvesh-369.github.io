@@ -1,0 +1,72 @@
+{
+  "peer_reviewed": [
+    {
+      "id": "prp-1",
+      "venue": "[ACL Findings]",
+      "authors": "Aakriti Agrawal, Gouthaman KV, Rohith Aralikatti, Gauri Jagatap, Jiaxin Yuan, <b>Sarvesh Baskar</b>, Vijay Kamarshi, Andrea Fanelli, and Furong Huang.",
+      "title": "\"Towards Mitigating Hallucinations in Large Vision-Language Models by Refining Textual Embeddings\".",
+      "link": "https://arxiv.org/abs/2511.05017",
+      "conference": "ACL Findings, 2026.",
+      "github": "https://github.com/Sarvesh-369",
+      "pdf": "https://arxiv.org/pdf/2511.05017",
+      "bibtex": "@inproceedings{agrawal2026mitigating,\n  author    = {Agrawal, Aakriti and KV, Gouthaman Extracted and Aralikatti, Rohith and Jagatap, Gauri and Yuan, Jiaxin and Baskar, Sarvesh and Kamarshi, Vijay and Fanelli, Andrea and Huang, Furong},\n  title     = {Towards Mitigating Hallucinations in Large Vision-Language Models by Refining Textual Embeddings},\n  booktitle = {Findings of the Association for Computational Linguistics (ACL Findings)},\n  year      = {2026}\n}"
+    },
+    {
+      "id": "prp-2",
+      "venue": "[NAACL SRW]",
+      "authors": "<b>Sarvesh Baskar</b>, Manas Gaur, Srinivasan Parthasarathy, and Tanmay Tulsidas Verlekar.",
+      "title": "\"(CPER) From Guessing to Asking: An Approach to Resolving Persona Knowledge Gap in LLMs during Multi-Turn Conversations\".",
+      "link": "https://github.com/Sarvesh-369",
+      "conference": "Proceedings of the 2025 Conference of the Human Language Technologies: Student Research Workshop (NAACL SRW), 2025.",
+      "github": "https://github.com/Sarvesh-369",
+      "pdf": "../assets/documents/resume.pdf",
+      "bibtex": "@inproceedings{baskar2025cper,\n  author    = {Baskar, Sarvesh and Gaur, Manas and Parthasarathy, Srinivasan and Verlekar, Tanmay Tulsidas},\n  title     = {(CPER) From Guessing to Asking: An Approach to Resolving Persona Knowledge Gap in LLMs during Multi-Turn Conversations},\n  booktitle = {Proceedings of the NAACL Student Research Workshop (SRW)},\n  year      = {2025}\n}"
+    },
+    {
+      "id": "prp-3",
+      "venue": "[WoRMA]",
+      "authors": "Seyedreza Mohseni, <b>Sarvesh Baskar</b>, Arman Hossain, Aritran Piplai, Edward Raff, and Manas Gaur.",
+      "title": "\"Analyzing Chain of Thought (CoT) Approaches in Control Flow Code Deobfuscation Tasks\".",
+      "link": "https://github.com/Sarvesh-369",
+      "conference": "Workshop on Robustness of Modern AI (WoRMA), 2026.",
+      "github": "https://github.com/Sarvesh-369",
+      "pdf": "../assets/documents/cv.pdf",
+      "bibtex": "@inproceedings{mohseni2026analyzing,\n  author    = {Mohseni, Seyedreza and Baskar, Sarvesh and Hossain, Arman and Piplai, Aritran and Raff, Edward and Gaur, Manas},\n  title     = {Analyzing Chain of Thought (CoT) Approaches in Control Flow Code Deobfuscation Tasks},\n  booktitle = {Workshop on Robustness of Modern AI (WoRMA)},\n  year      = {2026}\n}"
+    },
+    {
+      "id": "prp-4",
+      "venue": "[ICLR Workshop]",
+      "authors": "<b>Sarvesh Baskar</b>, Muhammad R. Islam, Zikui Cai, Ankit Nakhawa, Anirudh Satheesh, Tom Goldstein, and Furong Huang.",
+      "title": "\"The Low-Frequency Trap: Why Scaling Doesn’t Solve Simple Temporal Counting\".",
+      "link": "https://github.com/Sarvesh-369",
+      "conference": "ICLR Workshop on I Can’t Believe It’s Not Better, 2026.",
+      "github": "https://github.com/Sarvesh-369",
+      "pdf": "../assets/documents/cv.pdf",
+      "bibtex": "@inproceedings{baskar2026lowfrequency,\n  author    = {Baskar, Sarvesh and Islam, Muhammad R. and Cai, Zikui and Nakhawa, Ankit and Satheesh, Anirudh and Goldstein, Tom and Huang, Furong},\n  title     = {The Low-Frequency Trap: Why Scaling Doesn't Solve Simple Temporal Counting},\n  booktitle = {ICLR Workshop on I Can't Believe It's Not Better},\n  year      = {2026}\n}"
+    }
+  ],
+  "pre_prints": [
+    {
+      "id": "ppa-1",
+      "venue": "[ECCV'26]",
+      "authors": "<b>Sarvesh Baskar</b>, Muhammad R. Islam, Zikui Cai, Anirudh Satheesh, Tom Goldstein, and Furong Huang.",
+      "title": "\"Parametric Capability Profiling for Multimodal Video Reasoning\".",
+      "link": "https://github.com/Sarvesh-369",
+      "conference": "Under Review, ECCV, 2026.",
+      "github": "https://github.com/Sarvesh-369",
+      "pdf": "../assets/documents/cv.pdf",
+      "bibtex": "@article{baskar2026parametric,\n  author  = {Baskar, Sarvesh and Islam, Muhammad R. and Cai, Zikui and Satheesh, Anirudh and Goldstein, Tom and Huang, Furong},\n  title   = {Parametric Capability Profiling for Multimodal Video Reasoning},\n  journal = {arXiv preprint},\n  year    = {2026}\n}"
+    },
+    {
+      "id": "ppa-2",
+      "venue": "[ECCV'26]",
+      "authors": "Muhammad R. Islam, <b>Sarvesh Baskar</b>, Zikui Cai, Anirudh Satheesh, Keenan Powell, Tom Goldstein, and Furong Huang.",
+      "title": "\"Executable Reasoning Traces for Diagnosing Multimodal Video Reasoning\".",
+      "link": "https://github.com/Sarvesh-369",
+      "conference": "Under Review, ECCV, 2026.",
+      "github": "https://github.com/Sarvesh-369",
+      "pdf": "../assets/documents/cv.pdf",
+      "bibtex": "@article{islam2026executable,\n  author  = {Islam, Muhammad R. and Baskar, Sarvesh and Cai, Zikui and Satheesh, Anirudh and Powell, Keenan and Goldstein, Tom and Huang, Furong},\n  title   = {Executable Reasoning Traces for Diagnosing Multimodal Video Reasoning},\n  journal = {arXiv preprint},\n  year    = {2026}\n}"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "institution": "Birla Institute of Technology and Science (BITS), Pilani",
+  "location": "Goa Campus, India",
+  "duration": "Aug 2020 - May 2025",
+  "degree": "Dual Degree: Bachelor of Engineering (Hons.) in Computer Science & Master of Science (Hons.) in Physics",
+  "gpa": "8.46 / 10.00",
+  "logo": "../assets/img/education/bits-pilani.png",
+  "thesis": {
+    "title": "An Approach to Resolving the Persona Knowledge Gap in LLMs during Multi-Turn Conversations",
+    "advisors": "Dr. Manas Gaur (UMBC), Prof. Srinivasan Parthasarathy (Ohio State University), and Prof. Tanmay Tulsidas Verlekar (BITS Pilani)"
+  },
+  "courses": {
+    "cs": [
+      "Data Structures and Algorithms",
+      "Object-Oriented Programming",
+      "Computer Networks",
+      "Database Systems",
+      "Theory of Computation",
+      "Operating Systems"
+    ],
+    "physics": [
+      "Computational Physics",
+      "Mathematical Methods of Physics",
+      "Quantum Mechanics"
+    ]
+  },
+  "activities": [
+    {
+      "name": "Graduate Teaching Assistant",
+      "description": "Assisted instruction for Mathematical Methods of Physics"
+    },
+    {
+      "name": "Student Researcher (APPCAIR)",
+      "description": "Collaborated on planning and code synthesis research under APPCAIR."
+    }
+  ]
+}

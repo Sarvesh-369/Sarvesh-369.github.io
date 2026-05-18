@@ -1,0 +1,95 @@
+[
+  {
+    "category": "Research Experience",
+    "id": "1",
+    "institution": "University of Maryland, College Park",
+    "role": "AI Research Assistant (Furong Huang's Lab)",
+    "department": "Department of Computer Science",
+    "duration": "(Jul 2025 - Present)",
+    "logo": "../assets/img/experience/umd.png",
+    "link": "https://umd.edu",
+    "bullets": [
+      "Built and evaluated multimodal AI pipelines for large vision-language models (VLMs), video reasoning, hallucination mitigation, and synthetic visual reasoning tasks.",
+      "Implemented embedding-refinement experiments in the <strong>OpenQwen2VL</strong> stack to improve visual grounding and significantly reduce hallucinations in large vision-language models.",
+      "Executed controlled experiments, thorough ablations, result analyses, and generated paper-ready visualizations for ACL and ECCV research submissions."
+    ]
+  },
+  {
+    "category": "Research Experience",
+    "id": "2",
+    "institution": "University of Maryland, Baltimore County",
+    "role": "AI Research Assistant (KAI2 Lab)",
+    "department": "Department of Computer Science",
+    "duration": "(Aug 2024 - Jul 2025)",
+    "logo": "../assets/img/experience/umbc.png",
+    "link": "https://umbc.edu",
+    "bullets": [
+      "Developed LLM-based systems for multi-turn conversation, structural planning, and code reasoning using Python, structured prompt engineering, and standard evaluation pipelines.",
+      "Led experiments and evaluation for a first-author <strong>NAACL 2025 SRW</strong> paper on resolving persona knowledge gaps in LLM conversations, improving dialogue relevance in long-term multi-turn context.",
+      "Contributed to IBM-collaborative planning research by building benchmarks, experiment logs, and modular evaluation scripts for classical planning domains (ACPbench)."
+    ]
+  },
+  {
+    "category": "Research Experience",
+    "id": "appcair",
+    "institution": "TCS Research - Datalab, APPCAIR, BITS Pilani",
+    "role": "Student Researcher (APPCAIR)",
+    "department": "BITS Pilani, K K Birla Goa Campus",
+    "duration": "(Jan 2024 - May 2024)",
+    "logo": "../assets/img/education/bits-pilani.png",
+    "link": "https://appcair.bits-goa.ac.in/",
+    "bullets": [
+      "Conducted comprehensive literature reviews to scope tasks, identify baselines, datasets, and evaluation protocols.",
+      "Translated high-level research goals into concrete experimental plans and weekly milestones with professors and industry collaborators.",
+      "Implemented the discussed methodology pipelines in Python with version control, unit tests, and clear documentation for reproducibility.",
+      "Prepared weekly written reports and presentations summarizing results, insights, and next steps for faculty and industry stakeholders.",
+      "Coordinated code handoff by organizing repositories and packaging notebooks for maintainability and reuse.",
+      "Contributed to manuscript sections on related work, methods, experimental setup, and result interpretation."
+    ]
+  },
+  {
+    "category": "Industry Experience",
+    "id": "3",
+    "institution": "Avyott",
+    "role": "AI Consultant",
+    "department": "",
+    "duration": "(Aug 2025 - Present)",
+    "logo": "../assets/img/experience/avyott.png",
+    "link": "https://avyott.com",
+    "bullets": [
+      "Designed and deployed multimodal RAG chatbots for enterprise clients, supporting grounded Q&A over text, images, tables, and internal documents.",
+      "Built <strong>Model Context Protocol (MCP)</strong> servers to integrate LLM chat workflows with ticketing systems, enabling ticketing operations (create, update, fetch) directly through natural language.",
+      "Improved user intent capture and conversational depth by adding dynamic clarification workflows inspired by multi-turn LLM persona research."
+    ]
+  },
+  {
+    "category": "Industry Experience",
+    "id": "4",
+    "institution": "Techisy",
+    "role": "AI / Software Intern",
+    "department": "",
+    "duration": "(May 2024 - Jul 2024)",
+    "logo": "../assets/img/experience/techisy.png",
+    "link": "https://techisy.com",
+    "bullets": [
+      "Built an AI-powered duplicate bill detection system using OCR, OpenAI text-embeddings, and <strong>CLIP</strong> embeddings to find visual duplicates, achieving 95% accuracy.",
+      "Developed a RAG-based resume matching system using <strong>LangChain</strong>, <strong>Ollama</strong>, and <strong>FAISS</strong> to parse, extract, and align candidate skills with company job descriptions.",
+      "Deployed working web prototypes using Streamlit, facilitating streamlined HR workflows and reducing manual review efforts by 40%."
+    ]
+  },
+  {
+    "category": "Teaching & Mentorship",
+    "id": "5",
+    "institution": "BITS Pilani, Goa Campus",
+    "role": "Department of Physics",
+    "department": "Graduate Teaching Assistant",
+    "duration": "(Aug 2023 - May 2024)",
+    "logo": "../assets/img/education/bits-pilani.png",
+    "link": "",
+    "bullets": [
+      "Assisted instructions for the graduate-level courses <strong>Mathematical Methods of Physics</strong> and <strong>Computational Physics</strong>.",
+      "Led weekly grading, designed problem sets, and held dedicated office hours for a cohort of 50+ dual-degree students.",
+      "Guided students in computational physics algorithms and numerical methods using Matlab and C++."
+    ]
+  }
+]
