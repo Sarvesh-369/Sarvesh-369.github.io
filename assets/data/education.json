@@ -7,7 +7,7 @@
   "logo": "../assets/img/education/bits-pilani.png",
   "thesis": {
     "title": "An Approach to Resolving the Persona Knowledge Gap in LLMs during Multi-Turn Conversations",
-    "advisors": "Dr. Manas Gaur (UMBC), Prof. Srinivasan Parthasarathy (Ohio State University), and Prof. Tanmay Tulsidas Verlekar (BITS Pilani)"
+    "advisors": "Dr. Manas Gaur (UMBC) and Prof. Tanmay Tulsidas Verlekar (BITS Pilani)"
   },
   "courses": {
     "cs": [
