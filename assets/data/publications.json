@@ -14,7 +14,7 @@
       "venue": "[NAACL SRW]",
       "authors": "<b>Sarvesh Baskar</b>, Manas Gaur, Srinivasan Parthasarathy, and Tanmay Tulsidas Verlekar.",
       "title": "\"(CPER) From Guessing to Asking: An Approach to Resolving Persona Knowledge Gap in LLMs during Multi-Turn Conversations\".",
-      "conference": "Proceedings of the 2025 Conference of the Human Language Technologies: Student Research Workshop (NAACL SRW), 2025.",
+      "conference": "Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Student Research Workshop (NAACL SRW), 2025.",
       "pdf": "../assets/documents/publications/cper_naacl2025.pdf",
       "bibtex": "@inproceedings{baskar2025cper,\n  author    = {Baskar, Sarvesh and Gaur, Manas and Parthasarathy, Srinivasan and Verlekar, Tanmay Tulsidas},\n  title     = {(CPER) From Guessing to Asking: An Approach to Resolving Persona Knowledge Gap in LLMs during Multi-Turn Conversations},\n  booktitle = {Proceedings of the NAACL Student Research Workshop (SRW)},\n  year      = {2025}\n}"
     },
@@ -32,9 +32,9 @@
       "venue": "[WoRMA]",
       "authors": "Seyedreza Mohseni, <b>Sarvesh Baskar</b>, Arman Hossain, Aritran Piplai, Edward Raff, and Manas Gaur.",
       "title": "\"Analyzing Chain of Thought (CoT) Approaches in Control Flow Code Deobfuscation Tasks\".",
-      "conference": "Workshop on Robustness of Modern AI (WoRMA), 2026.",
+      "conference": "Workshop on Rethinking Malware Analysis (WoRMA), 2026.",
       "pdf": "../assets/documents/publications/deobfuscation_worma2026.pdf",
-      "bibtex": "@inproceedings{mohseni2026analyzing,\n  author    = {Mohseni, Seyedreza and Baskar, Sarvesh and Hossain, Arman and Piplai, Aritran and Raff, Edward and Gaur, Manas},\n  title     = {Analyzing Chain of Thought (CoT) Approaches in Control Flow Code Deobfuscation Tasks},\n  booktitle = {Workshop on Robustness of Modern AI (WoRMA)},\n  year      = {2026}\n}"
+      "bibtex": "@inproceedings{mohseni2026analyzing,\n  author    = {Mohseni, Seyedreza and Baskar, Sarvesh and Hossain, Arman and Piplai, Aritran and Raff, Edward and Gaur, Manas},\n  title     = {Analyzing Chain of Thought (CoT) Approaches in Control Flow Code Deobfuscation Tasks},\n  booktitle = {Workshop on Rethinking Malware Analysis (WoRMA)},\n  year      = {2026}\n}"
     }
   ],
   "pre_prints": [
