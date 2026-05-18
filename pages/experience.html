@@ -18,225 +18,300 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap"
         rel="stylesheet">
 
+    <!-- Custom Styling for Interactive Slider Navigation Switcher -->
+    <style>
+        .custom-tab-container {
+            margin-bottom: 2.5rem;
+            margin-top: 1rem;
+        }
+        .custom-project-nav {
+            background-color: #f1f5f9;
+            padding: 6px;
+            border-radius: 50px;
+            display: inline-flex;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .custom-project-nav .nav-link {
+            border-radius: 50px;
+            font-weight: 700;
+            color: #475569;
+            padding: 10px 24px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none !important;
+            background: transparent !important;
+            display: flex;
+            align-items: center;
+        }
+        .custom-project-nav .nav-link i {
+            font-size: 1.1rem;
+        }
+        .custom-project-nav .nav-link.active {
+            color: #ffffff !important;
+            background: linear-gradient(135deg, #0077b6, #0096c7) !important;
+            box-shadow: 0 4px 14px rgba(0, 119, 182, 0.3);
+        }
+        .custom-project-nav .nav-link:hover:not(.active) {
+            color: #0f172a;
+            background-color: rgba(0, 119, 182, 0.06) !important;
+        }
+        .tab-pane {
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 
 <body>
     <div id="page-container">
         <header-component></header-component>
+        
         <div class="container mt-4">
-            <h5><b>__ Research Experience _____</b></h5>
+            
+            <!-- Premium Dynamic Navigation Switcher -->
+            <div class="text-center custom-tab-container">
+                <div class="nav nav-pills custom-project-nav shadow-sm" id="pills-tab" role="tablist">
+                    <a class="nav-link active" id="pills-research-tab" data-toggle="pill" href="#pills-research" role="tab" aria-controls="pills-research" aria-selected="true">
+                        <i class="fa-solid fa-flask mr-2"></i>Research Experience
+                    </a>
+                    <a class="nav-link" id="pills-industry-tab" data-toggle="pill" href="#pills-industry" role="tab" aria-controls="pills-industry" aria-selected="false">
+                        <i class="fa-solid fa-briefcase mr-2"></i>Industry Experience
+                    </a>
+                    <a class="nav-link" id="pills-teaching-tab" data-toggle="pill" href="#pills-teaching" role="tab" aria-controls="pills-teaching" aria-selected="false">
+                        <i class="fa-solid fa-chalkboard-user mr-2"></i>Teaching & Mentorship
+                    </a>
+                </div>
+            </div>
 
-            <!-- Experience 1: UMD -->
-            <div class="mt-3 card shadow-sm">
-                <div class="card-body">
-                    <div class="row mt-2 mt-md-0">
-                        <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
-                            <img class="rounded" style="max-width: 130px; height: auto;" src="../assets/img/experience/umd.png" alt="UMD Logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/807/807479.png'">
-                        </div>
-                        <div class="col-md-10">
-                            <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">University of Maryland, College Park</h4>
-                            <h6 class="mt-1" style="font-size: 1.1rem; font-weight: 500; color: var(--blue-medium);">AI Research Assistant (Furong Huang's Lab)</h6>
-                            <h3 class="designation-lemos mt-1" style="font-size: 0.95rem; color: var(--gray-dark); font-weight: 600;">Department of Computer Science</h3>
-                            <h6 class="small-lemos mt-1">(Jul 2025 - Present)</h6>
-                            
-                            <p class="mt-3 mb-2">
-                                <button class="btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#collapseContent-1" aria-expanded="false" aria-controls="collapseContent-1">
-                                    Read more...
-                                </button>
-                            </p>
+            <!-- Tab Content Container -->
+            <div class="tab-content" id="pills-tabContent">
+                
+                <!-- 1. RESEARCH EXPERIENCE TAB -->
+                <div class="tab-pane fade show active" id="pills-research" role="tabpanel" aria-labelledby="pills-research-tab">
+                    
+                    <!-- Experience 1: UMD -->
+                    <div class="mt-3 card shadow-sm">
+                        <div class="card-body">
+                            <div class="row mt-2 mt-md-0">
+                                <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
+                                    <img class="rounded" style="max-width: 130px; height: auto;" src="../assets/img/experience/umd.png" alt="UMD Logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/807/807479.png'">
+                                </div>
+                                <div class="col-md-10">
+                                    <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">University of Maryland, College Park</h4>
+                                    <h6 class="mt-1" style="font-size: 1.1rem; font-weight: 500; color: var(--blue-medium);">AI Research Assistant (Furong Huang's Lab)</h6>
+                                    <h3 class="designation-lemos mt-1" style="font-size: 0.95rem; color: var(--gray-dark); font-weight: 600;">Department of Computer Science</h3>
+                                    <h6 class="small-lemos mt-1">(Jul 2025 - Present)</h6>
+                                    
+                                    <p class="mt-3 mb-2">
+                                        <button class="btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#collapseContent-1" aria-expanded="false" aria-controls="collapseContent-1">
+                                            Read more...
+                                        </button>
+                                    </p>
 
-                            <!-- Collapse details -->
-                            <div id="collapseContent-1" class="collapse mt-3">
-                                <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.55;">
-                                    <ul class="mb-0" style="padding-left: 1.25rem;">
-                                        <li class="mb-2">Built and evaluated multimodal AI pipelines for large vision-language models (VLMs), video reasoning, hallucination mitigation, and synthetic visual reasoning tasks.</li>
-                                        <li class="mb-2">Implemented embedding-refinement experiments in the <strong>OpenQwen2VL</strong> stack to improve visual grounding and significantly reduce hallucinations in large vision-language models.</li>
-                                        <li class="mb-0">Executed controlled experiments, thorough ablations, result analyses, and generated paper-ready visualizations for ACL and ECCV research submissions.</li>
-                                    </ul>
+                                    <!-- Collapse details -->
+                                    <div id="collapseContent-1" class="collapse mt-3">
+                                        <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.55;">
+                                            <ul class="mb-0" style="padding-left: 1.25rem;">
+                                                <li class="mb-2">Built and evaluated multimodal AI pipelines for large vision-language models (VLMs), video reasoning, hallucination mitigation, and synthetic visual reasoning tasks.</li>
+                                                <li class="mb-2">Implemented embedding-refinement experiments in the <strong>OpenQwen2VL</strong> stack to improve visual grounding and significantly reduce hallucinations in large vision-language models.</li>
+                                                <li class="mb-0">Executed controlled experiments, thorough ablations, result analyses, and generated paper-ready visualizations for ACL and ECCV research submissions.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Experience 2: UMBC -->
-            <div class="mt-3 card shadow-sm">
-                <div class="card-body">
-                    <div class="row mt-2 mt-md-0">
-                        <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
-                            <img class="rounded" style="max-width: 130px; height: auto;" src="../assets/img/experience/umbc.png" alt="UMBC Logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/807/807479.png'">
-                        </div>
-                        <div class="col-md-10">
-                            <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">University of Maryland, Baltimore County</h4>
-                            <h6 class="mt-1" style="font-size: 1.1rem; font-weight: 500; color: var(--blue-medium);">AI Research Assistant (KAI2 Lab)</h6>
-                            <h3 class="designation-lemos mt-1" style="font-size: 0.95rem; color: var(--gray-dark); font-weight: 600;">Department of Computer Science</h3>
-                            <h6 class="small-lemos mt-1">(Aug 2024 - Jul 2025)</h6>
-                            
-                            <p class="mt-3 mb-2">
-                                <button class="btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#collapseContent-2" aria-expanded="false" aria-controls="collapseContent-2">
-                                    Read more...
-                                </button>
-                            </p>
+                    <!-- Experience 2: UMBC -->
+                    <div class="mt-3 card shadow-sm">
+                        <div class="card-body">
+                            <div class="row mt-2 mt-md-0">
+                                <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
+                                    <img class="rounded" style="max-width: 130px; height: auto;" src="../assets/img/experience/umbc.png" alt="UMBC Logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/807/807479.png'">
+                                </div>
+                                <div class="col-md-10">
+                                    <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">University of Maryland, Baltimore County</h4>
+                                    <h6 class="mt-1" style="font-size: 1.1rem; font-weight: 500; color: var(--blue-medium);">AI Research Assistant (KAI2 Lab)</h6>
+                                    <h3 class="designation-lemos mt-1" style="font-size: 0.95rem; color: var(--gray-dark); font-weight: 600;">Department of Computer Science</h3>
+                                    <h6 class="small-lemos mt-1">(Aug 2024 - Jul 2025)</h6>
+                                    
+                                    <p class="mt-3 mb-2">
+                                        <button class="btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#collapseContent-2" aria-expanded="false" aria-controls="collapseContent-2">
+                                            Read more...
+                                        </button>
+                                    </p>
 
-                            <!-- Collapse details -->
-                            <div id="collapseContent-2" class="collapse mt-3">
-                                <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.55;">
-                                    <ul class="mb-0" style="padding-left: 1.25rem;">
-                                        <li class="mb-2">Developed LLM-based systems for multi-turn conversation, structural planning, and code reasoning using Python, structured prompt engineering, and standard evaluation pipelines.</li>
-                                        <li class="mb-2">Led experiments and evaluation for a first-author <strong>NAACL 2025 SRW</strong> paper on resolving persona knowledge gaps in LLM conversations, improving dialogue relevance in long-term multi-turn context.</li>
-                                        <li class="mb-0">Contributed to IBM-collaborative planning research by building benchmarks, experiment logs, and modular evaluation scripts for classical planning domains (ACPbench).</li>
-                                    </ul>
+                                    <!-- Collapse details -->
+                                    <div id="collapseContent-2" class="collapse mt-3">
+                                        <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.55;">
+                                            <ul class="mb-0" style="padding-left: 1.25rem;">
+                                                <li class="mb-2">Developed LLM-based systems for multi-turn conversation, structural planning, and code reasoning using Python, structured prompt engineering, and standard evaluation pipelines.</li>
+                                                <li class="mb-2">Led experiments and evaluation for a first-author <strong>NAACL 2025 SRW</strong> paper on resolving persona knowledge gaps in LLM conversations, improving dialogue relevance in long-term multi-turn context.</li>
+                                                <li class="mb-0">Contributed to IBM-collaborative planning research by building benchmarks, experiment logs, and modular evaluation scripts for classical planning domains (ACPbench).</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Experience 3: APPCAIR -->
-            <div class="mt-3 card shadow-sm">
-                <div class="card-body">
-                    <div class="row mt-2 mt-md-0">
-                        <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
-                            <img class="rounded" style="max-width: 130px; height: auto;" src="../assets/img/education/bits-pilani.png" alt="BITS Pilani Logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/807/807479.png'">
-                        </div>
-                        <div class="col-md-10">
-                            <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;"><a class="exp-affiliation exp-link-appcair" href="https://appcair.bits-goa.ac.in/" target="_blank" style="color: var(--blue-medium); font-weight: bold;">TCS Research - Datalab, APPCAIR, BITS Pilani</a></h4>
-                            <h6 class="mt-1" style="font-size: 1.1rem; font-weight: 500; color: var(--blue-medium);">Student Researcher (APPCAIR)</h6>
-                            <h3 class="designation-lemos mt-1" style="font-size: 0.95rem; color: var(--gray-dark); font-weight: 600;">BITS Pilani, K K Birla Goa Campus</h3>
-                            <h6 class="small-lemos mt-1">(Jan 2024 - May 2024)</h6>
-                            
-                            <p class="mt-3 mb-2">
-                                <button class="btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#collapseContent-appcair" aria-expanded="false" aria-controls="collapseContent-appcair">
-                                    Read more...
-                                </button>
-                            </p>
+                    <!-- Experience 3: APPCAIR -->
+                    <div class="mt-3 card shadow-sm">
+                        <div class="card-body">
+                            <div class="row mt-2 mt-md-0">
+                                <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
+                                    <img class="rounded" style="max-width: 130px; height: auto;" src="../assets/img/education/bits-pilani.png" alt="BITS Pilani Logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/807/807479.png'">
+                                </div>
+                                <div class="col-md-10">
+                                    <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;"><a class="exp-affiliation exp-link-appcair" href="https://appcair.bits-goa.ac.in/" target="_blank" style="color: var(--blue-medium); font-weight: bold;">TCS Research - Datalab, APPCAIR, BITS Pilani</a></h4>
+                                    <h6 class="mt-1" style="font-size: 1.1rem; font-weight: 500; color: var(--blue-medium);">Student Researcher (APPCAIR)</h6>
+                                    <h3 class="designation-lemos mt-1" style="font-size: 0.95rem; color: var(--gray-dark); font-weight: 600;">BITS Pilani, K K Birla Goa Campus</h3>
+                                    <h6 class="small-lemos mt-1">(Jan 2024 - May 2024)</h6>
+                                    
+                                    <p class="mt-3 mb-2">
+                                        <button class="btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#collapseContent-appcair" aria-expanded="false" aria-controls="collapseContent-appcair">
+                                            Read more...
+                                        </button>
+                                    </p>
 
-                            <!-- Collapse details -->
-                            <div id="collapseContent-appcair" class="collapse mt-3">
-                                <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.55;">
-                                    <ul class="mb-0" style="padding-left: 1.25rem;">
-                                        <li class="mb-2">Conducted comprehensive literature reviews to scope tasks, identify baselines, datasets, and evaluation protocols.</li>
-                                        <li class="mb-2">Translated high-level research goals into concrete experimental plans and weekly milestones with professors and industry collaborators.</li>
-                                        <li class="mb-2">Implemented the discussed methodology pipelines in Python with version control, unit tests, and clear documentation for reproducibility.</li>
-                                        <li class="mb-2">Prepared weekly written reports and presentations summarizing results, insights, and next steps for faculty and industry stakeholders.</li>
-                                        <li class="mb-2">Coordinated code handoff by organizing repositories and packaging notebooks for maintainability and reuse.</li>
-                                        <li class="mb-0">Contributed to manuscript sections on related work, methods, experimental setup, and result interpretation.</li>
-                                    </ul>
+                                    <!-- Collapse details -->
+                                    <div id="collapseContent-appcair" class="collapse mt-3">
+                                        <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.55;">
+                                            <ul class="mb-0" style="padding-left: 1.25rem;">
+                                                <li class="mb-2">Conducted comprehensive literature reviews to scope tasks, identify baselines, datasets, and evaluation protocols.</li>
+                                                <li class="mb-2">Translated high-level research goals into concrete experimental plans and weekly milestones with professors and industry collaborators.</li>
+                                                <li class="mb-2">Implemented the discussed methodology pipelines in Python with version control, unit tests, and clear documentation for reproducibility.</li>
+                                                <li class="mb-2">Prepared weekly written reports and presentations summarizing results, insights, and next steps for faculty and industry stakeholders.</li>
+                                                <li class="mb-2">Coordinated code handoff by organizing repositories and packaging notebooks for maintainability and reuse.</li>
+                                                <li class="mb-0">Contributed to manuscript sections on related work, methods, experimental setup, and result interpretation.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <h5 class="mt-5"><b>__ Industry Experience _____</b></h5>
+                </div> <!-- End pills-research tab-pane -->
 
-            <!-- Experience 4: Avyott -->
-            <div class="mt-3 card shadow-sm">
-                <div class="card-body">
-                    <div class="row mt-2 mt-md-0">
-                        <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
-                            <img class="rounded" style="max-width: 130px; height: auto;" src="../assets/img/experience/avyott.png" alt="Avyott Logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/2910/2910795.png'">
-                        </div>
-                        <div class="col-md-10">
-                            <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">Avyott</h4>
-                            <h6 class="mt-1" style="font-size: 1.1rem; font-weight: 500; color: var(--blue-medium);">AI Consultant</h6>
-                            <h6 class="small-lemos mt-1">(Aug 2025 - Present)</h6>
-                            
-                            <p class="mt-3 mb-2">
-                                <button class="btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#collapseContent-3" aria-expanded="false" aria-controls="collapseContent-3">
-                                    Read more...
-                                </button>
-                            </p>
+                <!-- 2. INDUSTRY EXPERIENCE TAB -->
+                <div class="tab-pane fade" id="pills-industry" role="tabpanel" aria-labelledby="pills-industry-tab">
 
-                            <!-- Collapse details -->
-                            <div id="collapseContent-3" class="collapse mt-3">
-                                <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.55;">
-                                    <ul class="mb-0" style="padding-left: 1.25rem;">
-                                        <li class="mb-2">Designed and deployed multimodal RAG chatbots for enterprise clients, supporting grounded Q&A over text, images, tables, and internal documents.</li>
-                                        <li class="mb-2">Built <strong>Model Context Protocol (MCP)</strong> servers to integrate LLM chat workflows with ticketing systems, enabling ticketing operations (create, update, fetch) directly through natural language.</li>
-                                        <li class="mb-0">Improved user intent capture and conversational depth by adding dynamic clarification workflows inspired by multi-turn LLM persona research.</li>
-                                    </ul>
+                    <!-- Experience 4: Avyott -->
+                    <div class="mt-3 card shadow-sm">
+                        <div class="card-body">
+                            <div class="row mt-2 mt-md-0">
+                                <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
+                                    <img class="rounded" style="max-width: 130px; height: auto;" src="../assets/img/experience/avyott.png" alt="Avyott Logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/2910/2910795.png'">
+                                </div>
+                                <div class="col-md-10">
+                                    <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">Avyott</h4>
+                                    <h6 class="mt-1" style="font-size: 1.1rem; font-weight: 500; color: var(--blue-medium);">AI Consultant</h6>
+                                    <h6 class="small-lemos mt-1">(Aug 2025 - Present)</h6>
+                                    
+                                    <p class="mt-3 mb-2">
+                                        <button class="btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#collapseContent-3" aria-expanded="false" aria-controls="collapseContent-3">
+                                            Read more...
+                                        </button>
+                                    </p>
+
+                                    <!-- Collapse details -->
+                                    <div id="collapseContent-3" class="collapse mt-3">
+                                        <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.55;">
+                                            <ul class="mb-0" style="padding-left: 1.25rem;">
+                                                <li class="mb-2">Designed and deployed multimodal RAG chatbots for enterprise clients, supporting grounded Q&A over text, images, tables, and internal documents.</li>
+                                                <li class="mb-2">Built <strong>Model Context Protocol (MCP)</strong> servers to integrate LLM chat workflows with ticketing systems, enabling ticketing operations (create, update, fetch) directly through natural language.</li>
+                                                <li class="mb-0">Improved user intent capture and conversational depth by adding dynamic clarification workflows inspired by multi-turn LLM persona research.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Experience 5: Techisy -->
-            <div class="mt-3 card shadow-sm">
-                <div class="card-body">
-                    <div class="row mt-2 mt-md-0">
-                        <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
-                            <img class="rounded" style="max-width: 130px; height: auto;" src="../assets/img/experience/techisy.png" alt="Techisy Logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/2910/2910795.png'">
-                        </div>
-                        <div class="col-md-10">
-                            <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">Techisy</h4>
-                            <h6 class="mt-1" style="font-size: 1.1rem; font-weight: 500; color: var(--blue-medium);">AI / Software Intern</h6>
-                            <h6 class="small-lemos mt-1">(May 2024 - Jul 2024)</h6>
-                            
-                            <p class="mt-3 mb-2">
-                                <button class="btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#collapseContent-4" aria-expanded="false" aria-controls="collapseContent-4">
-                                    Read more...
-                                </button>
-                            </p>
+                    <!-- Experience 5: Techisy -->
+                    <div class="mt-3 card shadow-sm">
+                        <div class="card-body">
+                            <div class="row mt-2 mt-md-0">
+                                <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
+                                    <img class="rounded" style="max-width: 130px; height: auto;" src="../assets/img/experience/techisy.png" alt="Techisy Logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/2910/2910795.png'">
+                                </div>
+                                <div class="col-md-10">
+                                    <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">Techisy</h4>
+                                    <h6 class="mt-1" style="font-size: 1.1rem; font-weight: 500; color: var(--blue-medium);">AI / Software Intern</h6>
+                                    <h6 class="small-lemos mt-1">(May 2024 - Jul 2024)</h6>
+                                    
+                                    <p class="mt-3 mb-2">
+                                        <button class="btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#collapseContent-4" aria-expanded="false" aria-controls="collapseContent-4">
+                                            Read more...
+                                        </button>
+                                    </p>
 
-                            <!-- Collapse details -->
-                            <div id="collapseContent-4" class="collapse mt-3">
-                                <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.55;">
-                                    <ul class="mb-0" style="padding-left: 1.25rem;">
-                                        <li class="mb-2">Built an AI-powered duplicate bill detection system using OCR, OpenAI text-embeddings, and <strong>CLIP</strong> embeddings to find visual duplicates, achieving 95% accuracy.</li>
-                                        <li class="mb-2">Developed a RAG-based resume matching system using <strong>LangChain</strong>, <strong>Ollama</strong>, and <strong>FAISS</strong> to parse, extract, and align candidate skills with company job descriptions.</li>
-                                        <li class="mb-0">Deployed working web prototypes using Streamlit, facilitating streamlined HR workflows and reducing manual review efforts by 40%.</li>
-                                    </ul>
+                                    <!-- Collapse details -->
+                                    <div id="collapseContent-4" class="collapse mt-3">
+                                        <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.55;">
+                                            <ul class="mb-0" style="padding-left: 1.25rem;">
+                                                <li class="mb-2">Built an AI-powered duplicate bill detection system using OCR, OpenAI text-embeddings, and <strong>CLIP</strong> embeddings to find visual duplicates, achieving 95% accuracy.</li>
+                                                <li class="mb-2">Developed a RAG-based resume matching system using <strong>LangChain</strong>, <strong>Ollama</strong>, and <strong>FAISS</strong> to parse, extract, and align candidate skills with company job descriptions.</li>
+                                                <li class="mb-0">Deployed working web prototypes using Streamlit, facilitating streamlined HR workflows and reducing manual review efforts by 40%.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <h5 class="mt-5"><b>__ Teaching & Mentorship _____</b></h5>
+                </div> <!-- End pills-industry tab-pane -->
 
-            <!-- Experience 6: BITS TA -->
-            <div class="mt-3 card shadow-sm">
-                <div class="card-body">
-                    <div class="row mt-2 mt-md-0">
-                        <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
-                            <img class="rounded" style="max-width: 130px; height: auto;" src="../assets/img/education/bits-pilani.png" alt="BITS Pilani Logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/807/807479.png'">
-                        </div>
-                        <div class="col-md-10">
-                            <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">BITS Pilani, Goa Campus</h4>
-                            <h6 class="mt-1" style="font-size: 1.1rem; font-weight: 500; color: var(--blue-medium);">Department of Physics</h6>
-                            <h3 class="designation-lemos mt-1" style="font-size: 0.95rem; color: var(--gray-dark); font-weight: 600;">Graduate Teaching Assistant</h3>
-                            <h6 class="small-lemos mt-1">(Aug 2023 - May 2024)</h6>
-                            
-                            <p class="mt-3 mb-2">
-                                <button class="btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#collapseContent-5" aria-expanded="false" aria-controls="collapseContent-5">
-                                    Read more...
-                                </button>
-                            </p>
+                <!-- 3. TEACHING & MENTORSHIP TAB -->
+                <div class="tab-pane fade" id="pills-teaching" role="tabpanel" aria-labelledby="pills-teaching-tab">
 
-                            <!-- Collapse details -->
-                            <div id="collapseContent-5" class="collapse mt-3">
-                                <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.55;">
-                                    <ul class="mb-0" style="padding-left: 1.25rem;">
-                                        <li class="mb-2">Assisted instructions for the graduate-level courses <strong>Mathematical Methods of Physics</strong> and <strong>Computational Physics</strong>.</li>
-                                        <li class="mb-2">Led weekly grading, designed problem sets, and held dedicated office hours for a cohort of 50+ dual-degree students.</li>
-                                        <li class="mb-0">Guided students in computational physics algorithms and numerical methods using Matlab and C++.</li>
-                                    </ul>
+                    <!-- Experience 6: BITS TA -->
+                    <div class="mt-3 card shadow-sm">
+                        <div class="card-body">
+                            <div class="row mt-2 mt-md-0">
+                                <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
+                                    <img class="rounded" style="max-width: 130px; height: auto;" src="../assets/img/education/bits-pilani.png" alt="BITS Pilani Logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/807/807479.png'">
+                                </div>
+                                <div class="col-md-10">
+                                    <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">BITS Pilani, Goa Campus</h4>
+                                    <h6 class="mt-1" style="font-size: 1.1rem; font-weight: 500; color: var(--blue-medium);">Department of Physics</h6>
+                                    <h3 class="designation-lemos mt-1" style="font-size: 0.95rem; color: var(--gray-dark); font-weight: 600;">Graduate Teaching Assistant</h3>
+                                    <h6 class="small-lemos mt-1">(Aug 2023 - May 2024)</h6>
+                                    
+                                    <p class="mt-3 mb-2">
+                                        <button class="btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#collapseContent-5" aria-expanded="false" aria-controls="collapseContent-5">
+                                            Read more...
+                                        </button>
+                                    </p>
+
+                                    <!-- Collapse details -->
+                                    <div id="collapseContent-5" class="collapse mt-3">
+                                        <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.55;">
+                                            <ul class="mb-0" style="padding-left: 1.25rem;">
+                                                <li class="mb-2">Assisted instructions for the graduate-level courses <strong>Mathematical Methods of Physics</strong> and <strong>Computational Physics</strong>.</li>
+                                                <li class="mb-2">Led weekly grading, designed problem sets, and held dedicated office hours for a cohort of 50+ dual-degree students.</li>
+                                                <li class="mb-0">Guided students in computational physics algorithms and numerical methods using Matlab and C++.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
+                </div> <!-- End pills-teaching tab-pane -->
+            </div> <!-- End tab-content -->
 
-        </div>
+        </div> <!-- End container -->
 
         <div id="footer">
             <footer-component></footer-component>
