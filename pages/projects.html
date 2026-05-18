@@ -240,17 +240,20 @@
                                     </div>
                                 </div>
                                 <div class="col-md-10">
-                                    <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">PlanForge: Automated Thought of Search for Language Described Search Problems</h4>
+                                    <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">PlanForge: Executable Planner Generation from Natural Language</h4>
                                     <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> University of Maryland, Baltimore County (UMBC)</span> (May 2025 - Present)</h6>
                                     <p class="card-text mt-2 mb-2 text-justify small">
-                                        Built a modular planning thought-of-search loop integrating LLM state generation with a unit-test feedback loop and breadth-first search.
+                                        Developed an Architect–Builder–Runner framework that converts natural-language planning problems into executable solver programs rather than direct textual plans.
                                     </p>
 
                                     <div class="mb-2">
-                                        <span class="badge p-1 sw-tools">LLM Planning</span>
-                                        <span class="badge p-1 sw-tools">Thought-of-Search</span>
-                                        <span class="badge p-1 sw-tools">DSPy</span>
                                         <span class="badge p-1 sw-tools">Python</span>
+                                        <span class="badge p-1 sw-tools">LLM Agents</span>
+                                        <span class="badge p-1 sw-tools">Planning</span>
+                                        <span class="badge p-1 sw-tools">Code Generation</span>
+                                        <span class="badge p-1 sw-tools">Search Algorithms</span>
+                                        <span class="badge p-1 sw-tools">Verification</span>
+                                        <span class="badge p-1 sw-tools">Natural-Language Planning</span>
                                     </div>
 
                                     <div class="mt-2">
@@ -265,9 +268,15 @@
                                     <!-- Collapse details -->
                                     <div id="projectCollapse-4" class="collapse mt-3">
                                         <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.5;">
-                                            <p class="mb-2"><strong>Problem:</strong> Natural-language described search problems are underspecified and hard to ground into executable search procedures. Pure LLM prompting is brittle and lacks verification, which leads to incorrect plans and poor generalization across domains.</p>
-                                            <p class="mb-2"><strong>What I built:</strong> ATLAS, a modular thought-of-search pipeline, was designed to parse tasks described in natural language into structured representations. It combines components using a unit-test feedback loop and carries out a validator-guided breadth-first search over candidate programs and plans. An ablation suite and evaluation tool were developed to identify the roles of tests, feedback, and search.</p>
-                                            <p class="mb-0"><strong>Impact and Results:</strong> ATLAS solved 120/130 tasks (92.3%) across 13 classical planning domains described in ACPbench, versus strongest baseline 112/130 (86.2%).</p>
+                                            <p class="mb-2"><strong>Problem:</strong> Traditional direct LLM plan generation from natural language is highly brittle, unverified, and generalizes poorly to multi-constraint tasks with multiple valid solutions.</p>
+                                            <p class="mb-2"><strong>Architecture and Workflow:</strong>
+                                                <ul class="pl-3 mb-2" style="list-style-type: disc;">
+                                                    <li><strong>Architect Stage:</strong> Infers state representations, function decompositions, algorithmic strategies, and verification logic from natural-language planning problems without a fixed schema or prescribed search algorithm.</li>
+                                                    <li><strong>Builder Pipeline:</strong> Converts solver designs into executable code, including parsing, constraint checking, search/solving logic, helper functions, and iterative code–test–fix repair.</li>
+                                                    <li><strong>Runner Execution:</strong> Implements a deterministic runner that executes generated solvers and accepts only verified outputs: a valid executable plan, a no-plan verdict for unreachable goals, or a failure signal.</li>
+                                                </ul>
+                                            </p>
+                                            <p class="mb-0"><strong>Impact and Results:</strong> Evaluated PlanForge on <strong>ACPBench, Tower of Hanoi, Frogs Jumping, and NaturalPlan</strong>, showing vastly improved execution-grounded planning over direct LLM plan generation. Achieved a <strong>100% success rate</strong> on NaturalPlan trip planning, meeting planning, and calendar scheduling, demonstrating flawless transfer to multi-constraint planning tasks with multiple valid solutions.</p>
                                         </div>
                                     </div>
                                 </div>

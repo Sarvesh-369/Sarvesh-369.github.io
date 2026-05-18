@@ -53,18 +53,18 @@
   {
     "category": "Research Projects",
     "id": "4",
-    "title": "PlanForge: Automated Thought of Search for Language Described Search Problems",
+    "title": "PlanForge: Executable Planner Generation from Natural Language",
     "affiliation": "University of Maryland, Baltimore County (UMBC)",
     "duration": "(May 2025 - Present)",
-    "description": "Built a modular planning thought-of-search loop integrating LLM state generation with a unit-test feedback loop and breadth-first search.",
-    "tools": ["LLM Planning", "Thought-of-Search", "DSPy", "Python"],
+    "description": "Developed an Architect–Builder–Runner framework that converts natural-language planning problems into executable solver programs rather than direct textual plans.",
+    "tools": ["Python", "LLM Agents", "Planning", "Code Generation", "Search Algorithms", "Verification", "Natural-Language Planning"],
     "github_link": "https://github.com/Sarvesh-369",
     "icon": "fa-route",
     "gradient": "linear-gradient(135deg, #0077b6, #003566)",
     "details": {
-      "Problem": "Natural-language described search problems are underspecified and hard to ground into executable search procedures. Pure LLM prompting is brittle and lacks verification, which leads to incorrect plans and poor generalization across domains.",
-      "What I built": "ATLAS, a modular thought-of-search pipeline, was designed to parse tasks described in natural language into structured representations. It combines components using a unit-test feedback loop and carries out a validator-guided breadth-first search over candidate programs and plans. An ablation suite and evaluation tool were developed to identify the roles of tests, feedback, and search.",
-      "Impact and Results": "ATLAS solved 120/130 tasks (92.3%) across 13 classical planning domains described in ACPbench, versus strongest baseline 112/130 (86.2%)."
+      "Problem": "Traditional direct LLM plan generation from natural language is highly brittle, unverified, and generalizes poorly to multi-constraint tasks with multiple valid solutions.",
+      "Architecture and Workflow": "Architect Stage: Infers state representations, function decompositions, algorithmic strategies, and verification logic from natural-language planning problems without a fixed schema or prescribed search algorithm. Builder Pipeline: Converts solver designs into executable code, including parsing, constraint checking, search/solving logic, helper functions, and iterative code–test–fix repair. Runner Execution: Implements a deterministic runner that executes generated solvers and accepts only verified outputs: a valid executable plan, a no-plan verdict for unreachable goals, or a failure signal.",
+      "Impact and Results": "Evaluated PlanForge on ACPBench, Tower of Hanoi, Frogs Jumping, and NaturalPlan, showing vastly improved execution-grounded planning over direct LLM plan generation. Achieved a 100% success rate on NaturalPlan trip planning, meeting planning, and calendar scheduling, demonstrating flawless transfer to multi-constraint planning tasks with multiple valid solutions."
     }
   },
   {
