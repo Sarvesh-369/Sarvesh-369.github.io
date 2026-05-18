@@ -180,6 +180,7 @@ function interpolatePortfolioData() {
   document.querySelectorAll('.exp-link-umbc').forEach(el => el.href = p.experience?.umbc?.link || '#');
   document.querySelectorAll('.exp-link-avyott').forEach(el => el.href = p.experience?.avyott?.link || '#');
   document.querySelectorAll('.exp-link-techisy').forEach(el => el.href = p.experience?.techisy?.link || '#');
+  document.querySelectorAll('.exp-link-appcair').forEach(el => el.href = p.experience?.appcair?.link || '#');
 
   // Render education dynamics whenever the containers are present in the DOM
   // (works for both direct load and SPA navigation)
