@@ -11,7 +11,7 @@
     "bullets": [
       "Built and evaluated multimodal AI pipelines for large vision-language models (VLMs), video reasoning, hallucination mitigation, and synthetic visual reasoning tasks.",
       "Implemented embedding-refinement experiments in the <strong>OpenQwen2VL</strong> stack to improve visual grounding and significantly reduce hallucinations in large vision-language models.",
-      "Executed controlled experiments, thorough ablations, result analyses, and generated paper-ready visualizations for ACL and ECCV research submissions."
+      "Executed controlled experiments and thorough ablations, delivering paper-ready visualizations that directly supported high-impact submissions under review at ACL and ECCV 2026."
     ]
   },
   {
@@ -25,8 +25,8 @@
     "link": "https://umbc.edu",
     "bullets": [
       "Developed LLM-based systems for multi-turn conversation, structural planning, and code reasoning using Python, structured prompt engineering, and standard evaluation pipelines.",
-      "Led experiments and evaluation for a first-author <strong>NAACL 2025 SRW</strong> paper on resolving persona knowledge gaps in LLM conversations, improving dialogue relevance in long-term multi-turn context.",
-      "Contributed to IBM-collaborative planning research by building benchmarks, experiment logs, and modular evaluation scripts for classical planning domains (ACPbench)."
+      "Led experiments, analysis, and writing for a first-author <strong>NAACL 2025 SRW</strong> paper, achieving +42% human A/B preference gains on CCPE-M for persona knowledge gap resolution.",
+      "Spearheaded IBM-collaborated planning research on classical planning domains (ACPBench), implementing modular evaluation workflows that achieved 92.3% planning accuracy."
     ]
   },
   {
@@ -41,10 +41,10 @@
     "bullets": [
       "Conducted comprehensive literature reviews to scope tasks, identify baselines, datasets, and evaluation protocols.",
       "Translated high-level research goals into concrete experimental plans and weekly milestones with professors and industry collaborators.",
-      "Implemented the discussed methodology pipelines in Python with version control, unit tests, and clear documentation for reproducibility.",
+      "Implemented discussed methodology pipelines in Python with unit tests and clear documentation, achieving a 30% increase in executable code yield through optimized prompting and iterative repair.",
       "Prepared weekly written reports and presentations summarizing results, insights, and next steps for faculty and industry stakeholders.",
       "Coordinated code handoff by organizing repositories and packaging notebooks for maintainability and reuse.",
-      "Contributed to manuscript sections on related work, methods, experimental setup, and result interpretation."
+      "Contributed to manuscript sections on methods and results, enabling successful end-to-end automation of ML paper-idea execution."
     ]
   },
   {
@@ -58,8 +58,8 @@
     "link": "https://avyott.com",
     "bullets": [
       "Designed and deployed multimodal RAG chatbots for enterprise clients, supporting grounded Q&A over text, images, tables, and internal documents.",
-      "Built <strong>Model Context Protocol (MCP)</strong> servers to integrate LLM chat workflows with ticketing systems, enabling ticketing operations (create, update, fetch) directly through natural language.",
-      "Improved user intent capture and conversational depth by adding dynamic clarification workflows inspired by multi-turn LLM persona research."
+      "Built <strong>Model Context Protocol (MCP)</strong> servers to integrate LLM chat workflows with ticketing systems, enabling ticketing operations directly through natural language.",
+      "Successfully deployed and scaled the conversational system for enterprise use at IPCA and Taj, incorporating dynamic clarification steps to improve intent capture and personalization."
     ]
   },
   {
@@ -87,9 +87,10 @@
     "logo": "../assets/img/education/bits-pilani.png",
     "link": "",
     "bullets": [
-      "Assisted instructions for the graduate-level courses <strong>Mathematical Methods of Physics</strong> and <strong>Computational Physics</strong>.",
-      "Led weekly grading, designed problem sets, and held dedicated office hours for a cohort of 50+ dual-degree students.",
-      "Guided students in computational physics algorithms and numerical methods using Matlab and C++."
+      "Assisted instruction for the graduate-level course <strong>Mathematical Methods of Physics</strong> (Fall 2023–24).",
+      "Graded assignments, problem sets, and lab exercises.",
+      "Conducted demonstrations for numerical methods (e.g., integration, differential equations) and scientific computing best practices.",
+      "Supported exam evaluation; provided feedback to students and instructors to improve learning outcomes."
     ]
   }
 ]
