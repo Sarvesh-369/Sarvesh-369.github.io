@@ -56,6 +56,26 @@
             color: #0f172a;
             background-color: rgba(0, 119, 182, 0.06) !important;
         }
+        @media (max-width: 576px) {
+            .custom-project-nav {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                border-radius: 30px;
+                padding: 4px;
+            }
+            .custom-project-nav .nav-link {
+                flex: 1;
+                justify-content: center;
+                padding: 8px 10px;
+                font-size: 0.82rem;
+                border-radius: 30px;
+            }
+            .custom-project-nav .nav-link i {
+                font-size: 0.95rem;
+                margin-right: 4px !important;
+            }
+        }
         .tab-pane {
             animation: fadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1);
         }
