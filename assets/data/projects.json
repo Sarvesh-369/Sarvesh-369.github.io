@@ -126,7 +126,6 @@
     "duration": "(Jan 2024 - May 2024)",
     "description": "Developed an LLM-driven planning and code-generation system to automate the mining and execution of ML research ideas from papers.",
     "tools": ["RAG", "Code Synthesis", "Iterative Repair", "Python"],
-    "github_link": "https://github.com/Sarvesh-369",
     "icon": "fa-gears",
     "gradient": "linear-gradient(135deg, #588157, #a3b18a)",
     "details": {
@@ -143,7 +142,6 @@
     "duration": "(Aug 2025 - Present)",
     "description": "Shipped an enterprise-grade multimodal RAG chatbot integrating custom MCP server endpoints for ticket lifecycle management and conversational clarification.",
     "tools": ["RAG", "MCP", "LlamaIndex", "Node.js", "Python"],
-    "github_link": "https://github.com/Sarvesh-369",
     "icon": "fa-magnifying-glass",
     "gradient": "linear-gradient(135deg, #005f73, #0a9396)",
     "details": {
@@ -160,7 +158,6 @@
     "duration": "(May 2024 - Jul 2024)",
     "description": "Built an AI duplicate invoice identification pipeline using OCR text parsing and CLIP multimodal embeddings.",
     "tools": ["CLIP", "OCR", "OpenAI Embeddings", "Streamlit"],
-    "github_link": "https://github.com/Sarvesh-369",
     "icon": "fa-receipt",
     "gradient": "linear-gradient(135deg, #d62828, #f77f00)",
     "details": {
@@ -177,7 +174,6 @@
     "duration": "(May 2024 - Jul 2024)",
     "description": "Developed an automated candidate-to-job matching solution using LangChain, Ollama, and FAISS vector indices.",
     "tools": ["LangChain", "Ollama", "FAISS", "RAG", "Streamlit"],
-    "github_link": "https://github.com/Sarvesh-369",
     "icon": "fa-address-card",
     "gradient": "linear-gradient(135deg, #003049, #669bbc)",
     "details": {
