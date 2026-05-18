@@ -6,7 +6,7 @@
   },
   "about": [
     "I am an AI research engineer working at the intersection of language models, vision-language models, planning, and multimodal agents. My work focuses on making AI systems more grounded and reliable as they move beyond text generation toward perception, reasoning, and action.",
-    "I have research experience with the University of Maryland, College Park and UMBC, where I have worked on VLM hallucination mitigation, multimodal video reasoning, LLM planning, code reasoning, and persona-aware conversational agents. I also have applied engineering experience building production AI systems, including multimodal RAG pipelines, MCP-based workflow integrations, and clarification-driven chat systems.",
+    "I have research experience with the University of Maryland, College Park and UMBC (collaborating with IBM Research on automated planning), where I have worked on VLM hallucination mitigation, multimodal video reasoning, LLM planning, code reasoning, and persona-aware conversational agents. I also have applied engineering experience building production AI systems, including multimodal RAG pipelines, MCP-based workflow integrations, and clarification-driven chat systems.",
     "My long-term goal is to build AI agents that can understand visual environments, reason over uncertainty, and execute reliable long-horizon actions — both in digital interfaces and eventually in embodied/robotic settings."
   ],
   "interests": {
