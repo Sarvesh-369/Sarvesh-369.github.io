@@ -19,15 +19,6 @@
       "bibtex": "@inproceedings{baskar2025cper,\n  author    = {Baskar, Sarvesh and Gaur, Manas and Parthasarathy, Srinivasan and Verlekar, Tanmay Tulsidas},\n  title     = {(CPER) From Guessing to Asking: An Approach to Resolving Persona Knowledge Gap in LLMs during Multi-Turn Conversations},\n  booktitle = {Proceedings of the NAACL Student Research Workshop (SRW)},\n  year      = {2025}\n}"
     },
     {
-      "id": "prp-3",
-      "venue": "[WoRMA]",
-      "authors": "Seyedreza Mohseni, <b>Sarvesh Baskar</b>, Arman Hossain, Aritran Piplai, Edward Raff, and Manas Gaur.",
-      "title": "\"Analyzing Chain of Thought (CoT) Approaches in Control Flow Code Deobfuscation Tasks\".",
-      "conference": "Workshop on Robustness of Modern AI (WoRMA), 2026.",
-      "pdf": "../assets/documents/publications/deobfuscation_worma2026.pdf",
-      "bibtex": "@inproceedings{mohseni2026analyzing,\n  author    = {Mohseni, Seyedreza and Baskar, Sarvesh and Hossain, Arman and Piplai, Aritran and Raff, Edward and Gaur, Manas},\n  title     = {Analyzing Chain of Thought (CoT) Approaches in Control Flow Code Deobfuscation Tasks},\n  booktitle = {Workshop on Robustness of Modern AI (WoRMA)},\n  year      = {2026}\n}"
-    },
-    {
       "id": "prp-4",
       "venue": "[ICLR Workshop]",
       "authors": "<b>Sarvesh Baskar</b>, Muhammad R. Islam, Zikui Cai, Ankit Nakhawa, Anirudh Satheesh, Tom Goldstein, and Furong Huang.",
@@ -35,6 +26,15 @@
       "conference": "ICLR Workshop on I Can’t Believe It’s Not Better, 2026.",
       "pdf": "../assets/documents/publications/counting_iclr2026.pdf",
       "bibtex": "@inproceedings{baskar2026lowfrequency,\n  author    = {Baskar, Sarvesh and Islam, Muhammad R. and Cai, Zikui and Nakhawa, Ankit and Satheesh, Anirudh and Goldstein, Tom and Huang, Furong},\n  title     = {The Low-Frequency Trap: Why Scaling Doesn't Solve Simple Temporal Counting},\n  booktitle = {ICLR Workshop on I Can't Believe It's Not Better},\n  year      = {2026}\n}"
+    },
+    {
+      "id": "prp-3",
+      "venue": "[WoRMA]",
+      "authors": "Seyedreza Mohseni, <b>Sarvesh Baskar</b>, Arman Hossain, Aritran Piplai, Edward Raff, and Manas Gaur.",
+      "title": "\"Analyzing Chain of Thought (CoT) Approaches in Control Flow Code Deobfuscation Tasks\".",
+      "conference": "Workshop on Robustness of Modern AI (WoRMA), 2026.",
+      "pdf": "../assets/documents/publications/deobfuscation_worma2026.pdf",
+      "bibtex": "@inproceedings{mohseni2026analyzing,\n  author    = {Mohseni, Seyedreza and Baskar, Sarvesh and Hossain, Arman and Piplai, Aritran and Raff, Edward and Gaur, Manas},\n  title     = {Analyzing Chain of Thought (CoT) Approaches in Control Flow Code Deobfuscation Tasks},\n  booktitle = {Workshop on Robustness of Modern AI (WoRMA)},\n  year      = {2026}\n}"
     }
   ],
   "pre_prints": [
