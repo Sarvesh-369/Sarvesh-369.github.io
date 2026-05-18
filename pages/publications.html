@@ -20,183 +20,404 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap"
         rel="stylesheet">
 
+    <!-- Custom Styling for Interactive Slider Navigation Switcher & Cards -->
+    <style>
+        .custom-tab-container {
+            margin-bottom: 2.5rem;
+            margin-top: 1rem;
+        }
+        .custom-project-nav {
+            background-color: #f1f5f9;
+            padding: 6px;
+            border-radius: 50px;
+            display: inline-flex;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .custom-project-nav .nav-link {
+            border-radius: 50px;
+            font-weight: 700;
+            color: #475569;
+            padding: 10px 28px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none !important;
+            background: transparent !important;
+            display: flex;
+            align-items: center;
+        }
+        .custom-project-nav .nav-link i {
+            font-size: 1.1rem;
+        }
+        .custom-project-nav .nav-link.active {
+            color: #ffffff !important;
+            background: linear-gradient(135deg, #0077b6, #0096c7) !important;
+            box-shadow: 0 4px 14px rgba(0, 119, 182, 0.3);
+        }
+        .custom-project-nav .nav-link:hover:not(.active) {
+            color: #0f172a;
+            background-color: rgba(0, 119, 182, 0.06) !important;
+        }
+        .tab-pane {
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Premium Card styling for Publications */
+        .pub-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .pub-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+        }
+        .pub-badge {
+            font-size: 0.8rem;
+            font-weight: 700;
+            background-color: rgba(0, 119, 182, 0.08);
+            color: var(--blue-medium);
+            border: 1px solid rgba(0, 119, 182, 0.15);
+            padding: 4px 12px;
+            border-radius: 6px;
+            display: inline-block;
+        }
+    </style>
 </head>
 
 <body>
 
     <div id="page-container">
         <header-component></header-component>
-        <div class="container mt-4 text-justify">
-            <h5><b>__ Publications ________________</b></h5>
+        
+        <div class="container mt-4">
+            
+            <!-- Premium Dynamic Navigation Switcher -->
+            <div class="text-center custom-tab-container">
+                <div class="nav nav-pills custom-project-nav shadow-sm" id="pills-tab" role="tablist">
+                    <a class="nav-link active" id="pills-peer-tab" data-toggle="pill" href="#pills-peer" role="tab" aria-controls="pills-peer" aria-selected="true">
+                        <i class="fa-solid fa-square-check mr-2"></i>Peer Reviewed Publications
+                    </a>
+                    <a class="nav-link" id="pills-preprints-tab" data-toggle="pill" href="#pills-preprints" role="tab" aria-controls="pills-preprints" aria-selected="false">
+                        <i class="fa-solid fa-hourglass-half mr-2"></i>Pre-Prints & Under Review
+                    </a>
+                </div>
+            </div>
 
-            <h4 class="mt-5">Peer Reviewed Publications</h4>
-
-            <div class="articles-card p-3">
-                <ol class="pl-3 mb-0">
+            <!-- Tab Content Container -->
+            <div class="tab-content" id="pills-tabContent">
+                
+                <!-- 1. PEER REVIEWED PUBLICATIONS TAB -->
+                <div class="tab-pane fade show active" id="pills-peer" role="tabpanel" aria-labelledby="pills-peer-tab">
+                    
                     <!-- Publication 1: ACL Findings -->
-                    <li class="pl-2 text-left mb-4">
-                        <span class="ref-journal">[ACL Findings] </span>Aakriti Agrawal, Gouthaman KV, Rohith Aralikatti, Gauri Jagatap, Jiaxin Yuan, <b>Sarvesh Baskar</b>, Vijay Kamarshi, Andrea Fanelli, and Furong Huang. 
-                        <span>"Towards Mitigating Hallucinations in Large Vision-Language Models by Refining Textual Embeddings".</span> 
-                        ACL Findings, 2026. <span class="pr-2"></span>
-                        <p class="mt-2 mb-0">
-                            <button type="button" class="btn btn-blue btn-sm"><a href="https://arxiv.org/pdf/2511.05017" target="_blank">PDF <i class="ml-1 fa-regular fa-file-pdf"></i></a></button>
-                            <button class="ml-2 btn btn-blue btn-sm" type="button" data-toggle="collapse" data-target="#collapseBibtex-prp-1" aria-expanded="false" aria-controls="collapseBibtex-prp-1">
-                                BibTeX <i class="ml-1 fa-solid fa-quote-right"></i>
-                            </button>
-                        </p>
-                        <!-- BibTeX card -->
-                        <div id="collapseBibtex-prp-1" class="collapse mt-2 mb-0 bibtex-card position-relative">                          
-                            <button class="btn btn-sm position-absolute bibtex-copy-btn py-0" style="right: 10px; top: 10px;" onclick="copyBibtex('bibtex-prp-1')">
-                                <i class="fa-regular fa-copy"></i>
-                            </button>
-                            <pre id="bibtex-prp-1" class="p-3 mb-0 text-left" style="background-color: #f1f5f9; border-radius: 8px; font-family: monospace; font-size: 0.85rem; overflow-x: auto;">
+                    <div class="mt-3 card pub-card shadow-sm">
+                        <div class="card-body">
+                            <div class="row mt-2 mt-md-0">
+                                <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
+                                    <div class="rounded d-flex align-items-center justify-content-center" style="width: 100%; height: 110px; background: linear-gradient(135deg, #0077b6, #0096c7); color: white; border: 1px solid var(--blue-light);">
+                                        <i class="fa-solid fa-brain fa-3x"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="mb-2">
+                                        <span class="pub-badge">[ACL Findings]</span>
+                                    </div>
+                                    <h4 class="card-title mb-1" style="color: var(--blue-dark); font-weight: bold; font-size: 1.2rem;">Towards Mitigating Hallucinations in Large Vision-Language Models by Refining Textual Embeddings</h4>
+                                    
+                                    <p class="card-text mb-2 text-justify small text-muted" style="line-height: 1.5;">
+                                        Aakriti Agrawal, Gouthaman KV, Rohith Aralikatti, Gauri Jagatap, Jiaxin Yuan, <b>Sarvesh Baskar</b>, Vijay Kamarshi, Andrea Fanelli, and Furong Huang.
+                                    </p>
+                                    <h6 class="small-lemos mt-1 mb-3">
+                                        <span class="span-lemos pr-2"><b>Venue:</b> Findings of the Association for Computational Linguistics (ACL Findings, 2026)</span>
+                                    </h6>
+
+                                    <div class="mt-2">
+                                        <p class="pt-2 my-auto"><b>Links & Citation:</b> 
+                                            <button type="button" class="ml-2 btn btn-blue btn-sm py-0"><a href="https://arxiv.org/pdf/2511.05017" target="_blank">PDF <i class="ml-1 fa-regular fa-file-pdf"></i></a></button>
+                                            <button class="ml-2 btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#collapseBibtex-prp-1" aria-expanded="false" aria-controls="collapseBibtex-prp-1">
+                                                BibTeX <i class="ml-1 fa-solid fa-quote-right"></i>
+                                            </button>
+                                        </p>
+                                    </div>
+
+                                    <!-- BibTeX card -->
+                                    <div id="collapseBibtex-prp-1" class="collapse mt-3 mb-0 bibtex-card position-relative">                          
+                                        <button class="btn btn-sm position-absolute bibtex-copy-btn py-0" style="right: 10px; top: 10px;" onclick="copyBibtex('bibtex-prp-1')">
+                                            <i class="fa-regular fa-copy"></i>
+                                        </button>
+                                        <pre id="bibtex-prp-1" class="p-3 mb-0 text-left" style="background-color: #f1f5f9; border-radius: 8px; font-family: monospace; font-size: 0.85rem; overflow-x: auto;">
 @inproceedings{agrawal2026mitigating,
   author    = {Agrawal, Aakriti and KV, Gouthaman Extracted and Aralikatti, Rohith and Jagatap, Gauri and Yuan, Jiaxin and Baskar, Sarvesh and Kamarshi, Vijay and Fanelli, Andrea and Huang, Furong},
   title     = {Towards Mitigating Hallucinations in Large Vision-Language Models by Refining Textual Embeddings},
   booktitle = {Findings of the Association for Computational Linguistics (ACL Findings)},
   year      = {2026}
 }</pre>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </li>
+                    </div>
 
                     <!-- Publication 2: NAACL SRW -->
-                    <li class="pl-2 text-left mb-4">
-                        <span class="ref-journal">[NAACL SRW] </span><b>Sarvesh Baskar</b>, Manas Gaur, Srinivasan Parthasarathy, and Tanmay Tulsidas Verlekar. 
-                        <span>"(CPER) From Guessing to Asking: An Approach to Resolving Persona Knowledge Gap in LLMs during Multi-Turn Conversations".</span> 
-                        Proceedings of the 2025 Conference of the Human Language Technologies: Student Research Workshop (NAACL SRW), 2025. <span class="pr-2"></span>
-                        <p class="mt-2 mb-0">
-                            <button type="button" class="btn btn-blue btn-sm"><a href="https://aclanthology.org/2025.naacl-srw.42.pdf" target="_blank">PDF <i class="ml-1 fa-regular fa-file-pdf"></i></a></button>
-                            <button class="ml-2 btn btn-blue btn-sm" type="button" data-toggle="collapse" data-target="#collapseBibtex-prp-2" aria-expanded="false" aria-controls="collapseBibtex-prp-2">
-                                BibTeX <i class="ml-1 fa-solid fa-quote-right"></i>
-                            </button>
-                        </p>
-                        <!-- BibTeX card -->
-                        <div id="collapseBibtex-prp-2" class="collapse mt-2 mb-0 bibtex-card position-relative">                          
-                            <button class="btn btn-sm position-absolute bibtex-copy-btn py-0" style="right: 10px; top: 10px;" onclick="copyBibtex('bibtex-prp-2')">
-                                <i class="fa-regular fa-copy"></i>
-                            </button>
-                            <pre id="bibtex-prp-2" class="p-3 mb-0 text-left" style="background-color: #f1f5f9; border-radius: 8px; font-family: monospace; font-size: 0.85rem; overflow-x: auto;">
+                    <div class="mt-3 card pub-card shadow-sm">
+                        <div class="card-body">
+                            <div class="row mt-2 mt-md-0">
+                                <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
+                                    <div class="rounded d-flex align-items-center justify-content-center" style="width: 100%; height: 110px; background: linear-gradient(135deg, #03045e, #669bbc); color: white; border: 1px solid var(--blue-light);">
+                                        <i class="fa-solid fa-comments fa-3x"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="mb-2">
+                                        <span class="pub-badge">[NAACL SRW]</span>
+                                    </div>
+                                    <h4 class="card-title mb-1" style="color: var(--blue-dark); font-weight: bold; font-size: 1.2rem;">(CPER) From Guessing to Asking: An Approach to Resolving Persona Knowledge Gap in LLMs during Multi-Turn Conversations</h4>
+                                    
+                                    <p class="card-text mb-2 text-justify small text-muted" style="line-height: 1.5;">
+                                        <b>Sarvesh Baskar</b>, Manas Gaur, Srinivasan Parthasarathy, and Tanmay Tulsidas Verlekar.
+                                    </p>
+                                    <h6 class="small-lemos mt-1 mb-3">
+                                        <span class="span-lemos pr-2"><b>Venue:</b> Proceedings of the 2025 Conference of the Human Language Technologies: Student Research Workshop (NAACL SRW), 2025</span>
+                                    </h6>
+
+                                    <div class="mt-2">
+                                        <p class="pt-2 my-auto"><b>Links & Citation:</b> 
+                                            <button type="button" class="ml-2 btn btn-blue btn-sm py-0"><a href="https://aclanthology.org/2025.naacl-srw.42.pdf" target="_blank">PDF <i class="ml-1 fa-regular fa-file-pdf"></i></a></button>
+                                            <button class="ml-2 btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#collapseBibtex-prp-2" aria-expanded="false" aria-controls="collapseBibtex-prp-2">
+                                                BibTeX <i class="ml-1 fa-solid fa-quote-right"></i>
+                                            </button>
+                                        </p>
+                                    </div>
+
+                                    <!-- BibTeX card -->
+                                    <div id="collapseBibtex-prp-2" class="collapse mt-3 mb-0 bibtex-card position-relative">                          
+                                        <button class="btn btn-sm position-absolute bibtex-copy-btn py-0" style="right: 10px; top: 10px;" onclick="copyBibtex('bibtex-prp-2')">
+                                            <i class="fa-regular fa-copy"></i>
+                                        </button>
+                                        <pre id="bibtex-prp-2" class="p-3 mb-0 text-left" style="background-color: #f1f5f9; border-radius: 8px; font-family: monospace; font-size: 0.85rem; overflow-x: auto;">
 @inproceedings{baskar2025cper,
   author    = {Baskar, Sarvesh and Gaur, Manas and Parthasarathy, Srinivasan and Verlekar, Tanmay Tulsidas},
   title     = {(CPER) From Guessing to Asking: An Approach to Resolving Persona Knowledge Gap in LLMs during Multi-Turn Conversations},
   booktitle = {Proceedings of the NAACL Student Research Workshop (SRW)},
   year      = {2025}
 }</pre>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </li>
+                    </div>
 
                     <!-- Publication 3: ICLR Workshop -->
-                    <li class="pl-2 text-left mb-4">
-                        <span class="ref-journal">[ICLR Workshop] </span><b>Sarvesh Baskar</b>, Muhammad R. Islam, Zikui Cai, Ankit Nakhawa, Anirudh Satheesh, Tom Goldstein, and Furong Huang. 
-                        <span>"The Low-Frequency Trap: Why Scaling Doesn’t Solve Simple Temporal Counting".</span> 
-                        ICLR Workshop on I Can’t Believe It’s Not Better, 2026. <span class="pr-2"></span>
-                        <p class="mt-2 mb-0">
-                            <button type="button" class="btn btn-blue btn-sm"><a href="https://openreview.net/pdf?id=r6kwHy6oeO" target="_blank">PDF <i class="ml-1 fa-regular fa-file-pdf"></i></a></button>
-                            <button class="ml-2 btn btn-blue btn-sm" type="button" data-toggle="collapse" data-target="#collapseBibtex-prp-4" aria-expanded="false" aria-controls="collapseBibtex-prp-4">
-                                BibTeX <i class="ml-1 fa-solid fa-quote-right"></i>
-                            </button>
-                        </p>
-                        <!-- BibTeX card -->
-                        <div id="collapseBibtex-prp-4" class="collapse mt-2 mb-0 bibtex-card position-relative">                          
-                            <button class="btn btn-sm position-absolute bibtex-copy-btn py-0" style="right: 10px; top: 10px;" onclick="copyBibtex('bibtex-prp-4')">
-                                <i class="fa-regular fa-copy"></i>
-                            </button>
-                            <pre id="bibtex-prp-4" class="p-3 mb-0 text-left" style="background-color: #f1f5f9; border-radius: 8px; font-family: monospace; font-size: 0.85rem; overflow-x: auto;">
+                    <div class="mt-3 card pub-card shadow-sm">
+                        <div class="card-body">
+                            <div class="row mt-2 mt-md-0">
+                                <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
+                                    <div class="rounded d-flex align-items-center justify-content-center" style="width: 100%; height: 110px; background: linear-gradient(135deg, #00b4d8, #0077b6); color: white; border: 1px solid var(--blue-light);">
+                                        <i class="fa-solid fa-sliders fa-3x"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="mb-2">
+                                        <span class="pub-badge">[ICLR Workshop]</span>
+                                    </div>
+                                    <h4 class="card-title mb-1" style="color: var(--blue-dark); font-weight: bold; font-size: 1.2rem;">The Low-Frequency Trap: Why Scaling Doesn’t Solve Simple Temporal Counting</h4>
+                                    
+                                    <p class="card-text mb-2 text-justify small text-muted" style="line-height: 1.5;">
+                                        <b>Sarvesh Baskar</b>, Muhammad R. Islam, Zikui Cai, Ankit Nakhawa, Anirudh Satheesh, Tom Goldstein, and Furong Huang.
+                                    </p>
+                                    <h6 class="small-lemos mt-1 mb-3">
+                                        <span class="span-lemos pr-2"><b>Venue:</b> ICLR Workshop on "I Can’t Believe It’s Not Better", 2026</span>
+                                    </h6>
+
+                                    <div class="mt-2">
+                                        <p class="pt-2 my-auto"><b>Links & Citation:</b> 
+                                            <button type="button" class="ml-2 btn btn-blue btn-sm py-0"><a href="https://openreview.net/pdf?id=r6kwHy6oeO" target="_blank">PDF <i class="ml-1 fa-regular fa-file-pdf"></i></a></button>
+                                            <button class="ml-2 btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#collapseBibtex-prp-4" aria-expanded="false" aria-controls="collapseBibtex-prp-4">
+                                                BibTeX <i class="ml-1 fa-solid fa-quote-right"></i>
+                                            </button>
+                                        </p>
+                                    </div>
+
+                                    <!-- BibTeX card -->
+                                    <div id="collapseBibtex-prp-4" class="collapse mt-3 mb-0 bibtex-card position-relative">                          
+                                        <button class="btn btn-sm position-absolute bibtex-copy-btn py-0" style="right: 10px; top: 10px;" onclick="copyBibtex('bibtex-prp-4')">
+                                            <i class="fa-regular fa-copy"></i>
+                                        </button>
+                                        <pre id="bibtex-prp-4" class="p-3 mb-0 text-left" style="background-color: #f1f5f9; border-radius: 8px; font-family: monospace; font-size: 0.85rem; overflow-x: auto;">
 @inproceedings{baskar2026lowfrequency,
   author    = {Baskar, Sarvesh and Islam, Muhammad R. and Cai, Zikui and Nakhawa, Ankit and Satheesh, Anirudh and Goldstein, Tom and Huang, Furong},
   title     = {The Low-Frequency Trap: Why Scaling Doesn't Solve Simple Temporal Counting},
   booktitle = {ICLR Workshop on I Can't Believe It's Not Better},
   year      = {2026}
 }</pre>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </li>
+                    </div>
 
                     <!-- Publication 4: WoRMA -->
-                    <li class="pl-2 text-left mb-2">
-                        <span class="ref-journal">[WoRMA] </span>Seyedreza Mohseni, <b>Sarvesh Baskar</b>, Arman Hossain, Aritran Piplai, Edward Raff, and Manas Gaur. 
-                        <span>"Analyzing Chain of Thought (CoT) Approaches in Control Flow Code Deobfuscation Tasks".</span> 
-                        Workshop on Robustness of Modern AI (WoRMA), 2026. <span class="pr-2"></span>
-                        <p class="mt-2 mb-0">
-                            <button type="button" class="btn btn-blue btn-sm"><a href="https://arxiv.org/pdf/2604.15390" target="_blank">PDF <i class="ml-1 fa-regular fa-file-pdf"></i></a></button>
-                            <button class="ml-2 btn btn-blue btn-sm" type="button" data-toggle="collapse" data-target="#collapseBibtex-prp-3" aria-expanded="false" aria-controls="collapseBibtex-prp-3">
-                                BibTeX <i class="ml-1 fa-solid fa-quote-right"></i>
-                            </button>
-                        </p>
-                        <!-- BibTeX card -->
-                        <div id="collapseBibtex-prp-3" class="collapse mt-2 mb-0 bibtex-card position-relative">                          
-                            <button class="btn btn-sm position-absolute bibtex-copy-btn py-0" style="right: 10px; top: 10px;" onclick="copyBibtex('bibtex-prp-3')">
-                                <i class="fa-regular fa-copy"></i>
-                            </button>
-                            <pre id="bibtex-prp-3" class="p-3 mb-0 text-left" style="background-color: #f1f5f9; border-radius: 8px; font-family: monospace; font-size: 0.85rem; overflow-x: auto;">
+                    <div class="mt-3 card pub-card shadow-sm">
+                        <div class="card-body">
+                            <div class="row mt-2 mt-md-0">
+                                <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
+                                    <div class="rounded d-flex align-items-center justify-content-center" style="width: 100%; height: 110px; background: linear-gradient(135deg, #3f37c9, #7209b7); color: white; border: 1px solid var(--blue-light);">
+                                        <i class="fa-solid fa-code fa-3x"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="mb-2">
+                                        <span class="pub-badge">[WoRMA]</span>
+                                    </div>
+                                    <h4 class="card-title mb-1" style="color: var(--blue-dark); font-weight: bold; font-size: 1.2rem;">Analyzing Chain of Thought (CoT) Approaches in Control Flow Code Deobfuscation Tasks</h4>
+                                    
+                                    <p class="card-text mb-2 text-justify small text-muted" style="line-height: 1.5;">
+                                        Seyedreza Mohseni, <b>Sarvesh Baskar</b>, Arman Hossain, Aritran Piplai, Edward Raff, and Manas Gaur.
+                                    </p>
+                                    <h6 class="small-lemos mt-1 mb-3">
+                                        <span class="span-lemos pr-2"><b>Venue:</b> Workshop on Robustness of Modern AI (WoRMA), 2026</span>
+                                    </h6>
+
+                                    <div class="mt-2">
+                                        <p class="pt-2 my-auto"><b>Links & Citation:</b> 
+                                            <button type="button" class="ml-2 btn btn-blue btn-sm py-0"><a href="https://arxiv.org/pdf/2604.15390" target="_blank">PDF <i class="ml-1 fa-regular fa-file-pdf"></i></a></button>
+                                            <button class="ml-2 btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#collapseBibtex-prp-3" aria-expanded="false" aria-controls="collapseBibtex-prp-3">
+                                                BibTeX <i class="ml-1 fa-solid fa-quote-right"></i>
+                                            </button>
+                                        </p>
+                                    </div>
+
+                                    <!-- BibTeX card -->
+                                    <div id="collapseBibtex-prp-3" class="collapse mt-3 mb-0 bibtex-card position-relative">                          
+                                        <button class="btn btn-sm position-absolute bibtex-copy-btn py-0" style="right: 10px; top: 10px;" onclick="copyBibtex('bibtex-prp-3')">
+                                            <i class="fa-regular fa-copy"></i>
+                                        </button>
+                                        <pre id="bibtex-prp-3" class="p-3 mb-0 text-left" style="background-color: #f1f5f9; border-radius: 8px; font-family: monospace; font-size: 0.85rem; overflow-x: auto;">
 @inproceedings{mohseni2026analyzing,
   author    = {Mohseni, Seyedreza and Baskar, Sarvesh and Hossain, Arman and Piplai, Aritran and Raff, Edward and Gaur, Manas},
   title     = {Analyzing Chain of Thought (CoT) Approaches in Control Flow Code Deobfuscation Tasks},
   booktitle = {Workshop on Robustness of Modern AI (WoRMA)},
   year      = {2026}
 }</pre>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </li>
-                </ol>
-            </div>
+                    </div>
 
-            <h4 class="mt-5">Pre-Prints & Under Review</h4>
-            <div class="articles-card p-3 mb-2">
-                <ol class="pl-3 mb-0">
-                    <!-- Publication 5: ECCV 1 -->
-                    <li class="pl-2 text-left mb-4">
-                        <span class="ref-journal">[ECCV'26] </span><b>Sarvesh Baskar</b>, Muhammad R. Islam, Zikui Cai, Anirudh Satheesh, Tom Goldstein, and Furong Huang. 
-                        <span>"Parametric Capability Profiling for Multimodal Video Reasoning".</span> 
-                        Under Review, ECCV, 2026. <span class="pr-2"></span>
-                        <p class="mt-2 mb-0">
-                            <button type="button" class="btn btn-blue btn-sm"><a href="../assets/documents/publications/video_reasoning_eccv2026.pdf" target="_blank">PDF <i class="ml-1 fa-regular fa-file-pdf"></i></a></button>
-                            <button class="ml-2 btn btn-blue btn-sm" type="button" data-toggle="collapse" data-target="#collapseBibtex-ppa-1" aria-expanded="false" aria-controls="collapseBibtex-ppa-1">
-                                BibTeX <i class="ml-1 fa-solid fa-quote-right"></i>
-                            </button>
-                        </p>
-                        <!-- BibTeX card -->
-                        <div id="collapseBibtex-ppa-1" class="collapse mt-2 mb-0 bibtex-card position-relative">                          
-                            <button class="btn btn-sm position-absolute bibtex-copy-btn py-0" style="right: 10px; top: 10px;" onclick="copyBibtex('bibtex-ppa-1')">
-                                <i class="fa-regular fa-copy"></i>
-                            </button>
-                            <pre id="bibtex-ppa-1" class="p-3 mb-0 text-left" style="background-color: #f1f5f9; border-radius: 8px; font-family: monospace; font-size: 0.85rem; overflow-x: auto;">
+                </div> <!-- End pills-peer tab-pane -->
+
+                <!-- 2. PRE-PRINTS & UNDER REVIEW TAB -->
+                <div class="tab-pane fade" id="pills-preprints" role="tabpanel" aria-labelledby="pills-preprints-tab">
+
+                    <!-- Publication 5: ECCV 1 (Parametric Capability) -->
+                    <div class="mt-3 card pub-card shadow-sm">
+                        <div class="card-body">
+                            <div class="row mt-2 mt-md-0">
+                                <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
+                                    <div class="rounded d-flex align-items-center justify-content-center" style="width: 100%; height: 110px; background: linear-gradient(135deg, #00b4d8, #0077b6); color: white; border: 1px solid var(--blue-light);">
+                                        <i class="fa-solid fa-chart-line fa-3x"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="mb-2">
+                                        <span class="pub-badge">[ECCV'26 Under Review]</span>
+                                    </div>
+                                    <h4 class="card-title mb-1" style="color: var(--blue-dark); font-weight: bold; font-size: 1.2rem;">Parametric Capability Profiling for Multimodal Video Reasoning</h4>
+                                    
+                                    <p class="card-text mb-2 text-justify small text-muted" style="line-height: 1.5;">
+                                        <b>Sarvesh Baskar</b>, Muhammad R. Islam, Zikui Cai, Anirudh Satheesh, Tom Goldstein, and Furong Huang.
+                                    </p>
+                                    <h6 class="small-lemos mt-1 mb-3">
+                                        <span class="span-lemos pr-2"><b>Venue:</b> Under Review, European Conference on Computer Vision (ECCV), 2026</span>
+                                    </h6>
+
+                                    <div class="mt-2">
+                                        <p class="pt-2 my-auto"><b>Links & Citation:</b> 
+                                            <button type="button" class="ml-2 btn btn-blue btn-sm py-0"><a href="../assets/documents/publications/video_reasoning_eccv2026.pdf" target="_blank">PDF <i class="ml-1 fa-regular fa-file-pdf"></i></a></button>
+                                            <button class="ml-2 btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#collapseBibtex-ppa-1" aria-expanded="false" aria-controls="collapseBibtex-ppa-1">
+                                                BibTeX <i class="ml-1 fa-solid fa-quote-right"></i>
+                                            </button>
+                                        </p>
+                                    </div>
+
+                                    <!-- BibTeX card -->
+                                    <div id="collapseBibtex-ppa-1" class="collapse mt-3 mb-0 bibtex-card position-relative">                          
+                                        <button class="btn btn-sm position-absolute bibtex-copy-btn py-0" style="right: 10px; top: 10px;" onclick="copyBibtex('bibtex-ppa-1')">
+                                            <i class="fa-regular fa-copy"></i>
+                                        </button>
+                                        <pre id="bibtex-ppa-1" class="p-3 mb-0 text-left" style="background-color: #f1f5f9; border-radius: 8px; font-family: monospace; font-size: 0.85rem; overflow-x: auto;">
 @article{baskar2026parametric,
   author  = {Baskar, Sarvesh and Islam, Muhammad R. and Cai, Zikui and Satheesh, Anirudh and Goldstein, Tom and Huang, Furong},
   title   = {Parametric Capability Profiling for Multimodal Video Reasoning},
   journal = {arXiv preprint},
   year    = {2026}
 }</pre>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </li>
+                    </div>
 
-                    <!-- Publication 6: ECCV 2 -->
-                    <li class="pl-2 text-left mb-2">
-                        <span class="ref-journal">[ECCV'26] </span>Muhammad R. Islam, <b>Sarvesh Baskar</b>, Zikui Cai, Anirudh Satheesh, Keenan Powell, Tom Goldstein, and Furong Huang. 
-                        <span>"Executable Reasoning Traces for Diagnosing Multimodal Video Reasoning".</span> 
-                        Under Review, ECCV, 2026. <span class="pr-2"></span>
-                        <p class="mt-2 mb-0">
-                            <button type="button" class="btn btn-blue btn-sm"><a href="../assets/documents/publications/reasoning_traces_eccv2026.pdf" target="_blank">PDF <i class="ml-1 fa-regular fa-file-pdf"></i></a></button>
-                            <button class="ml-2 btn btn-blue btn-sm" type="button" data-toggle="collapse" data-target="#collapseBibtex-ppa-2" aria-expanded="false" aria-controls="collapseBibtex-ppa-2">
-                                BibTeX <i class="ml-1 fa-solid fa-quote-right"></i>
-                            </button>
-                        </p>
-                        <!-- BibTeX card -->
-                        <div id="collapseBibtex-ppa-2" class="collapse mt-2 mb-0 bibtex-card position-relative">                          
-                            <button class="btn btn-sm position-absolute bibtex-copy-btn py-0" style="right: 10px; top: 10px;" onclick="copyBibtex('bibtex-ppa-2')">
-                                <i class="fa-regular fa-copy"></i>
-                            </button>
-                            <pre id="bibtex-ppa-2" class="p-3 mb-0 text-left" style="background-color: #f1f5f9; border-radius: 8px; font-family: monospace; font-size: 0.85rem; overflow-x: auto;">
+                    <!-- Publication 6: ECCV 2 (Reasoning Traces) -->
+                    <div class="mt-3 card pub-card shadow-sm">
+                        <div class="card-body">
+                            <div class="row mt-2 mt-md-0">
+                                <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
+                                    <div class="rounded d-flex align-items-center justify-content-center" style="width: 100%; height: 110px; background: linear-gradient(135deg, #0096c7, #03045e); color: white; border: 1px solid var(--blue-light);">
+                                        <i class="fa-solid fa-video fa-3x"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="mb-2">
+                                        <span class="pub-badge">[ECCV'26 Under Review]</span>
+                                    </div>
+                                    <h4 class="card-title mb-1" style="color: var(--blue-dark); font-weight: bold; font-size: 1.2rem;">Executable Reasoning Traces for Diagnosing Multimodal Video Reasoning</h4>
+                                    
+                                    <p class="card-text mb-2 text-justify small text-muted" style="line-height: 1.5;">
+                                        Muhammad R. Islam, <b>Sarvesh Baskar</b>, Zikui Cai, Anirudh Satheesh, Keenan Powell, Tom Goldstein, and Furong Huang.
+                                    </p>
+                                    <h6 class="small-lemos mt-1 mb-3">
+                                        <span class="span-lemos pr-2"><b>Venue:</b> Under Review, European Conference on Computer Vision (ECCV), 2026</span>
+                                    </h6>
+
+                                    <div class="mt-2">
+                                        <p class="pt-2 my-auto"><b>Links & Citation:</b> 
+                                            <button type="button" class="ml-2 btn btn-blue btn-sm py-0"><a href="../assets/documents/publications/reasoning_traces_eccv2026.pdf" target="_blank">PDF <i class="ml-1 fa-regular fa-file-pdf"></i></a></button>
+                                            <button class="ml-2 btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#collapseBibtex-ppa-2" aria-expanded="false" aria-controls="collapseBibtex-ppa-2">
+                                                BibTeX <i class="ml-1 fa-solid fa-quote-right"></i>
+                                            </button>
+                                        </p>
+                                    </div>
+
+                                    <!-- BibTeX card -->
+                                    <div id="collapseBibtex-ppa-2" class="collapse mt-3 mb-0 bibtex-card position-relative">                          
+                                        <button class="btn btn-sm position-absolute bibtex-copy-btn py-0" style="right: 10px; top: 10px;" onclick="copyBibtex('bibtex-ppa-2')">
+                                            <i class="fa-regular fa-copy"></i>
+                                        </button>
+                                        <pre id="bibtex-ppa-2" class="p-3 mb-0 text-left" style="background-color: #f1f5f9; border-radius: 8px; font-family: monospace; font-size: 0.85rem; overflow-x: auto;">
 @article{islam2026executable,
   author  = {Islam, Muhammad R. and Baskar, Sarvesh and Cai, Zikui and Satheesh, Anirudh and Powell, Keenan and Goldstein, Tom and Huang, Furong},
   title   = {Executable Reasoning Traces for Diagnosing Multimodal Video Reasoning},
   journal = {arXiv preprint},
   year    = {2026}
 }</pre>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </li>
-                </ol>
-            </div>
+                    </div>
 
-        </div>
+                </div> <!-- End pills-preprints tab-pane -->
+            </div> <!-- End tab-content -->
+
+        </div> <!-- End container -->
 
         <div id="footer" class="mt-5">
             <footer-component></footer-component>
