@@ -224,7 +224,6 @@ function renderEducationPageDynamics() {
             <li class="activity-lemos">
               <span class="activity-names" style="font-weight: bold; color: var(--blue-medium);">${act.name}:</span> 
               <span>${act.description}</span>
-              ${act.link ? `<a class="ml-2" href="${act.link}" target="_blank">Reference Link <i class="fa-solid fa-up-right-from-square small"></i></a>` : ''}
             </li>
           </ul>
         </div>
