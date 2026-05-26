@@ -140,15 +140,20 @@ function initSubnavScrollSpy() {
 
   const scrollHandler = () => {
     let currentActiveId = '';
-    // Check which section is currently in the viewport (with offset for sticky headers)
-    const scrollPosition = window.scrollY + 100; // offset matches scroll-margin-top + buffer
-
+    
+    // Find active section using bounding rect (direct viewport measurement)
     sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      if (scrollPosition >= sectionTop) {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 180 && rect.bottom > 80) {
         currentActiveId = section.getAttribute('id');
       }
     });
+
+    // UX override: highlight the last section if scrolled to the very bottom
+    const isAtBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 15;
+    if (isAtBottom && sections.length > 0) {
+      currentActiveId = sections[sections.length - 1].getAttribute('id');
+    }
 
     if (currentActiveId) {
       navPills.forEach(pill => {
