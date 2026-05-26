@@ -11,8 +11,11 @@ async function navigateToPage(url, pushState = true) {
   // Increment the active transition ID to track rapid clicks
   const currentTransitionId = ++activeTransitionId;
 
-  // 1. Trigger exit animation
-  pageContainer.classList.add('fade-out');
+  // Clean up previous ScrollSpy scroll listener if it exists
+  if (window._currentScrollSpyHandler) {
+    window.removeEventListener('scroll', window._currentScrollSpyHandler);
+    window._currentScrollSpyHandler = null;
+  }
 
   try {
     // 2. Fetch target page concurrently (bypass local browser cache to get fresh markup)
@@ -33,9 +36,6 @@ async function navigateToPage(url, pushState = true) {
       return;
     }
 
-    // Wait for the exit animation to finish (80ms)
-    await new Promise(resolve => setTimeout(resolve, 80));
-
     // Abort if a newer page transition has been triggered in the meantime
     if (currentTransitionId !== activeTransitionId) return;
 
@@ -47,7 +47,9 @@ async function navigateToPage(url, pushState = true) {
     // 4. Swap page content
     pageContainer.innerHTML = newContainer.innerHTML;
     document.title = newDoc.title;
-    interpolatePortfolioData();
+    if (typeof interpolatePortfolioData === 'function') {
+      interpolatePortfolioData();
+    }
 
     // 5. Dynamic Stylesheet Injection: Load any page-specific stylesheet links
     const newLinks = newDoc.querySelectorAll('link[rel="stylesheet"]');
@@ -95,11 +97,8 @@ async function navigateToPage(url, pushState = true) {
     // Scroll smoothly to top
     window.scrollTo({ top: 0, behavior: 'instant' });
 
-    // 5. Trigger smooth entrance animation
-    pageContainer.classList.remove('fade-out');
-    pageContainer.style.animation = 'none';
-    pageContainer.offsetHeight; // Force reflow to restart CSS keyframe animation
-    pageContainer.style.animation = '';
+    // Initialize ScrollSpy on the newly loaded page
+    initSubnavScrollSpy();
 
   } catch (err) {
     console.warn('SPA transition failed, falling back to standard load:', err);
@@ -132,3 +131,70 @@ document.addEventListener('click', (e) => {
 window.addEventListener('popstate', (e) => {
   navigateToPage(window.location.href, false);
 });
+
+// Lightweight, dynamic ScrollSpy for sticky sub-navigation
+function initSubnavScrollSpy() {
+  const navPills = document.querySelectorAll('.custom-project-nav .nav-link');
+  const sections = document.querySelectorAll('.scroll-section');
+  if (navPills.length === 0 || sections.length === 0) return;
+
+  const scrollHandler = () => {
+    let currentActiveId = '';
+    // Check which section is currently in the viewport (with offset for sticky headers)
+    const scrollPosition = window.scrollY + 160; // offset matches scroll-margin-top + buffer
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      if (scrollPosition >= sectionTop) {
+        currentActiveId = section.getAttribute('id');
+      }
+    });
+
+    if (currentActiveId) {
+      navPills.forEach(pill => {
+        const href = pill.getAttribute('href');
+        // Match either full href or hash
+        const targetId = href.split('#')[1];
+        if (targetId === currentActiveId) {
+          if (!pill.classList.contains('active')) {
+            pill.classList.add('active');
+            pill.setAttribute('aria-selected', 'true');
+          }
+        } else {
+          if (pill.classList.contains('active')) {
+            pill.classList.remove('active');
+            pill.setAttribute('aria-selected', 'false');
+          }
+        }
+      });
+    }
+  };
+
+  window.addEventListener('scroll', scrollHandler);
+  // Run once to initialize correct state on load
+  scrollHandler();
+
+  // Smooth scroll override to prevent abrupt hash jumps
+  navPills.forEach(pill => {
+    pill.addEventListener('click', (e) => {
+      const href = pill.getAttribute('href');
+      if (href && href.includes('#')) {
+        const targetId = href.split('#')[1];
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          e.preventDefault();
+          // Update URL hash without jumping
+          window.history.pushState(null, null, '#' + targetId);
+          // Scroll smoothly
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  });
+
+  // Keep a reference to clean up if we transition pages in SPA
+  window._currentScrollSpyHandler = scrollHandler;
+}
+
+// Initialize on initial page load
+document.addEventListener('DOMContentLoaded', initSubnavScrollSpy);

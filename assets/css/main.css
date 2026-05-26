@@ -18,6 +18,10 @@
   /* https://colorhunt.co/palette/f9f7f7dbe2ef3f72af112d4e */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
     height:100%;
 }
@@ -124,35 +128,10 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-
-  /* Smooth page transition animation */
-  animation: pageFadeIn 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-#page-container.fade-out {
-  animation: pageFadeOut 0.08s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
-}
-
-@keyframes pageFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes pageFadeOut {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
+.scroll-section {
+  scroll-margin-top: 140px; /* Offset for sticky header + sticky subnav */
 }
   
 #content-wrap {

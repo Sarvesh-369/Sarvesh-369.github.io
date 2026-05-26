@@ -23,6 +23,15 @@
         .custom-tab-container {
             margin-bottom: 2.5rem;
             margin-top: 1rem;
+            position: sticky;
+            top: 56px;
+            z-index: 99;
+            background-color: rgba(219, 226, 239, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
         .custom-project-nav {
             background-color: #f1f5f9;
@@ -89,15 +98,21 @@
     <div id="page-container">
         <header-component></header-component>
         
-        <div class="container mt-4">
+        <div class="container mt-4" id="content-wrap">
+            <div class="mb-4 mt-2">
+                <h2 class="font-weight-bold" style="color: var(--blue-dark); font-family: 'Ubuntu Sans', sans-serif; position: relative; padding-bottom: 12px; display: inline-block;">
+                    Projects
+                    <span style="position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background: linear-gradient(135deg, #0077b6, #0096c7); border-radius: 2px;"></span>
+                </h2>
+            </div>
             
             <!-- Premium Dynamic Navigation Switcher -->
             <div class="text-center custom-tab-container">
-                <div class="nav nav-pills custom-project-nav shadow-sm" id="pills-tab" role="tablist">
-                    <a class="nav-link active" id="pills-research-tab" data-toggle="pill" href="#pills-research" role="tab" aria-controls="pills-research" aria-selected="true">
+                <div class="nav nav-pills custom-project-nav shadow-sm" id="pills-tab">
+                    <a class="nav-link active" id="pills-research-tab" href="#pills-research">
                         <i class="fa-solid fa-flask mr-2"></i>Research Projects
                     </a>
-                    <a class="nav-link" id="pills-industry-tab" data-toggle="pill" href="#pills-industry" role="tab" aria-controls="pills-industry" aria-selected="false">
+                    <a class="nav-link" id="pills-industry-tab" href="#pills-industry">
                         <i class="fa-solid fa-briefcase mr-2"></i>Industry Projects
                     </a>
                 </div>
@@ -107,7 +122,13 @@
             <div class="tab-content" id="pills-tabContent">
                 
                 <!-- 1. RESEARCH PROJECTS TAB -->
-                <div class="tab-pane fade show active" id="pills-research" role="tabpanel" aria-labelledby="pills-research-tab">
+                <div class="scroll-section mb-5" id="pills-research">
+                    <div class="mb-4 mt-2">
+                        <h3 class="font-weight-bold" style="color: var(--blue-dark); font-family: 'Ubuntu Sans', sans-serif; position: relative; padding-bottom: 8px; display: inline-block;">
+                            <i class="fa-solid fa-flask mr-2 text-primary"></i> Research Projects
+                            <span style="position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: linear-gradient(135deg, #0077b6, #0096c7); border-radius: 2px;"></span>
+                        </h3>
+                    </div>
                     
                     <!-- Project 1: VisAlign -->
                     <div class="mt-3 card shadow-sm">
@@ -487,10 +508,16 @@
                         </div>
                     </div>
 
-                </div> <!-- End pills-research tab-pane -->
-
+                </div> <!-- End pills-research scroll-section -->
+                
                 <!-- 2. INDUSTRY PROJECTS TAB -->
-                <div class="tab-pane fade" id="pills-industry" role="tabpanel" aria-labelledby="pills-industry-tab">
+                <div class="scroll-section mb-5" id="pills-industry">
+                    <div class="mb-4 mt-2">
+                        <h3 class="font-weight-bold" style="color: var(--blue-dark); font-family: 'Ubuntu Sans', sans-serif; position: relative; padding-bottom: 8px; display: inline-block;">
+                            <i class="fa-solid fa-briefcase mr-2 text-primary"></i> Industry Projects
+                            <span style="position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: linear-gradient(135deg, #0077b6, #0096c7); border-radius: 2px;"></span>
+                        </h3>
+                    </div>
 
                     <!-- Project 9: Avyott RAG & MCP (Combined) -->
                     <div class="mt-3 card shadow-sm">

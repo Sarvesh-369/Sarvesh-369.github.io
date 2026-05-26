@@ -25,6 +25,15 @@
         .custom-tab-container {
             margin-bottom: 2.5rem;
             margin-top: 1rem;
+            position: sticky;
+            top: 56px;
+            z-index: 99;
+            background-color: rgba(219, 226, 239, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
         .custom-project-nav {
             background-color: #f1f5f9;
@@ -115,15 +124,21 @@
     <div id="page-container">
         <header-component></header-component>
         
-        <div class="container mt-4">
+        <div class="container mt-4" id="content-wrap">
+            <div class="mb-4 mt-2">
+                <h2 class="font-weight-bold" style="color: var(--blue-dark); font-family: 'Ubuntu Sans', sans-serif; position: relative; padding-bottom: 12px; display: inline-block;">
+                    Publications
+                    <span style="position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background: linear-gradient(135deg, #0077b6, #0096c7); border-radius: 2px;"></span>
+                </h2>
+            </div>
             
             <!-- Premium Dynamic Navigation Switcher -->
             <div class="text-center custom-tab-container">
-                <div class="nav nav-pills custom-project-nav shadow-sm" id="pills-tab" role="tablist">
-                    <a class="nav-link active" id="pills-peer-tab" data-toggle="pill" href="#pills-peer" role="tab" aria-controls="pills-peer" aria-selected="true">
+                <div class="nav nav-pills custom-project-nav shadow-sm" id="pills-tab">
+                    <a class="nav-link active" id="pills-peer-tab" href="#pills-peer">
                         <i class="fa-solid fa-square-check mr-2"></i>Peer Reviewed Publications
                     </a>
-                    <a class="nav-link" id="pills-preprints-tab" data-toggle="pill" href="#pills-preprints" role="tab" aria-controls="pills-preprints" aria-selected="false">
+                    <a class="nav-link" id="pills-preprints-tab" href="#pills-preprints">
                         <i class="fa-solid fa-hourglass-half mr-2"></i>Pre-Prints & Under Review
                     </a>
                 </div>
@@ -133,7 +148,13 @@
             <div class="tab-content" id="pills-tabContent">
                 
                 <!-- 1. PEER REVIEWED PUBLICATIONS TAB -->
-                <div class="tab-pane fade show active" id="pills-peer" role="tabpanel" aria-labelledby="pills-peer-tab">
+                <div class="scroll-section mb-5" id="pills-peer">
+                    <div class="mb-4 mt-2">
+                        <h3 class="font-weight-bold" style="color: var(--blue-dark); font-family: 'Ubuntu Sans', sans-serif; position: relative; padding-bottom: 8px; display: inline-block;">
+                            <i class="fa-solid fa-square-check mr-2 text-primary"></i> Peer Reviewed Publications
+                            <span style="position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: linear-gradient(135deg, #0077b6, #0096c7); border-radius: 2px;"></span>
+                        </h3>
+                    </div>
                     
                     <!-- Publication 1: ACL Findings -->
                     <div class="mt-3 card pub-card shadow-sm">
@@ -335,10 +356,16 @@
                         </div>
                     </div>
 
-                </div> <!-- End pills-peer tab-pane -->
-
+                </div> <!-- End pills-peer scroll-section -->
+                
                 <!-- 2. PRE-PRINTS & UNDER REVIEW TAB -->
-                <div class="tab-pane fade" id="pills-preprints" role="tabpanel" aria-labelledby="pills-preprints-tab">
+                <div class="scroll-section mb-5" id="pills-preprints">
+                    <div class="mb-4 mt-2">
+                        <h3 class="font-weight-bold" style="color: var(--blue-dark); font-family: 'Ubuntu Sans', sans-serif; position: relative; padding-bottom: 8px; display: inline-block;">
+                            <i class="fa-solid fa-hourglass-half mr-2 text-primary"></i> Pre-Prints & Under Review
+                            <span style="position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: linear-gradient(135deg, #0077b6, #0096c7); border-radius: 2px;"></span>
+                        </h3>
+                    </div>
 
                     <!-- Publication 5: ECCV 1 (Parametric Capability) -->
                     <div class="mt-3 card pub-card shadow-sm">
