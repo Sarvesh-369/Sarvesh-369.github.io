@@ -134,7 +134,7 @@
                                 </div>
                                 <div class="col-md-10">
                                     <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">Video2LoRA: Parametric Video Internalization for Vision-Language Models</h4>
-                                    <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> University of Maryland, College Park (UMD)</span> (Jan 2026 - Present)</h6>
+                                    <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> University of Maryland, College Park (UMD)</span> (Mar 2026 - Present)</h6>
                                     <p class="card-text mt-2 mb-2 text-justify small">
                                         Introduced Video2LoRA, a method for parametric video internalization where a perceiver hypernetwork generates a Low-Rank Adaptation (LoRA) adapter directly from a video's intermediate representations in a single forward pass, enabling video question answering and summarization with zero visual tokens at query time.
                                     </p>
@@ -156,54 +156,8 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Project 2: VisAlign -->
-                    <div class="mt-3 card shadow-sm">
-                        <div class="card-body">
-                            <div class="row mt-2 mt-md-0">
-                                <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
-                                    <div class="rounded d-flex align-items-center justify-content-center" style="width: 100%; height: 110px; background: linear-gradient(135deg, #0077b6, #0096c7); color: white; border: 1px solid var(--blue-light); overflow: hidden; position: relative;">
-                                        <img src="../assets/img/project/visalign.png" alt="VisAlign Logo" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 2;" onerror="this.style.display='none';">
-                                        <i class="fa-solid fa-brain fa-3x" style="position: relative; z-index: 1;"></i>
-                                    </div>
-                                </div>
-                                <div class="col-md-10">
-                                    <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">VisAlign: Mitigating Hallucinations via Refining Textual Embeddings</h4>
-                                    <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> University of Maryland, College Park (UMD)</span> (Oct 2025 - Jan 2026)</h6>
-                                    <p class="card-text mt-2 mb-2 text-justify small">
-                                        Investigated text-embedding space refinement in the Qwen2-VL architecture to enhance visual grounding and reduce hallucinations.
-                                    </p>
 
-                                    <div class="mb-2">
-                                        <span class="badge p-1 sw-tools">Qwen2-VL</span>
-                                        <span class="badge p-1 sw-tools">PyTorch</span>
-                                        <span class="badge p-1 sw-tools">HuggingFace</span>
-                                        <span class="badge p-1 sw-tools">Python</span>
-                                    </div>
-
-                                    <div class="mt-2">
-                                        <p class="pt-2 my-auto"><b>References:</b> 
-                                            <button type="button" class="ml-2 btn btn-blue btn-sm py-0"><a href="https://github.com/Sarvesh-369" target="_blank">GitHub <i class="ml-1 fa-brands fa-github"></i></a></button>
-                                            <button class="ml-2 btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#projectCollapse-1" aria-expanded="false" aria-controls="projectCollapse-1">
-                                                Read more...
-                                            </button>
-                                        </p>
-                                    </div>
-
-                                    <!-- Collapse details -->
-                                    <div id="projectCollapse-1" class="collapse mt-3">
-                                        <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.5;">
-                                            <p class="mb-2"><strong>Problem:</strong> Large vision language models tend to over rely on language tokens because visual embeddings are simply appended to the text stream, which leads to weak visual grounding and hallucination.</p>
-                                            <p class="mb-2"><strong>What I did:</strong> Implemented the VisAlign refinement in the OpenQwen2VL stack and ran the full pretraining and evaluations. Integrated average pooled visual features into textual embeddings at inference, executed experiments, and prepared the result tables and plots for the paper.</p>
-                                            <p class="mb-0"><strong>Impact and Results:</strong> Integrated VisAlign into OpenQwen2VL and ran full pretraining plus eval scripts. Preliminary benchmarks suggest lower hallucination rates with improved grounding; full OpenQwen2VL numbers pending. <strong>(Published in ACL Findings, 2026)</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 3: Executable Reasoning Traces -->
+                    <!-- Project 2: Executable Reasoning Traces -->
                     <div class="mt-3 card shadow-sm">
                         <div class="card-body">
                             <div class="row mt-2 mt-md-0">
@@ -250,7 +204,7 @@
                         </div>
                     </div>
 
-                    <!-- Project 4: Parametric Capability Profiling -->
+                    <!-- Project 3: Parametric Capability Profiling -->
                     <div class="mt-3 card shadow-sm">
                         <div class="card-body">
                             <div class="row mt-2 mt-md-0">
@@ -297,7 +251,7 @@
                         </div>
                     </div>
 
-                    <!-- Project 5: PlanForge -->
+                    <!-- Project 4: PlanForge -->
                     <div class="mt-3 card shadow-sm">
                         <div class="card-body">
                             <div class="row mt-2 mt-md-0">
@@ -345,6 +299,52 @@
                                                 </ul>
                                             </p>
                                             <p class="mb-0"><strong>Impact and Results:</strong> Evaluated PlanForge on <strong>ACPBench, Tower of Hanoi, Frogs Jumping, and NaturalPlan</strong>, showing vastly improved execution-grounded planning over direct LLM plan generation. Achieved a <strong>100% success rate</strong> on NaturalPlan trip planning, meeting planning, and calendar scheduling, demonstrating flawless transfer to multi-constraint planning tasks with multiple valid solutions.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: VisAlign -->
+                    <div class="mt-3 card shadow-sm">
+                        <div class="card-body">
+                            <div class="row mt-2 mt-md-0">
+                                <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
+                                    <div class="rounded d-flex align-items-center justify-content-center" style="width: 100%; height: 110px; background: linear-gradient(135deg, #0077b6, #0096c7); color: white; border: 1px solid var(--blue-light); overflow: hidden; position: relative;">
+                                        <img src="../assets/img/project/visalign.png" alt="VisAlign Logo" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 2;" onerror="this.style.display='none';">
+                                        <i class="fa-solid fa-brain fa-3x" style="position: relative; z-index: 1;"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-10">
+                                    <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">VisAlign: Mitigating Hallucinations via Refining Textual Embeddings</h4>
+                                    <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> University of Maryland, College Park (UMD)</span> (Oct 2025 - Jan 2026)</h6>
+                                    <p class="card-text mt-2 mb-2 text-justify small">
+                                        Investigated text-embedding space refinement in the Qwen2-VL architecture to enhance visual grounding and reduce hallucinations.
+                                    </p>
+
+                                    <div class="mb-2">
+                                        <span class="badge p-1 sw-tools">Qwen2-VL</span>
+                                        <span class="badge p-1 sw-tools">PyTorch</span>
+                                        <span class="badge p-1 sw-tools">HuggingFace</span>
+                                        <span class="badge p-1 sw-tools">Python</span>
+                                    </div>
+
+                                    <div class="mt-2">
+                                        <p class="pt-2 my-auto"><b>References:</b> 
+                                            <button type="button" class="ml-2 btn btn-blue btn-sm py-0"><a href="https://github.com/Sarvesh-369" target="_blank">GitHub <i class="ml-1 fa-brands fa-github"></i></a></button>
+                                            <button class="ml-2 btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#projectCollapse-1" aria-expanded="false" aria-controls="projectCollapse-1">
+                                                Read more...
+                                            </button>
+                                        </p>
+                                    </div>
+
+                                    <!-- Collapse details -->
+                                    <div id="projectCollapse-1" class="collapse mt-3">
+                                        <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.5;">
+                                            <p class="mb-2"><strong>Problem:</strong> Large vision language models tend to over rely on language tokens because visual embeddings are simply appended to the text stream, which leads to weak visual grounding and hallucination.</p>
+                                            <p class="mb-2"><strong>What I did:</strong> Implemented the VisAlign refinement in the OpenQwen2VL stack and ran the full pretraining and evaluations. Integrated average pooled visual features into textual embeddings at inference, executed experiments, and prepared the result tables and plots for the paper.</p>
+                                            <p class="mb-0"><strong>Impact and Results:</strong> Integrated VisAlign into OpenQwen2VL and ran full pretraining plus eval scripts. Preliminary benchmarks suggest lower hallucination rates with improved grounding; full OpenQwen2VL numbers pending. <strong>(Published in ACL Findings, 2026)</strong></p>
                                         </div>
                                     </div>
                                 </div>
