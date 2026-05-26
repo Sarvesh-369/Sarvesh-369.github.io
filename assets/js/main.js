@@ -141,7 +141,7 @@ function initSubnavScrollSpy() {
   const scrollHandler = () => {
     let currentActiveId = '';
     // Check which section is currently in the viewport (with offset for sticky headers)
-    const scrollPosition = window.scrollY + 160; // offset matches scroll-margin-top + buffer
+    const scrollPosition = window.scrollY + 100; // offset matches scroll-margin-top + buffer
 
     sections.forEach(section => {
       const sectionTop = section.offsetTop;

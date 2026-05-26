@@ -131,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .scroll-section {
-  scroll-margin-top: 140px; /* Offset for sticky header + sticky subnav */
+  scroll-margin-top: 80px; /* Offset for sticky subnav at top: 0 */
 }
   
 #content-wrap {
