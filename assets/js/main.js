@@ -98,11 +98,26 @@ async function navigateToPage(url, pushState = true) {
       newScript.remove(); // Clean up DOM immediately
     });
 
+    // Helper to force scroll position to top in any browser
+    const forceScrollToTop = () => {
+      window.scrollTo(0, 0);
+      if (document.documentElement) document.documentElement.scrollTop = 0;
+      if (document.body) document.body.scrollTop = 0;
+    };
+
+    // Scroll to top immediately on DOM swap
+    forceScrollToTop();
+
     // Scroll to top and initialize ScrollSpy after a short layout/scroll-restoration timeout
     setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'instant' });
+      forceScrollToTop();
       initSubnavScrollSpy();
     }, 50);
+
+    // Redundant scroll resets to guarantee viewport stays at the very top after delayed layout changes
+    setTimeout(forceScrollToTop, 150);
+    setTimeout(forceScrollToTop, 300);
+    setTimeout(forceScrollToTop, 600);
 
   } catch (err) {
     console.warn('SPA transition failed, falling back to standard load:', err);

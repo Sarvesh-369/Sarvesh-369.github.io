@@ -24,6 +24,7 @@ html {
 
 html, body {
     height:100%;
+    scroll-anchor: none !important;
 }
 
 /* Use the root variable for primary color in your CSS */
@@ -216,4 +217,11 @@ h1, h2, h3, h4, h5, h6 {
 /* Ensure no conflicts with bootstrap or standard buttons */
 button.btn-blue {
   line-height: inherit !important;
+}
+
+/* Custom Elements layout stability */
+header-component {
+  display: block;
+  min-height: 56px;
+  background-color: var(--blue-dark);
 }
