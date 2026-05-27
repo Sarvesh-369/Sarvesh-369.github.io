@@ -150,7 +150,19 @@
                                     <div class="mt-2">
                                         <p class="pt-2 my-auto"><b>References:</b> 
                                             <button type="button" class="ml-2 btn btn-blue btn-sm py-0"><a href="#" onclick="return false;">PDF <i class="ml-1 fa-regular fa-file-pdf"></i></a></button>
+                                            <button class="ml-2 btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#projectCollapse-video2lora" aria-expanded="false" aria-controls="projectCollapse-video2lora">
+                                                Read more...
+                                            </button>
                                         </p>
+                                    </div>
+
+                                    <!-- Collapse details -->
+                                    <div id="projectCollapse-video2lora" class="collapse mt-3">
+                                        <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.5;">
+                                            <p class="mb-2"><strong>Problem:</strong> Processing videos in vision-language models (VLMs) is extremely token-heavy and computationally expensive. Concatenating hundreds of visual tokens per frame into the VLM's context window increases latency, scales up query time-to-first-token (TTFT), and limits the model's ability to process long-video sequences effectively without context window degeneration.</p>
+                                            <p class="mb-2"><strong>What I did:</strong> Introduced <strong>Video2LoRA</strong>, a method for parametric video internalization. Designed a perceiver hypernetwork that runs layer-by-layer alongside a frozen VLM to ingest intermediate video representations and predict Low-Rank Adaptation (LoRA) weight adapters in a single forward pass, entirely bypassing iterative gradient-based training. Implemented training on SmolVLM2 (500M and 2.2B) for video question answering, summarization, and captioning.</p>
+                                            <p class="mb-0"><strong>Impact and Results:</strong> Achieved statistical non-inferiority to standard in-context video inference on 5 captioning and 7 of 8 QA benchmarks, while reducing visual token load at query time by up to 1,500&times; and query TTFT by 6&times; to 80&times;. Demonstrated stability up to 1,024 frames and showed that independently generated adapters can compose in rank space for chunked long-video internalization. <strong>(Under Review at EMNLP, 2026)</strong></p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
