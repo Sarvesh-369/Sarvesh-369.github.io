@@ -1,4 +1,8 @@
 // Premium SPA Transition Engine for Zero-Flash, Buttery-Smooth Page Changes
+if (history.scrollRestoration) {
+  history.scrollRestoration = 'manual';
+}
+
 let activeTransitionId = 0;
 
 async function navigateToPage(url, pushState = true) {
@@ -94,11 +98,11 @@ async function navigateToPage(url, pushState = true) {
       newScript.remove(); // Clean up DOM immediately
     });
 
-    // Scroll smoothly to top
-    window.scrollTo({ top: 0, behavior: 'instant' });
-
-    // Initialize ScrollSpy on the newly loaded page
-    initSubnavScrollSpy();
+    // Scroll to top and initialize ScrollSpy after a short layout/scroll-restoration timeout
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      initSubnavScrollSpy();
+    }, 50);
 
   } catch (err) {
     console.warn('SPA transition failed, falling back to standard load:', err);
