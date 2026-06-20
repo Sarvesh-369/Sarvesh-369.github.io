@@ -70,8 +70,8 @@ A dedicated, organized document structure is located inside `assets/documents/`.
 
 | Document Type | Local Folder / File Name | HTML Link Path |
 | :--- | :--- | :--- |
-| **Industry Resume** | `assets/documents/resume.pdf` | Already linked on **Home** (`./assets/documents/resume.pdf`) |
-| **Academic CV** | `assets/documents/cv.pdf` | Already linked on **Home** (`./assets/documents/cv.pdf`) |
+| **Industry Resume** | `assets/documents/sarvesh_resume.pdf` | Already linked on **Home** (`./assets/documents/sarvesh_resume.pdf`) |
+| **Academic CV** | `assets/documents/sarvesh_cv.pdf` | Already linked on **Home** (`./assets/documents/sarvesh_cv.pdf`) |
 | **Research Papers / Preprints** | `assets/documents/publications/paper_name.pdf` | Link from **Publications** (`../assets/documents/publications/paper_name.pdf`) |
 | **Project Reports / Slides** | `assets/documents/projects/project_name.pdf` | Link from **Projects** (`../assets/documents/projects/project_name.pdf`) |
 
