@@ -6,7 +6,7 @@
       "authors": "Aakriti Agrawal, Gouthaman KV, Rohith Aralikatti, Gauri Jagatap, Jiaxin Yuan, <b>Sarvesh Baskar</b>, Vijay Kamarshi, Andrea Fanelli, and Furong Huang.",
       "title": "\"Towards Mitigating Hallucinations in Large Vision-Language Models by Refining Textual Embeddings\".",
       "conference": "ACL Findings, 2026.",
-      "pdf": "https://arxiv.org/pdf/2511.05017",
+      "pdf": "https://aclanthology.org/2026.findings-acl.2086.pdf",
       "bibtex": "@inproceedings{agrawal2026mitigating,\n  author    = {Agrawal, Aakriti and KV, Gouthaman Extracted and Aralikatti, Rohith and Jagatap, Gauri and Yuan, Jiaxin and Baskar, Sarvesh and Kamarshi, Vijay and Fanelli, Andrea and Huang, Furong},\n  title     = {Towards Mitigating Hallucinations in Large Vision-Language Models by Refining Textual Embeddings},\n  booktitle = {Findings of the Association for Computational Linguistics (ACL Findings)},\n  year      = {2026}\n}"
     },
     {
