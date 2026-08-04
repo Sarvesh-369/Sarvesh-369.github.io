@@ -72,15 +72,17 @@
                                     <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">The Low-Frequency Trap: Video–Language Models Fail at Simple Event Bookkeeping</h4>
                                     <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> University of Maryland, College Park (UMD)</span> (Sep 2025 - Jul 2026)</h6>
                                     <p class="card-text mt-2 mb-2 text-justify small">
-                                        Created a parametric evaluation framework to systematically map video model performance across variations in frequency, count, temporal span, clutter, and scale.
+                                        Introduced trace-grounded parametric profiling for video-language models, generating 2,190 controlled videos with executable ground-truth traces across event count N and frequency F grid sweeps to audit model reasoning and diagnose temporal failure modes.
                                     </p>
 
                                     <div class="mb-2">
                                         <span class="badge p-1 sw-tools">Python</span>
                                         <span class="badge p-1 sw-tools">VLM Evaluation</span>
-                                        <span class="badge p-1 sw-tools">Synthetic Data Generation</span>
+                                        <span class="badge p-1 sw-tools">Trace-Grounded Benchmarking</span>
                                         <span class="badge p-1 sw-tools">Temporal Reasoning</span>
-                                        <span class="badge p-1 sw-tools">Model Scaling Analysis</span>
+                                        <span class="badge p-1 sw-tools">Gemini 3.6 Flash</span>
+                                        <span class="badge p-1 sw-tools">Qwen3-VL</span>
+                                        <span class="badge p-1 sw-tools">GPT-5.6 Sol</span>
                                     </div>
 
                                     <div class="mt-2">
@@ -96,9 +98,9 @@
                                     <!-- Collapse details -->
                                     <div id="projectCollapse-3" class="collapse mt-3">
                                         <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.5;">
-                                            <p class="mb-2"><strong>Problem:</strong> Assessing video-language model robustness requires systematic, stress-tested benchmarks, but standard datasets lack parameterized control over event frequency, clutter, or object scale.</p>
-                                            <p class="mb-2"><strong>What I did:</strong> Developed a <strong>parametric capability profiling</strong> framework to evaluate video-language models by systematically varying event frequency, event count, temporal span, clutter, and object scale. Created controlled temporal and spatial reasoning tasks, including <strong>State Transition</strong>, <strong>Blinking</strong>, <strong>Bouncing Ball</strong>, and <strong>Domino Counting</strong>, with deterministic executable traces for ground-truth validation. Benchmarked Qwen3-VL, Molmo2, and InternVL3.5 models across parameterized difficulty grids using exact-match accuracy across randomized seeds.</p>
-                                            <p class="mb-0"><strong>Impact and Results:</strong> Identified a <strong>low-frequency temporal reasoning trap</strong>, where models failed to count simple events beyond small thresholds even when events were slow and visually distinct. Showed that scaling model size from <strong>8B to 235B parameters</strong> improved average accuracy but did not meaningfully expand the temporal success region, suggesting scale alone is insufficient for robust temporal reasoning. <strong>(Under Review at AAAI, 2027)</strong></p>
+                                            <p class="mb-2"><strong>Problem:</strong> Standard video benchmarks use fixed clips that entangle event count, rate, duration, and visual clutter, while existing programmatic benchmarks score only final answers without auditing intermediate temporal traces against ground truth.</p>
+                                            <p class="mb-2"><strong>What I did:</strong> Developed a <strong>trace-grounded parametric profiling</strong> framework for event counting across three controlled video tasks (Bouncing Ball wall contacts, visual blinks, categorical state transitions) paired with executable event traces across 2,190 synthetic videos. Audited model-reported timestamps (precision, recall, trace F1, ACR, RFR) for Gemini 3.6 Flash, Qwen3-VL-235B, and GPT-5.6 Sol under sampling density sweeps (1–16 FPS), oracle keyframe evidence, and prompting interventions.</p>
+                                            <p class="mb-0"><strong>Impact and Results:</strong> Exposed a staged temporal failure and the <strong>low-frequency trap</strong>, showing models recover only 18.1% of true events under high temporal load. Demonstrated that increasing sampling density (1–16 FPS) inflates final integer counts without producing faithful step-by-step trace agreement (trace F1 remains near 3.7%). <strong>(Under Review at AAAI, 2027)</strong></p>
                                         </div>
                                     </div>
                                 </div>
