@@ -40,21 +40,23 @@
   "pre_prints": [
     {
       "id": "ppa-1",
-      "venue": "[ECCV'26]",
-      "authors": "<b>Sarvesh Baskar</b>, Muhammad R. Islam, Zikui Cai, Anirudh Satheesh, Tom Goldstein, and Furong Huang.",
-      "title": "\"Parametric Capability Profiling for Multimodal Video Reasoning\".",
-      "conference": "Under Review, ECCV, 2026.",
-      "pdf": "../assets/documents/publications/video_reasoning_eccv2026.pdf",
-      "bibtex": "@article{baskar2026parametric,\n  author  = {Baskar, Sarvesh and Islam, Muhammad R. and Cai, Zikui and Satheesh, Anirudh and Goldstein, Tom and Huang, Furong},\n  title   = {Parametric Capability Profiling for Multimodal Video Reasoning},\n  journal = {arXiv preprint},\n  year    = {2026}\n}"
+      "venue": "[AAAI'27]",
+      "authors": "<b>Sarvesh Baskar</b>*, Zikui Cai*, Shayan Shabihi*, Anirudh Satheesh, Muhammad R. Islam, Udari Madhushani Sehwag, Tom Goldstein, and Furong Huang.",
+      "title": "\"The Low-Frequency Trap: Video–Language Models Fail at Simple Event Bookkeeping\".",
+      "conference": "Under Review, AAAI, 2027.",
+      "pdf": "#",
+      "project_page": "https://the-low-frequency-trap.github.io",
+      "github": "https://github.com/The-Low-Frequency-Trap/The-Low-Frequency-Trap",
+      "bibtex": "@article{baskar2026lowfrequency,\n  author  = {Baskar, Sarvesh and Cai, Zikui and Shabihi, Shayan and Satheesh, Anirudh and Islam, Muhammad R. and Sehwag, Udari Madhushani and Goldstein, Tom and Huang, Furong},\n  title   = {The Low-Frequency Trap: Video--Language Models Fail at Simple Event Bookkeeping},\n  journal = {arXiv preprint},\n  year    = {2026}\n}"
     },
     {
       "id": "ppa-2",
-      "venue": "[ECCV'26]",
-      "authors": "Muhammad R. Islam, <b>Sarvesh Baskar</b>, Zikui Cai, Anirudh Satheesh, Keenan Powell, Tom Goldstein, and Furong Huang.",
-      "title": "\"Executable Reasoning Traces for Diagnosing Multimodal Video Reasoning\".",
-      "conference": "Under Review, ECCV, 2026.",
-      "pdf": "../assets/documents/publications/reasoning_traces_eccv2026.pdf",
-      "bibtex": "@article{islam2026executable,\n  author  = {Islam, Muhammad R. and Baskar, Sarvesh and Cai, Zikui and Satheesh, Anirudh and Powell, Keenan and Goldstein, Tom and Huang, Furong},\n  title   = {Executable Reasoning Traces for Diagnosing Multimodal Video Reasoning},\n  journal = {arXiv preprint},\n  year    = {2026}\n}"
+      "venue": "[AAAI'27]",
+      "authors": "<b>Sarvesh Baskar</b>, Raviteja Bommireddy, Saksham Kumar Sharma, Harsha Kokel, Manas Gaur, Michael Katz, Shirin Sohrabi, and Kavitha Srinivas.",
+      "title": "\"PlanForge: Synthesizing Planners from Natural Language with an LLM-Driven Architect–Builder–Runner Pipeline\".",
+      "conference": "Under Review, AAAI, 2027.",
+      "pdf": "../assets/documents/publications/PlanForge.pdf",
+      "bibtex": "@article{baskar2026planforge,\n  author  = {Baskar, Sarvesh and Bommireddy, Raviteja and Sharma, Saksham Kumar and Kokel, Harsha and Gaur, Manas and Katz, Michael and Sohrabi, Shirin and Srinivas, Kavitha},\n  title   = {PlanForge: Synthesizing Planners from Natural Language with an LLM-Driven Architect--Builder--Runner Pipeline},\n  journal = {arXiv preprint},\n  year    = {2026}\n}"
     }
   ]
 }

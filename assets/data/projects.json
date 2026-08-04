@@ -19,35 +19,35 @@
   {
     "category": "Research Projects",
     "id": "2",
-    "title": "Executable Reasoning Traces for Diagnosing Multimodal Video Reasoning",
+    "title": "Frames2LoRA: Parametric Video Internalization for Vision-Language Models",
     "affiliation": "University of Maryland, College Park (UMD)",
-    "duration": "(Sep 2025 - Present)",
-    "description": "Developed MORSE Trace, a diagnostic evaluation framework generating videos with executable ground-truth reasoning traces to pinpoint visual, temporal, and logical model failures.",
-    "tools": ["Python", "Manim", "Vision-Language Models", "Benchmarking", "Error Analysis"],
-    "github_link": "https://github.com/Sarvesh-369",
+    "duration": "(Mar 2026 - Present)",
+    "description": "Introduced Frames2LoRA, a method for parametric video internalization where a perceiver hypernetwork generates a Low-Rank Adaptation (LoRA) adapter directly from a video's intermediate representations in a single forward pass, enabling video question answering and summarization with zero visual tokens at query time.",
+    "tools": ["SmolVLM2", "LoRA", "Hypernetworks", "PyTorch", "Python"],
+    "github_link": "https://github.com/MananSuri27/video2lora",
     "icon": "fa-video",
-    "gradient": "linear-gradient(135deg, #0096c7, #03045e)",
+    "gradient": "linear-gradient(135deg, #005f73, #0a9396)",
     "details": {
-      "Problem": "Traditional multimodal video reasoning evaluation relies solely on final-answer accuracy, making it impossible to diagnose why or where models fail (e.g., missed visual events, temporal ordering, state loss, or faulty inference).",
-      "What I did": "Developed MORSE Trace, a diagnostic evaluation framework for multimodal video reasoning that generates videos with executable ground-truth reasoning traces instead of relying only on final-answer accuracy. Built a programmatic video-generation pipeline that captures state transitions, visual events, and reasoning operations required to solve each task.",
-      "Impact and Results": "Designed trace-level evaluation to localize model failures into missed visual events, incorrect temporal ordering, object-state loss, hallucinations, and faulty inference. Evaluated multimodal models on spatial and temporal reasoning tasks, showing persistent failures in temporal tracking, logical reasoning, and hallucination under increasing task complexity. (Under Review at ECCV, 2026)"
+      "Problem": "Video reasoning in VLMs is extremely token-heavy, causing high latency, large context window usage, and context degeneration during long-video question answering.",
+      "What I did": "Introduced Frames2LoRA, a method for parametric video internalization. Designed a perceiver hypernetwork that runs layer-by-layer alongside a frozen VLM to ingest intermediate video representations and predict Low-Rank Adaptation (LoRA) weight adapters in a single forward pass, entirely bypassing iterative gradient-based training. Implemented training on SmolVLM2 (500M and 2.2B) for video question answering, summarization, and captioning.",
+      "Impact and Results": "Reduces query-time visual tokens by 1500x and TTFT by up to 80x while maintaining accuracy. (Under Review at EMNLP, 2026)"
     }
   },
   {
     "category": "Research Projects",
     "id": "3",
-    "title": "Parametric Capability Profiling for Multimodal Video Reasoning",
+    "title": "The Low-Frequency Trap: Video–Language Models Fail at Simple Event Bookkeeping",
     "affiliation": "University of Maryland, College Park (UMD)",
     "duration": "(Sep 2025 - Present)",
     "description": "Created a parametric evaluation framework to systematically map video model performance across variations in frequency, count, temporal span, clutter, and scale.",
     "tools": ["Python", "VLM Evaluation", "Synthetic Data Generation", "Temporal Reasoning", "Model Scaling Analysis"],
-    "github_link": "https://github.com/Sarvesh-369/The_Low_Frequency_Trap",
+    "github_link": "https://github.com/The-Low-Frequency-Trap/The-Low-Frequency-Trap",
     "icon": "fa-sliders",
     "gradient": "linear-gradient(135deg, #00b4d8, #0077b6)",
     "details": {
       "Problem": "Assessing video-language model robustness requires systematic, stress-tested benchmarks, but standard datasets lack parameterized control over event frequency, clutter, or object scale.",
       "What I did": "Developed a parametric capability profiling framework to evaluate video-language models by systematically varying event frequency, event count, temporal span, clutter, and object scale. Created controlled temporal and spatial reasoning tasks, including State Transition, Blinking, Bouncing Ball, and Domino Counting, with deterministic executable traces for ground-truth validation. Benchmarked Qwen3-VL, Molmo2, and InternVL3.5 models across parameterized difficulty grids using exact-match accuracy across randomized seeds.",
-      "Impact and Results": "Identified a low-frequency temporal reasoning trap, where models failed to count simple events beyond small thresholds even when events were slow and visually distinct. Showed that scaling model size from 8B to 235B parameters improved average accuracy but did not meaningfully expand the temporal success region, suggesting scale alone is insufficient for robust temporal reasoning. (Under Review at ECCV, 2026)"
+      "Impact and Results": "Identified a low-frequency temporal reasoning trap, where models failed to count simple events beyond small thresholds even when events were slow and visually distinct. Showed that scaling model size from 8B to 235B parameters improved average accuracy but did not meaningfully expand the temporal success region, suggesting scale alone is insufficient for robust temporal reasoning. (Under Review at AAAI, 2027)"
     }
   },
   {
@@ -64,7 +64,7 @@
     "details": {
       "Problem": "Traditional direct LLM plan generation from natural language is highly brittle, unverified, and generalizes poorly to multi-constraint tasks with multiple valid solutions.",
       "Architecture and Workflow": "Architect Stage: Infers state representations, function decompositions, algorithmic strategies, and verification logic from natural-language planning problems without a fixed schema or prescribed search algorithm. Builder Pipeline: Converts solver designs into executable code, including parsing, constraint checking, search/solving logic, helper functions, and iterative code–test–fix repair. Runner Execution: Implements a deterministic runner that executes generated solvers and accepts only verified outputs: a valid executable plan, a no-plan verdict for unreachable goals, or a failure signal.",
-      "Impact and Results": "Evaluated PlanForge on ACPBench, Tower of Hanoi, Frogs Jumping, and NaturalPlan, showing vastly improved execution-grounded planning over direct LLM plan generation. Achieved a 100% success rate on NaturalPlan trip planning, meeting planning, and calendar scheduling, demonstrating flawless transfer to multi-constraint planning tasks with multiple valid solutions."
+      "Impact and Results": "Evaluated PlanForge on ACPBench, Tower of Hanoi, Frogs Jumping, and NaturalPlan, showing vastly improved execution-grounded planning over direct LLM plan generation. Achieved a 100% success rate on NaturalPlan trip planning, meeting planning, and calendar scheduling, demonstrating flawless transfer to multi-constraint planning tasks with multiple valid solutions. (Under Review at AAAI, 2027)"
     }
   },
   {
