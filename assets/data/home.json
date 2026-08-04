@@ -20,7 +20,7 @@
     {"type": "Academic", "date": "May 2025", "content": "First-author paper \"(CPER) From Guessing to Asking\" accepted at <b>NAACL SRW 2025</b>!"}
   ],
   "documents": [
-    {"title": "Resume", "url": "./assets/documents/sarvesh_resume.pdf?v=3", "icon": "fa-circle-info"},
-    {"title": "Curriculum Vitae", "url": "./assets/documents/sarvesh_cv.pdf?v=3", "icon": "fa-file"}
+    {"title": "Resume", "url": "./assets/documents/sarvesh_resume.pdf?v=4", "icon": "fa-circle-info"},
+    {"title": "Curriculum Vitae", "url": "./assets/documents/sarvesh_cv.pdf?v=4", "icon": "fa-file"}
   ]
 }
