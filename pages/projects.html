@@ -58,55 +58,7 @@
                         </h3>
                     </div>
                     
-                    <!-- Project 1: Frames2LoRA -->
-                    <div class="mt-3 card shadow-sm">
-                        <div class="card-body">
-                            <div class="row mt-2 mt-md-0">
-                                <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
-                                    <div class="rounded d-flex align-items-center justify-content-center" style="width: 100%; height: 110px; background: linear-gradient(135deg, #005f73, #0a9396); color: white; border: 1px solid var(--blue-light); overflow: hidden; position: relative;">
-                                        <i class="fa-solid fa-video fa-3x" style="position: relative; z-index: 1;"></i>
-                                    </div>
-                                </div>
-                                <div class="col-md-10">
-                                    <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">Frames2LoRA: Parametric Video Internalization for Vision-Language Models</h4>
-                                    <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> University of Maryland, College Park (UMD)</span> (Mar 2026 - Present)</h6>
-                                    <p class="card-text mt-2 mb-2 text-justify small">
-                                        Introduced Frames2LoRA, a method for parametric video internalization where a perceiver hypernetwork generates a Low-Rank Adaptation (LoRA) adapter directly from a video's intermediate representations in a single forward pass, enabling video question answering and summarization with zero visual tokens at query time.
-                                    </p>
-
-                                    <div class="mb-2">
-                                        <span class="badge p-1 sw-tools">SmolVLM2</span>
-                                        <span class="badge p-1 sw-tools">LoRA</span>
-                                        <span class="badge p-1 sw-tools">Hypernetworks</span>
-                                        <span class="badge p-1 sw-tools">PyTorch</span>
-                                        <span class="badge p-1 sw-tools">Python</span>
-                                    </div>
-
-                                    <div class="mt-2">
-                                        <p class="pt-2 my-auto"><b>References:</b> 
-                                            <button type="button" class="ml-2 btn btn-blue btn-sm py-0"><a href="https://github.com/MananSuri27/video2lora" target="_blank">GitHub <i class="ml-1 fa-brands fa-github"></i></a></button>
-                                            <button class="ml-2 btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#projectCollapse-frames2lora" aria-expanded="false" aria-controls="projectCollapse-frames2lora">
-                                                Read more...
-                                            </button>
-                                        </p>
-                                    </div>
-
-                                    <!-- Collapse details -->
-                                    <div id="projectCollapse-frames2lora" class="collapse mt-3">
-                                        <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.5;">
-                                            <p class="mb-2"><strong>Problem:</strong> Processing videos in vision-language models (VLMs) is extremely token-heavy and computationally expensive. Concatenating hundreds of visual tokens per frame into the VLM's context window increases latency, scales up query time-to-first-token (TTFT), and limits the model's ability to process long-video sequences effectively without context window degeneration.</p>
-                                            <p class="mb-2"><strong>What I did:</strong> Introduced <strong>Frames2LoRA</strong>, a method for parametric video internalization. Designed a perceiver hypernetwork that runs layer-by-layer alongside a frozen VLM to ingest intermediate video representations and predict Low-Rank Adaptation (LoRA) weight adapters in a single forward pass, entirely bypassing iterative gradient-based training. Implemented training on SmolVLM2 (500M and 2.2B) for video question answering, summarization, and captioning.</p>
-                                            <p class="mb-0"><strong>Impact and Results:</strong> Achieved statistical non-inferiority to standard in-context video inference on 5 captioning and 7 of 8 QA benchmarks, while reducing visual token load at query time by up to 1,500&times; and query TTFT by 6&times; to 80&times;. Demonstrated stability up to 1,024 frames and showed that independently generated adapters can compose in rank space for chunked long-video internalization. <strong>(Under Review at EMNLP, 2026)</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <!-- Project 3: The Low-Frequency Trap -->
+                    <!-- Project 1: The Low-Frequency Trap -->
                     <div class="mt-3 card shadow-sm">
                         <div class="card-body">
                             <div class="row mt-2 mt-md-0">
@@ -118,7 +70,7 @@
                                 </div>
                                 <div class="col-md-10">
                                     <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">The Low-Frequency Trap: Video–Language Models Fail at Simple Event Bookkeeping</h4>
-                                    <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> University of Maryland, College Park (UMD)</span> (Sep 2025 - Present)</h6>
+                                    <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> University of Maryland, College Park (UMD)</span> (Sep 2025 - Jul 2026)</h6>
                                     <p class="card-text mt-2 mb-2 text-justify small">
                                         Created a parametric evaluation framework to systematically map video model performance across variations in frequency, count, temporal span, clutter, and scale.
                                     </p>
@@ -154,7 +106,7 @@
                         </div>
                     </div>
 
-                    <!-- Project 4: PlanForge -->
+                    <!-- Project 2: PlanForge -->
                     <div class="mt-3 card shadow-sm">
                         <div class="card-body">
                             <div class="row mt-2 mt-md-0">
@@ -197,7 +149,53 @@
                                             <p class="mb-2"><strong>Architecture and Workflow:</strong> <strong>Architect Stage:</strong> Infers state representations, function decompositions, algorithmic strategies, and verification logic from natural-language planning problems without a fixed schema or prescribed search algorithm. <strong>Builder Pipeline:</strong> Converts solver designs into executable code, including parsing, constraint checking, search/solving logic, helper functions, and iterative code–test–fix repair. <strong>Runner Execution:</strong> Implements a deterministic runner that executes generated solvers and accepts only verified outputs: a valid executable plan, a no-plan verdict for unreachable goals, or a failure signal.</p>
                                             <p class="mb-0"><strong>Impact and Results:</strong> Evaluated PlanForge on ACPBench, Tower of Hanoi, Frogs Jumping, and NaturalPlan, showing vastly improved execution-grounded planning over direct LLM plan generation. Achieved a 100% success rate on NaturalPlan trip planning, meeting planning, and calendar scheduling, demonstrating flawless transfer to multi-constraint planning tasks with multiple valid solutions. <strong>(Under Review at AAAI, 2027)</strong></p>
                                         </div>
-                                    </div>  </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Frames2LoRA -->
+                    <div class="mt-3 card shadow-sm">
+                        <div class="card-body">
+                            <div class="row mt-2 mt-md-0">
+                                <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
+                                    <div class="rounded d-flex align-items-center justify-content-center" style="width: 100%; height: 110px; background: linear-gradient(135deg, #005f73, #0a9396); color: white; border: 1px solid var(--blue-light); overflow: hidden; position: relative;">
+                                        <i class="fa-solid fa-video fa-3x" style="position: relative; z-index: 1;"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-10">
+                                    <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">Frames2LoRA: Parametric Video Internalization for Vision-Language Models</h4>
+                                    <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> University of Maryland, College Park (UMD)</span> (Mar 2026 - May 2026)</h6>
+                                    <p class="card-text mt-2 mb-2 text-justify small">
+                                        Introduced Frames2LoRA, a method for parametric video internalization where a perceiver hypernetwork generates a Low-Rank Adaptation (LoRA) adapter directly from a video's intermediate representations in a single forward pass, enabling video question answering and summarization with zero visual tokens at query time.
+                                    </p>
+
+                                    <div class="mb-2">
+                                        <span class="badge p-1 sw-tools">SmolVLM2</span>
+                                        <span class="badge p-1 sw-tools">LoRA</span>
+                                        <span class="badge p-1 sw-tools">Hypernetworks</span>
+                                        <span class="badge p-1 sw-tools">PyTorch</span>
+                                        <span class="badge p-1 sw-tools">Python</span>
+                                    </div>
+
+                                    <div class="mt-2">
+                                        <p class="pt-2 my-auto"><b>References:</b> 
+                                            <button type="button" class="ml-2 btn btn-blue btn-sm py-0"><a href="https://github.com/MananSuri27/video2lora" target="_blank">GitHub <i class="ml-1 fa-brands fa-github"></i></a></button>
+                                            <button class="ml-2 btn btn-blue btn-sm py-0" type="button" data-toggle="collapse" data-target="#projectCollapse-frames2lora" aria-expanded="false" aria-controls="projectCollapse-frames2lora">
+                                                Read more...
+                                            </button>
+                                        </p>
+                                    </div>
+
+                                    <!-- Collapse details -->
+                                    <div id="projectCollapse-frames2lora" class="collapse mt-3">
+                                        <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.5;">
+                                            <p class="mb-2"><strong>Problem:</strong> Processing videos in vision-language models (VLMs) is extremely token-heavy and computationally expensive. Concatenating hundreds of visual tokens per frame into the VLM's context window increases latency, scales up query time-to-first-token (TTFT), and limits the model's ability to process long-video sequences effectively without context window degeneration.</p>
+                                            <p class="mb-2"><strong>What I did:</strong> Introduced <strong>Frames2LoRA</strong>, a method for parametric video internalization. Designed a perceiver hypernetwork that runs layer-by-layer alongside a frozen VLM to ingest intermediate video representations and predict Low-Rank Adaptation (LoRA) weight adapters in a single forward pass, entirely bypassing iterative gradient-based training. Implemented training on SmolVLM2 (500M and 2.2B) for video question answering, summarization, and captioning.</p>
+                                            <p class="mb-0"><strong>Impact and Results:</strong> Achieved statistical non-inferiority to standard in-context video inference on 5 captioning and 7 of 8 QA benchmarks, while reducing visual token load at query time by up to 1,500&times; and query TTFT by 6&times; to 80&times;. Demonstrated stability up to 1,024 frames and showed that independently generated adapters can compose in rank space for chunked long-video internalization. <strong>(Under Review at EMNLP, 2026)</strong></p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
