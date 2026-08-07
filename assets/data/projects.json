@@ -42,6 +42,7 @@
     "description": "Introduced trace-grounded parametric profiling for video-language models, generating 2,190 controlled videos with executable ground-truth traces across event count N and frequency F grid sweeps to audit model reasoning and diagnose temporal failure modes.",
     "tools": ["Python", "VLM Evaluation", "Trace-Grounded Benchmarking", "Temporal Reasoning", "Gemini 3.6 Flash", "Qwen3-VL", "GPT-5.6 Sol"],
     "github_link": "https://github.com/The-Low-Frequency-Trap/The-Low-Frequency-Trap",
+    "arxiv_link": "http://arxiv.org/abs/2608.06361",
     "icon": "fa-sliders",
     "gradient": "linear-gradient(135deg, #00b4d8, #0077b6)",
     "details": {
