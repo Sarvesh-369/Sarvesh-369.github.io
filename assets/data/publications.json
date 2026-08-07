@@ -45,7 +45,7 @@
       "title": "\"The Low-Frequency Trap: Video–Language Models Fail at Simple Event Bookkeeping\".",
       "conference": "Under Review, AAAI, 2027.",
       "pdf": "http://arxiv.org/abs/2608.06361",
-      "project_page": "https://the-low-frequency-trap.github.io",
+      "project_page": "https://low-frequency-trap.github.io",
       "bibtex": "@article{baskar2026lowfrequency,\n  author  = {Baskar, Sarvesh and Cai, Zikui and Shabihi, Shayan and Satheesh, Anirudh and Islam, Muhammad R. and Sehwag, Udari Madhushani and Goldstein, Tom and Huang, Furong},\n  title   = {The Low-Frequency Trap: Video--Language Models Fail at Simple Event Bookkeeping},\n  journal = {arXiv preprint arXiv:2608.06361},\n  year    = {2026}\n}"
     },
     {
