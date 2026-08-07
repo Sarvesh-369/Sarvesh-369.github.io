@@ -54,7 +54,7 @@
       "authors": "<b>Sarvesh Baskar</b>, Raviteja Bommireddy, Saksham Kumar Sharma, Harsha Kokel, Manas Gaur, Michael Katz, Shirin Sohrabi, and Kavitha Srinivas.",
       "title": "\"PlanForge: Synthesizing Planners from Natural Language with an LLM-Driven Architect–Builder–Runner Pipeline\".",
       "conference": "Under Review, AAAI, 2027.",
-      "pdf": "../assets/documents/publications/PlanForge.pdf",
+      "pdf": "#",
       "bibtex": "@article{baskar2026planforge,\n  author  = {Baskar, Sarvesh and Bommireddy, Raviteja and Sharma, Saksham Kumar and Kokel, Harsha and Gaur, Manas and Katz, Michael and Sohrabi, Shirin and Srinivas, Kavitha},\n  title   = {PlanForge: Synthesizing Planners from Natural Language with an LLM-Driven Architect--Builder--Runner Pipeline},\n  journal = {arXiv preprint},\n  year    = {2026}\n}"
     }
   ]
