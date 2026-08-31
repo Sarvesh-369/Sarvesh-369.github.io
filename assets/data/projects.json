@@ -64,7 +64,7 @@
     "details": {
       "Problem": "Traditional direct LLM plan generation from natural language is highly brittle, unverified, and generalizes poorly to multi-constraint tasks with multiple valid solutions.",
       "Architecture and Workflow": "Architect Stage: Infers state representations, function decompositions, algorithmic strategies, and verification logic from natural-language planning problems without a fixed schema or prescribed search algorithm. Builder Pipeline: Converts solver designs into executable code, including parsing, constraint checking, search/solving logic, helper functions, and iterative code–test–fix repair. Runner Execution: Implements a deterministic runner that executes generated solvers and accepts only verified outputs: a valid executable plan, a no-plan verdict for unreachable goals, or a failure signal.",
-      "Impact and Results": "Evaluated PlanForge on ACPBench, Tower of Hanoi, Frogs Jumping, and NaturalPlan, showing vastly improved execution-grounded planning over direct LLM plan generation. Achieved a 100% success rate on NaturalPlan trip planning, meeting planning, and calendar scheduling, demonstrating flawless transfer to multi-constraint planning tasks with multiple valid solutions. (Under Review at AAAI, 2027)"
+      "Impact and Results": "Evaluated PlanForge on ACPBench, Tower of Hanoi, Frogs Jumping, and NaturalPlan, showing vastly improved execution-grounded planning over direct LLM plan generation. Achieved a 100% success rate on NaturalPlan trip planning, meeting planning, and calendar scheduling, demonstrating flawless transfer to multi-constraint planning tasks with multiple valid solutions. (Under Review at AAAI, 2027; Accepted at COLM 2026 Workshop on Efficient Reasoning)"
     }
   },
   {

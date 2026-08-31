@@ -11,6 +11,15 @@
       "bibtex": "@inproceedings{suri2026frames2lora,\n  author    = {Suri, Manan and Baskar, Sarvesh and Manocha, Dinesh},\n  title     = {Frames2LoRA: Parametric Video Internalization for Vision-Language Models},\n  booktitle = {Proceedings of Empirical Methods in Natural Language Processing (EMNLP)},\n  year      = {2026}\n}"
     },
     {
+      "id": "prp-6",
+      "venue": "[COLM Workshop]",
+      "authors": "<b>Sarvesh Baskar</b>, Raviteja Bommireddy, Saksham Kumar Sharma, Harsha Kokel, Manas Gaur, Michael Katz, Shirin Sohrabi, and Kavitha Srinivas.",
+      "title": "\"PlanForge: Synthesizing Planners from Natural Language with an LLM-Driven Architect–Builder–Runner Pipeline\".",
+      "conference": "COLM Workshop on Efficient Reasoning, 2026.",
+      "pdf": "#",
+      "bibtex": "@inproceedings{baskar2026planforge,\n  author    = {Baskar, Sarvesh and Bommireddy, Raviteja and Sharma, Saksham Kumar and Kokel, Harsha and Gaur, Manas and Katz, Michael and Sohrabi, Shirin and Srinivas, Kavitha},\n  title     = {PlanForge: Synthesizing Planners from Natural Language with an LLM-Driven Architect--Builder--Runner Pipeline},\n  booktitle = {COLM Workshop on Efficient Reasoning},\n  year      = {2026}\n}"
+    },
+    {
       "id": "prp-1",
       "venue": "[ACL Findings]",
       "authors": "Aakriti Agrawal, Gouthaman KV, Rohith Aralikatti, Gauri Jagatap, Jiaxin Yuan, <b>Sarvesh Baskar</b>, Vijay Kamarshi, Andrea Fanelli, and Furong Huang.",
