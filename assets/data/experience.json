@@ -11,7 +11,7 @@
     "bullets": [
       "Built and evaluated multimodal AI pipelines for large vision-language models (VLMs), video reasoning, hallucination mitigation, and synthetic visual reasoning tasks.",
       "Implemented embedding-refinement experiments in the <strong>OpenQwen2VL</strong> stack to improve visual grounding and significantly reduce hallucinations in large vision-language models.",
-      "Executed controlled experiments and thorough ablations, delivering paper-ready visualizations that directly supported high-impact publications at EMNLP 2026, ACL Findings, and AAAI."
+      "Executed controlled experiments and thorough ablations, delivering paper-ready visualizations that directly supported high-impact publications at EMNLP Findings 2026, ACL Findings, and AAAI."
     ]
   },
   {
