@@ -30,7 +30,7 @@
     "details": {
       "Problem": "Video reasoning in VLMs is extremely token-heavy, causing high latency, large context window usage, and context degeneration during long-video question answering.",
       "What I did": "Introduced Frames2LoRA, a method for parametric video internalization. Designed a perceiver hypernetwork that runs layer-by-layer alongside a frozen VLM to ingest intermediate video representations and predict Low-Rank Adaptation (LoRA) weight adapters in a single forward pass, entirely bypassing iterative gradient-based training. Implemented training on SmolVLM2 (500M and 2.2B) for video question answering, summarization, and captioning.",
-      "Impact and Results": "Reduces query-time visual tokens by 1500x and TTFT by up to 80x while maintaining accuracy. (Under Review at EMNLP, 2026)"
+      "Impact and Results": "Reduces query-time visual tokens by 1500x and TTFT by up to 80x while maintaining accuracy. (Accepted at EMNLP, 2026)"
     }
   },
   {

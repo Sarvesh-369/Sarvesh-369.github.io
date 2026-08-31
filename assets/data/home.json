@@ -14,6 +14,7 @@
     "keywords": "Multimodal AI, Vision-Language Models, LLM Agents, Reasoning & Planning, Visual Grounding, Embodied AI, Robotics, Computer Vision, Vision-Language-Action Models"
   },
   "news": [
+    {"type": "Academic", "date": "August 2026", "content": "Paper \"Frames2LoRA: Parametric Video Internalization for Vision-Language Models\" accepted at <b>EMNLP 2026</b>!"},
     {"type": "Academic", "date": "March 2026", "content": "Research paper \"Towards Mitigating Hallucinations in Large Vision-Language Models by Refining Textual Embeddings\" accepted at <b>ACL Findings 2026</b>!"},
     {"type": "Academic", "date": "March 2026", "content": "Paper \"The Low-Frequency Trap: Why Scaling Doesn't Solve Simple Temporal Counting\" accepted at the <b>ICLR 2026 Workshop</b>!"},
     {"type": "Academic", "date": "February 2026", "content": "Co-authored paper \"Analyzing Chain of Thought (CoT) Approaches in Control Flow Code Deobfuscation Tasks\" accepted at the <b>WoRMA 2026 Workshop</b>!"},

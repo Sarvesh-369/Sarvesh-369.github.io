@@ -1,6 +1,16 @@
 {
   "peer_reviewed": [
     {
+      "id": "prp-5",
+      "venue": "[EMNLP]",
+      "authors": "Manan Suri, <b>Sarvesh Baskar</b>, and Dinesh Manocha.",
+      "title": "\"Frames2LoRA: Parametric Video Internalization for Vision-Language Models\".",
+      "conference": "Empirical Methods in Natural Language Processing (EMNLP), 2026.",
+      "pdf": "https://arxiv.org/pdf/2606.04351",
+      "project_page": "https://video2lora.github.io/",
+      "bibtex": "@inproceedings{suri2026frames2lora,\n  author    = {Suri, Manan and Baskar, Sarvesh and Manocha, Dinesh},\n  title     = {Frames2LoRA: Parametric Video Internalization for Vision-Language Models},\n  booktitle = {Proceedings of Empirical Methods in Natural Language Processing (EMNLP)},\n  year      = {2026}\n}"
+    },
+    {
       "id": "prp-1",
       "venue": "[ACL Findings]",
       "authors": "Aakriti Agrawal, Gouthaman KV, Rohith Aralikatti, Gauri Jagatap, Jiaxin Yuan, <b>Sarvesh Baskar</b>, Vijay Kamarshi, Andrea Fanelli, and Furong Huang.",
