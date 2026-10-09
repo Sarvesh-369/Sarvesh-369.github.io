@@ -47,7 +47,7 @@
     "details": {
       "Problem": "Standard video benchmarks use fixed clips that entangle event count, rate, duration, and visual clutter, while existing programmatic benchmarks score only final answers without auditing intermediate temporal traces against ground truth.",
       "What I did": "Developed a trace-grounded parametric profiling framework for event counting across three controlled video tasks (Bouncing Ball wall contacts, visual blinks, categorical state transitions) paired with executable event traces across 2,190 synthetic videos. Audited model-reported timestamps (precision, recall, trace F1, ACR, RFR) for Gemini 3.6 Flash, Qwen3-VL-235B, and GPT-5.6 Sol under sampling density sweeps (1–16 FPS), oracle keyframe evidence, and prompting interventions.",
-      "Impact and Results": "Exposed a staged temporal failure and the low-frequency trap, showing models recover only 18.1% of true events under high temporal load. Demonstrated that increasing sampling density (1–16 FPS) inflates final integer counts without producing faithful step-by-step trace agreement (trace F1 remains near 3.7%). (Under Review at AAAI, 2027)"
+      "Impact and Results": "Exposed a staged temporal failure and the low-frequency trap, showing models recover only 18.1% of true events under high temporal load. Demonstrated that increasing sampling density (1–16 FPS) inflates final integer counts without producing faithful step-by-step trace agreement (trace F1 remains near 3.7%)."
     }
   },
   {
@@ -64,7 +64,7 @@
     "details": {
       "Problem": "Traditional direct LLM plan generation from natural language is highly brittle, unverified, and generalizes poorly to multi-constraint tasks with multiple valid solutions.",
       "Architecture and Workflow": "Architect Stage: Infers state representations, function decompositions, algorithmic strategies, and verification logic from natural-language planning problems without a fixed schema or prescribed search algorithm. Builder Pipeline: Converts solver designs into executable code, including parsing, constraint checking, search/solving logic, helper functions, and iterative code–test–fix repair. Runner Execution: Implements a deterministic runner that executes generated solvers and accepts only verified outputs: a valid executable plan, a no-plan verdict for unreachable goals, or a failure signal.",
-      "Impact and Results": "Evaluated PlanForge on ACPBench, Tower of Hanoi, Frogs Jumping, and NaturalPlan, showing vastly improved execution-grounded planning over direct LLM plan generation. Achieved a 100% success rate on NaturalPlan trip planning, meeting planning, and calendar scheduling, demonstrating flawless transfer to multi-constraint planning tasks with multiple valid solutions. (Under Review at AAAI, 2027; Accepted at COLM 2026 Workshop on Efficient Reasoning)"
+      "Impact and Results": "Evaluated PlanForge on ACPBench, Tower of Hanoi, Frogs Jumping, and NaturalPlan, showing vastly improved execution-grounded planning over direct LLM plan generation. Achieved a 100% success rate on NaturalPlan trip planning, meeting planning, and calendar scheduling, demonstrating flawless transfer to multi-constraint planning tasks with multiple valid solutions. (Accepted at COLM 2026 Workshop on Efficient Reasoning)"
     }
   },
   {
