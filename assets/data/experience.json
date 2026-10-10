@@ -9,9 +9,9 @@
     "logo": "../assets/img/experience/umd.png",
     "link": "https://umd.edu",
     "bullets": [
-      "Built and evaluated multimodal AI pipelines for large vision-language models (VLMs), video reasoning, hallucination mitigation, and synthetic visual reasoning tasks.",
-      "Implemented embedding-refinement experiments in the <strong>OpenQwen2VL</strong> stack to improve visual grounding and significantly reduce hallucinations in large vision-language models.",
-      "Executed controlled experiments and thorough ablations, delivering paper-ready visualizations that directly supported high-impact publications at ACL Findings and AAAI."
+      "Developed trace-grounded parametric profiling to evaluate temporal event bookkeeping in video-language models, uncovering the <b>Low-Frequency Trap</b> (accepted at <b>ICLR 2026 Workshop</b>).",
+      "Implemented <b>VisAlign's</b> visual-context refinement of text embeddings in the OpenQwen2VL stack to improve visual grounding and mitigate hallucinations (published at <b>ACL Findings 2026</b>).",
+      "Executed large-scale Slurm training, controlled ablations, and benchmark evaluations across multimodal reasoning and temporal capability boundaries."
     ]
   },
   {
