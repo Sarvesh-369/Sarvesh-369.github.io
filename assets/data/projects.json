@@ -20,7 +20,7 @@
     "category": "Research Projects",
     "id": "2",
     "title": "Frames2LoRA: Parametric Video Internalization for Vision-Language Models",
-    "affiliation": "University of Maryland, College Park (UMD | Advisor: Dr. Dinesh Manocha)",
+    "affiliation": "University of Maryland, College Park (UMD)",
     "duration": "(Mar 2026 - May 2026)",
     "description": "Introduced Frames2LoRA, a method for parametric video internalization where a perceiver hypernetwork generates a Low-Rank Adaptation (LoRA) adapter directly from a video's intermediate representations in a single forward pass, enabling video question answering and summarization with zero visual tokens at query time.",
     "tools": ["SmolVLM2", "LoRA", "Hypernetworks", "PyTorch", "Python"],
