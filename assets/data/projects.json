@@ -12,15 +12,15 @@
     "gradient": "linear-gradient(135deg, #0077b6, #0096c7)",
     "details": {
       "Problem": "Large vision language models tend to over rely on language tokens because visual embeddings are simply appended to the text stream, which leads to weak visual grounding and hallucination.",
-      "What I did": "Implemented the VisAlign refinement in the OpenQwen2VL stack and ran the full pretraining and evaluations. Integrated average pooled visual features into textual embeddings at inference, executed experiments, and prepared the result tables and plots for the paper.",
-      "Impact and Results": "Integrated VisAlign into OpenQwen2VL and ran full pretraining plus eval scripts. Preliminary benchmarks suggest lower hallucination rates with improved grounding; full OpenQwen2VL numbers pending. (Published in ACL Findings, 2026)"
+      "What I did": "Implemented VisAlign’s visual-context refinement of text embeddings in OpenQwen2VL and ran the pretraining and evaluation pipeline.",
+      "Impact and Results": "Demonstrated lower hallucination rates with improved visual grounding across multimodal benchmarks. (Published in ACL Findings, 2026)"
     }
   },
   {
     "category": "Research Projects",
     "id": "2",
     "title": "Frames2LoRA: Parametric Video Internalization for Vision-Language Models",
-    "affiliation": "University of Maryland, College Park (UMD)",
+    "affiliation": "University of Maryland, College Park (UMD | Advisor: Dr. Dinesh Manocha)",
     "duration": "(Mar 2026 - May 2026)",
     "description": "Introduced Frames2LoRA, a method for parametric video internalization where a perceiver hypernetwork generates a Low-Rank Adaptation (LoRA) adapter directly from a video's intermediate representations in a single forward pass, enabling video question answering and summarization with zero visual tokens at query time.",
     "tools": ["SmolVLM2", "LoRA", "Hypernetworks", "PyTorch", "Python"],
@@ -47,7 +47,7 @@
     "details": {
       "Problem": "Standard video benchmarks use fixed clips that entangle event count, rate, duration, and visual clutter, while existing programmatic benchmarks score only final answers without auditing intermediate temporal traces against ground truth.",
       "What I did": "Developed a trace-grounded parametric profiling framework for event counting across three controlled video tasks (Bouncing Ball wall contacts, visual blinks, categorical state transitions) paired with executable event traces across 2,190 synthetic videos. Audited model-reported timestamps (precision, recall, trace F1, ACR, RFR) for Gemini 3.6 Flash, Qwen3-VL-235B, and GPT-5.6 Sol under sampling density sweeps (1–16 FPS), oracle keyframe evidence, and prompting interventions.",
-      "Impact and Results": "Exposed a staged temporal failure and the low-frequency trap, showing models recover only 18.1% of true events under high temporal load. Demonstrated that increasing sampling density (1–16 FPS) inflates final integer counts without producing faithful step-by-step trace agreement (trace F1 remains near 3.7%)."
+      "Impact and Results": "Exposed a staged temporal failure and the low-frequency trap, showing Gemini 3.6 Flash recovers only 18.1% of true events under high temporal load. Demonstrated that denser frame sampling (1–16 FPS) can improve final-count accuracy without improving event-trace fidelity (trace F1 remains near 3.7%)."
     }
   },
   {
