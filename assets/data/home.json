@@ -10,21 +10,7 @@
     "My long-term goal is to develop agents that combine vision, language, memory, and planning to complete reliable long-horizon tasks - first in digital environments and eventually in embodied settings."
   ],
   "interests": {
-    "directions": [
-      {
-        "title": "Multimodal perception and grounding",
-        "description": "Vision-language models, video understanding, temporal reasoning, visual grounding, and hallucination detection and mitigation."
-      },
-      {
-        "title": "Reasoning, planning, and verification",
-        "description": "LLM agents, state tracking, executable planning, code reasoning, and methods that let agents check and correct their own outputs."
-      },
-      {
-        "title": "Memory, world models, and action",
-        "description": "Long-horizon multimodal memory, world models, visual-context compression, vision-language-action models, and agents for GUIs and embodied environments."
-      }
-    ],
-    "closing": "Broadly, I am interested in AI systems that know when to look, what to remember, how to reason, when to verify, and how to act."
+    "description": "My technical interests center on multimodal intelligence: how models can combine language, vision, memory, and planning to make decisions that are grounded in the world rather than only fluent in text. I am especially interested in vision-language models, multimodal reasoning, planning for agents, visual grounding, hallucination mitigation, and embodied AI. A recurring theme in my work is that intelligent systems should not simply generate answers; they should know when to ask, when to look, when to verify, and when to plan. Going forward, I want to work on systems that connect VLMs, world models, and planning/control for agents that can operate across visual environments, GUIs, simulations, and robotics-inspired settings. Broadly, I am interested in AI systems that know when to look, what to remember, how to reason, when to verify, and how to act."
   },
   "news": [
     {"type": "Academic", "date": "August 2026", "content": "Paper \"Frames2LoRA: Parametric Video Internalization for Vision-Language Models\" accepted at <b>EMNLP Findings 2026</b>!"},
