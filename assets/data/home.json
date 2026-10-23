@@ -1,17 +1,30 @@
 {
   "profile": {
     "name": "Sarvesh Baskar",
-    "title": "AI Engineer/Researcher | LLM/VLM Systems &bull; Multimodal Agents &bull; Planning &bull; Embodied AI",
+    "title": "AI Researcher | Multimodal AI · Reliable Agents · Reasoning & Planning",
     "image": "./assets/img/profile.png"
   },
   "about": [
-    "I am an AI engineer/researcher working at the intersection of language models, vision-language models, planning, and multimodal agents. My work focuses on making AI systems more grounded and reliable as they move beyond text generation toward perception, reasoning, and action.",
-    "I have research experience with the University of Maryland, College Park and UMBC (collaborating with IBM Research on automated planning), where I have worked on VLM hallucination mitigation, multimodal video reasoning, LLM planning, code reasoning, and persona-aware conversational agents. I also have applied engineering experience building production AI systems, including multimodal RAG pipelines, MCP-based workflow integrations, and clarification-driven chat systems.",
-    "My long-term goal is to build AI agents that can understand visual environments, reason over uncertainty, and execute reliable long-horizon actions — both in digital interfaces and eventually in embodied/robotic settings."
+    "I am an AI researcher working on reliable multimodal agents: systems that can perceive visual environments, reason over time, and take grounded actions. My work spans vision-language models, LLM reasoning and planning, and multimodal evaluation, with a focus on visual grounding, temporal video understanding, and reducing hallucinations.",
+    "At the University of Maryland and UMBC, I have worked on VLM hallucination mitigation, trace-grounded video reasoning, executable planning from natural language, code reasoning, and persona-aware conversational agents. I also have applied engineering experience building multimodal RAG systems and agentic workflow integrations.",
+    "My long-term goal is to develop agents that combine vision, language, memory, and planning to complete reliable long-horizon tasks - first in digital environments and eventually in embodied settings."
   ],
   "interests": {
-    "description": "My technical interests center on multimodal intelligence: how models can combine language, vision, memory, and planning to make decisions that are grounded in the world rather than only fluent in text. I am especially interested in vision-language models, multimodal reasoning, planning for agents, visual grounding, hallucination mitigation, and embodied AI. A recurring theme in my work is that intelligent systems should not simply generate answers; they should know when to ask, when to look, when to verify, and when to plan. Going forward, I want to work on systems that connect VLMs, world models, and planning/control for agents that can operate across visual environments, GUIs, simulations, and robotics-inspired settings.",
-    "keywords": "Multimodal AI, Vision-Language Models, LLM Agents, Reasoning & Planning, Visual Grounding, Embodied AI, Robotics, Computer Vision, Vision-Language-Action Models"
+    "directions": [
+      {
+        "title": "Multimodal perception and grounding",
+        "description": "Vision-language models, video understanding, temporal reasoning, visual grounding, and hallucination detection and mitigation."
+      },
+      {
+        "title": "Reasoning, planning, and verification",
+        "description": "LLM agents, state tracking, executable planning, code reasoning, and methods that let agents check and correct their own outputs."
+      },
+      {
+        "title": "Memory, world models, and action",
+        "description": "Long-horizon multimodal memory, world models, visual-context compression, vision-language-action models, and agents for GUIs and embodied environments."
+      }
+    ],
+    "closing": "Broadly, I am interested in AI systems that know when to look, what to remember, how to reason, when to verify, and how to act."
   },
   "news": [
     {"type": "Academic", "date": "August 2026", "content": "Paper \"Frames2LoRA: Parametric Video Internalization for Vision-Language Models\" accepted at <b>EMNLP Findings 2026</b>!"},
