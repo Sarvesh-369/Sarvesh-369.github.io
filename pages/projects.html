@@ -70,7 +70,7 @@
                                 </div>
                                 <div class="col-md-10">
                                     <h4 class="card-title mb-0" style="color: var(--blue-dark); font-weight: bold;">The Low-Frequency Trap: Video–Language Models Fail at Simple Event Bookkeeping</h4>
-                                    <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> University of Maryland, College Park (UMD)</span> (Sep 2025 - Jul 2026)</h6>
+                                    <h6 class="small-lemos mt-1"><span class="span-lemos pr-2"><b>Affiliation:</b> University of Maryland, College Park (UMD)</span> (Sep 2025 - Present)</h6>
                                     <p class="card-text mt-2 mb-2 text-justify small">
                                         Introduced trace-grounded parametric profiling for video-language models, generating 2,190 controlled videos with executable ground-truth traces across event count N and frequency F grid sweeps to audit model reasoning and diagnose temporal failure modes.
                                     </p>
@@ -99,7 +99,7 @@
                                         <div class="p-3 mb-0 text-justify" style="background-color: rgba(0,0,0,0.02); border-radius: 8px; border-left: 3px solid var(--blue-medium); font-size: 0.9rem; line-height: 1.5;">
                                             <p class="mb-2"><strong>Problem:</strong> Standard video benchmarks use fixed clips that entangle event count, rate, duration, and visual clutter, while existing programmatic benchmarks score only final answers without auditing intermediate temporal traces against ground truth.</p>
                                             <p class="mb-2"><strong>What I did:</strong> Developed a <strong>trace-grounded parametric profiling</strong> framework for event counting across three controlled video tasks (Bouncing Ball wall contacts, visual blinks, categorical state transitions) paired with executable event traces across 2,190 synthetic videos. Audited model-reported timestamps (precision, recall, trace F1, ACR, RFR) for Gemini 3.6 Flash, Qwen3-VL-235B, and GPT-5.6 Sol under sampling density sweeps (1–16 FPS), oracle keyframe evidence, and prompting interventions.</p>
-                                             <p class="mb-0"><strong>Impact and Results:</strong> Exposed a staged temporal failure and the <strong>low-frequency trap</strong>, showing Gemini 3.6 Flash recovers only 18.1% of true events under high temporal load. Demonstrated that denser frame sampling (1–16 FPS) can improve final-count accuracy without improving event-trace fidelity (trace F1 remains near 3.7%).</p>
+                                             <p class="mb-0"><strong>Impact and Results:</strong> Found that final-count accuracy and model-reported temporal evidence can diverge: under high temporal load, Gemini 3.6 Flash achieved 18.1% recall of ground-truth events; denser sampling improved final-count accuracy without a commensurate improvement in reported trace alignment.</p>
                                         </div>
                                     </div>
                                 </div>
